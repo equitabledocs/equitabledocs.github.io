@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EquitableDocs — A Document Equity Initiative. Free document accessibility remediation and Easy Read conversion for students and persons with disabilities across the Global South. Screen reader accessible formats for persons with blindness or low vision. Easy Read documents for persons with learning disabilities and intellectual disabilities. In every language, at no cost.">
+  <meta name="theme-color" content="#1a3a3a">
+  <title>EquitableDocs — Accessible Documents for Every Student</title>
+  <style>
+    /* ============================================
+       CSS CUSTOM PROPERTIES
+       All colors verified for WCAG AA contrast
+       ============================================ */
+    :root {
+      --color-deep: #1a3a3a;        /* Primary dark — contrast 11.8:1 on cream */
+      --color-teal: #1b6b6b;        /* Accent teal — contrast 5.2:1 on cream */
+      --color-warm: #b85a3a;         /* Warm accent — contrast 4.6:1 on cream */
+      --color-cream: #faf6f0;        /* Background */
+      --color-white: #ffffff;
+      --color-text: #2a2a2a;         /* Body text — contrast 14.5:1 on cream */
+      --color-text-light: #4a4a4a;   /* Secondary text — contrast 8.5:1 on cream */
+      --color-border: #d4cfc7;
+      --color-highlight: #e8f4f4;
+      --color-footer-bg: #1a3a3a;
+      --color-footer-text: #e8e4de;  /* contrast 10.2:1 on footer bg */
+      --font-heading: Georgia, 'Times New Roman', 'Noto Serif', serif;
+      --font-body: -apple-system, 'Segoe UI', 'Noto Sans', Ubuntu, Cantarell, sans-serif;
+      --max-width: 52rem;
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 2rem;
+      --space-lg: 3.5rem;
+      --space-xl: 5rem;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 100%; /* Respects user's browser font size */
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--color-text);
+      background-color: var(--color-cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ============================================
+       SKIP LINK — visible on focus for keyboard users
+       ============================================ */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-sm);
+      background: var(--color-deep);
+      color: var(--color-white);
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      z-index: 1000;
+      border-radius: 0 0 4px 4px;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid var(--color-warm);
+      outline-offset: 2px;
+    }
+
+    /* ============================================
+       FOCUS INDICATORS — visible for all interactive elements
+       ============================================ */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--color-warm);
+      outline-offset: 3px;
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--color-deep);
+      line-height: 1.25;
+    }
+
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin-bottom: var(--space-sm); }
+    h3 { font-size: 1.25rem; margin-bottom: var(--space-xs); }
+
+    p { margin-bottom: var(--space-sm); }
+
+    a {
+      color: var(--color-teal);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: var(--color-warm);
+    }
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+    }
+
+    section {
+      padding: var(--space-xl) 0;
+    }
+
+    /* ============================================
+       HEADER
+       ============================================ */
+    header[role="banner"] {
+      background: var(--color-deep);
+      padding: var(--space-sm) 0;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+
+    .site-title {
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .site-title:hover { color: var(--color-cream); }
+
+    nav[aria-label="Main navigation"] ul {
+      list-style: none;
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--color-footer-text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      padding: var(--space-xs) 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+    nav a:hover,
+    nav a:focus-visible {
+      border-bottom-color: var(--color-warm);
+      color: var(--color-white);
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      background: var(--color-deep);
+      padding: var(--space-xl) 0 var(--space-xl);
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: var(--color-white);
+      margin-bottom: var(--space-xs);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle {
+      color: var(--color-footer-text);
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-style: italic;
+      margin-bottom: var(--space-md);
+      opacity: 0.9;
+    }
+
+    .hero-tagline {
+      color: var(--color-white);
+      font-size: 1.125rem;
+      max-width: 36rem;
+      margin: 0 auto var(--space-md);
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--color-warm);
+      color: var(--color-white);
+      padding: 0.875rem 2rem;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 3px;
+      letter-spacing: 0.02em;
+      transition: background-color 0.2s ease;
+    }
+    .hero-cta:hover,
+    .hero-cta:focus-visible {
+      background: #9a4a2e;
+      color: var(--color-white);
+    }
+
+    /* ============================================
+       DIVIDER — thin decorative line between sections
+       ============================================ */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       MISSION SECTION
+       ============================================ */
+    .mission {
+      background: var(--color-cream);
+    }
+
+    .mission-lead {
+      font-family: var(--font-heading);
+      font-size: 1.3125rem;
+      color: var(--color-deep);
+      line-height: 1.6;
+      margin-bottom: var(--space-md);
+      border-left: 4px solid var(--color-teal);
+      padding-left: var(--space-sm);
+    }
+
+    /* ============================================
+       HOW IT WORKS
+       ============================================ */
+    .how-it-works {
+      background: var(--color-highlight);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .step {
+      background: var(--color-white);
+      padding: var(--space-md);
+      border-top: 4px solid var(--color-teal);
+    }
+
+    .step-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--color-teal);
+      display: block;
+      margin-bottom: var(--space-xs);
+      line-height: 1;
+    }
+
+    .step h3 {
+      color: var(--color-deep);
+    }
+
+    .step p {
+      color: var(--color-text-light);
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    /* ============================================
+       PRINCIPLES
+       ============================================ */
+    .principles blockquote {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--color-deep);
+      text-align: center;
+      max-width: 38rem;
+      margin: 0 auto var(--space-lg);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .principles blockquote footer {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-style: normal;
+      color: var(--color-text-light);
+      margin-top: var(--space-xs);
+    }
+
+    .principle-list {
+      list-style: none;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    .principle-list li {
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      gap: var(--space-sm);
+      align-items: baseline;
+    }
+    .principle-list li:last-child {
+      border-bottom: none;
+    }
+
+    .principle-marker {
+      color: var(--color-teal);
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       LANGUAGES
+       ============================================ */
+    .languages {
+      background: var(--color-highlight);
+    }
+
+    .language-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+      gap: var(--space-xs) var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .language-region {
+      margin-bottom: var(--space-sm);
+    }
+
+    .language-region h3 {
+      font-size: 1rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+      color: var(--color-teal);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+    }
+
+    .language-region p {
+      font-size: 0.95rem;
+      color: var(--color-text-light);
+      margin-bottom: 0;
+    }
+
+    /* ============================================
+       CONTACT
+       ============================================ */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-md);
+    }
+
+    .contact-info h3 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .contact-email {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+      color: var(--color-deep);
+    }
+
+    .contact-form .field {
+      margin-bottom: var(--space-sm);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--color-text);
+      background: var(--color-white);
+      border: 2px solid var(--color-border);
+      border-radius: 3px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--color-teal);
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 8rem;
+    }
+
+    .contact-form button {
+      background: var(--color-teal);
+      color: var(--color-white);
+      padding: 0.75rem 2rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .contact-form button:hover,
+    .contact-form button:focus-visible {
+      background: var(--color-deep);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    footer[role="contentinfo"] {
+      background: var(--color-footer-bg);
+      color: var(--color-footer-text);
+      padding: var(--space-lg) 0 var(--space-md);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--space-md);
+    }
+
+    .footer-brand {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+    }
+
+    .footer-brand span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      opacity: 0.75;
+      margin-top: 0.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--color-footer-text);
+      font-size: 0.9rem;
+    }
+    .footer-links a:hover {
+      color: var(--color-white);
+    }
+
+    .footer-legal {
+      width: 100%;
+      margin-top: var(--space-md);
+      padding-top: var(--space-sm);
+      border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 0.8125rem;
+      opacity: 0.7;
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 40rem) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav[aria-label="Main navigation"] ul {
+        gap: var(--space-sm);
+      }
+      section {
+        padding: var(--space-lg) 0;
+      }
+      .hero {
+        padding: var(--space-lg) 0;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    /* ============================================
+       REDUCED MOTION — respect user preferences
+       ============================================ */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+
+    /* ============================================
+       HIGH CONTRAST MODE — enhance for Windows HC
+       ============================================ */
+    @media (forced-colors: active) {
+      .hero-cta,
+      .contact-form button {
+        border: 2px solid currentColor;
+      }
+      .step {
+        border: 1px solid currentColor;
+      }
+    }
+
+    /* ============================================
+       PRINT STYLES
+       ============================================ */
+    @media print {
+      .hero { background: none; color: #000; }
+      .hero h1, .hero-subtitle, .hero-tagline { color: #000; }
+      nav, .contact-form, .hero-cta { display: none; }
+      footer[role="contentinfo"] { background: none; color: #000; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip navigation link for keyboard and screen reader users -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header role="banner">
+    <div class="container header-inner">
+      <a href="/" class="site-title" aria-label="EquitableDocs home page">EquitableDocs</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#languages">Languages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <h1 id="hero-heading">EquitableDocs</h1>
+      <p class="hero-subtitle">A Document Equity Initiative</p>
+      <p class="hero-tagline">Accessible documents for every student, in every language, at no cost.</p>
+      <a href="#contact" class="hero-cta">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MAIN CONTENT
+       ============================================ -->
+  <main id="main">
+
+    <!-- MISSION -->
+    <section class="mission" id="mission" aria-labelledby="mission-heading">
+      <div class="container">
+        <h2 id="mission-heading">What We Do</h2>
+        <p class="mission-lead">An untagged PDF is not merely inconvenient. For a student who relies on a screen reader, it is a locked door. For a person with a learning disability or intellectual disability, a dense, unformatted document is an equally impassable barrier. EquitableDocs exists to remove both.</p>
+        <p>We provide free document accessibility remediation and Easy Read conversion for persons with disabilities across the Global South. Our services address two distinct but equally critical information barriers identified under <strong>UNCRPD Articles 9, 21, and 24</strong>:</p>
+        <p><strong>Screen reader accessible formats</strong> &mdash; for students with blindness or low vision who use assistive technologies such as screen readers, refreshable braille displays, and text-to-speech software. We remediate documents to meet WCAG 2.1 AA and PDF/UA standards: proper structural tagging, logical reading order, alternative text for images, MathML for mathematical content, and validated compatibility with JAWS, NVDA, VoiceOver, and TalkBack.</p>
+        <p><strong>Easy Read formats</strong> &mdash; for persons with learning disabilities and intellectual disabilities who face barriers when information is presented in complex language, dense layouts, or abstract structures. We convert academic and institutional documents into Easy Read versions following international Easy Read guidelines: clear and simple language, short sentences, one idea per sentence, meaningful images supporting the text, and accessible page layouts with generous spacing.</p>
+        <p>Students upload their inaccessible academic documents &mdash; textbooks, exam papers, government forms, research articles &mdash; and receive accessible versions delivered to their email and WhatsApp, at no cost. Our pipeline combines enterprise-grade automation with expert human review, processing documents through AI-powered auto-tagging, OCR for scanned materials in over 100 languages, mathematical content recognition for STEM textbooks, and validation against international accessibility standards. An expert remediator reviews each document before delivery.</p>
+        <p>EquitableDocs is the flagship platform of the <strong>Document Equity</strong> initiative &mdash; a commitment to ensuring that persons with disabilities are not excluded from the educational materials, public information, and institutional documents they have every right to access, as affirmed by the United Nations Convention on the Rights of Persons with Disabilities.</p>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading">How It Works</h2>
+        <p>A simple, transparent process from upload to delivery. You tell us what you need &mdash; a screen reader accessible version, an Easy Read version, or both &mdash; and we handle the rest. Every request receives a tracking ID to monitor progress.</p>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3>Upload</h3>
+            <p>Upload your document through our portal or send it via email. We accept PDFs, Word documents, PowerPoint files, and scanned images in any language. Tell us whether you need screen reader accessible format, Easy Read format, or both.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3>Process</h3>
+            <p>For screen reader formats: OCR extraction for scanned materials, AI-powered structure tagging, mathematical content recognition, and automated accessibility validation. For Easy Read: content simplification, clear language conversion, meaningful image selection, and accessible layout generation.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3>Review</h3>
+            <p>An expert remediator reviews the automated output. Screen reader formats are validated against WCAG 2.1 AA and PDF/UA standards and tested with assistive technologies. Easy Read versions are reviewed for adherence to international Easy Read guidelines and clarity of communication.</p>
+          </div>
+          <div class="step">
+            <span class="step-number" aria-hidden="true">04</span>
+            <h3>Deliver</h3>
+            <p>Your accessible document is delivered to your email and WhatsApp with a compliance report. Download it anytime from the portal using your tracking ID. All formats are yours to keep, share, and use without restriction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- PRINCIPLES -->
+    <section class="principles" id="principles" aria-labelledby="principles-heading">
+      <div class="container">
+        <h2 id="principles-heading">Our Principles</h2>
+        <blockquote>
+          <p>&ldquo;Nothing About Us Without Us.&rdquo;</p>
+          <footer>— International disability rights movement</footer>
+        </blockquote>
+        <ul class="principle-list">
+          <li>
+            <span class="principle-marker" aria-hidden="true">&mdash;</span>
+            <div>
+              <strong>Information accessibility is a human right, not a service.</strong> UNCRPD Article 9 obligates States Parties to ensure persons with disabilities can access information and communications on an equal basis with others. Article 21 affirms the right to receive information in accessible formats and technologies. Article 24 requires inclusive education with reasonable accommodation. India&rsquo;s RPwD Act 2016, the European Accessibility Act, and the April 2025 Supreme Court judgment recognising digital access as a constitutional entitlement all reinforce these obligations. EquitableDocs exists because these rights are not yet realised for millions of persons with disabilities in the Global South.
+            </div>
+          </li>
+          <li>
+            <span class="principle-marker" aria-hidden="true">&mdash;</span>
+            <div>
+              <strong>The Least Common Denominator as the point of departure.</strong> Every design decision starts with the most marginalised user &mdash; a student with blindness in a rural area using a basic screen reader on limited connectivity, or a person with an intellectual disability encountering a complex government form for the first time. If the service works for them, it works for everyone. We do not design for the easiest case and adapt downward; we design for the hardest case and build upward.
+            </div>
+          </li>
+          <li>
+            <span class="principle-marker" aria-hidden="true">&mdash;</span>
+            <div>
+              <strong>Multiple formats for multiple barriers.</strong> Accessibility is not one thing. A screen reader accessible PDF with proper tags and alt-text serves persons with blindness or low vision. An Easy Read document with simplified language, short sentences, and supporting images serves persons with learning disabilities and intellectual disabilities. The same source document may need both formats. EquitableDocs treats every format as equally essential.
+            </div>
+          </li>
+          <li>
+            <span class="principle-marker" aria-hidden="true">&mdash;</span>
+            <div>
+              <strong>Automation with human accountability.</strong> AI-powered remediation handles the bulk of structural processing, but every document passes through expert human review before reaching the person who requested it. Automated tools cannot yet judge whether alt-text meaningfully conveys a diagram&rsquo;s purpose, or whether an Easy Read version preserves the original&rsquo;s essential meaning. Human expertise ensures quality that technology alone cannot guarantee.
+            </div>
+          </li>
+          <li>
+            <span class="principle-marker" aria-hidden="true">&mdash;</span>
+            <div>
+              <strong>Open-source, open-access.</strong> Our remediation pipeline is built on open-source tools &mdash; Tesseract, OCRmyPDF, veraPDF, PDFix SDK &mdash; and our code is developed transparently. Knowledge about document accessibility and Easy Read conversion should not be locked behind paywalls or restricted to the Global North.
+            </div>
+          </li>
+          <li>
+            <span class="principle-marker" aria-hidden="true">&mdash;</span>
+            <div>
+              <strong>Free for persons with disabilities. Always.</strong> Commercial document remediation costs USD 3&ndash;4 per page. Professional Easy Read conversion costs even more. For persons with disabilities in the Global South, these costs mean inaccessible education, inaccessible public services, and inaccessible civic participation. EquitableDocs will never charge persons with disabilities for document remediation or Easy Read conversion services.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- LANGUAGES -->
+    <section class="languages" id="languages" aria-labelledby="languages-heading">
+      <div class="container">
+        <h2 id="languages-heading">Languages and Formats We Support</h2>
+        <p>EquitableDocs processes documents in over 100 languages across the Global South, using specialised OCR models trained for each script family. We produce screen reader accessible formats validated against international standards, and Easy Read versions that make complex information understandable for persons with learning disabilities and intellectual disabilities.</p>
+        <div class="language-grid">
+          <div class="language-region">
+            <h3>India &mdash; North</h3>
+            <p>Hindi, Urdu, Punjabi, Gujarati, Marathi</p>
+          </div>
+          <div class="language-region">
+            <h3>India &mdash; South</h3>
+            <p>Tamil, Telugu, Kannada, Malayalam</p>
+          </div>
+          <div class="language-region">
+            <h3>India &mdash; East</h3>
+            <p>Bengali, Assamese, Odia</p>
+          </div>
+          <div class="language-region">
+            <h3>South Asia</h3>
+            <p>Sinhala, Nepali, Dzongkha</p>
+          </div>
+          <div class="language-region">
+            <h3>Southeast Asia</h3>
+            <p>Thai, Khmer, Lao, Burmese</p>
+          </div>
+          <div class="language-region">
+            <h3>East Africa</h3>
+            <p>Swahili, Amharic, Tigrinya</p>
+          </div>
+          <div class="language-region">
+            <h3>West Africa</h3>
+            <p>Hausa, Yoruba, Igbo</p>
+          </div>
+          <div class="language-region">
+            <h3>MENA</h3>
+            <p>Arabic, Persian, Kurdish</p>
+          </div>
+          <div class="language-region">
+            <h3>STEM Content</h3>
+            <p>Mathematical equations, LaTeX, MathML</p>
+          </div>
+          <div class="language-region">
+            <h3>Easy Read</h3>
+            <p>Simplified language versions with supporting images, available in all supported languages</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" aria-hidden="true">
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading">Get in Touch</h2>
+        <p>Whether you are a person with a disability who needs a document made accessible or converted to Easy Read, a self-advocate, a Disabled People&rsquo;s Organisation, an institution interested in partnering with the Document Equity initiative, or a developer who wants to contribute &mdash; we would like to hear from you.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Reach Us Directly</h3>
+            <p>Email: <a href="mailto:deepa@equitabledocs.org" class="contact-email">deepa@equitabledocs.org</a></p>
+            <p>For persons with disabilities: Send us your document and tell us what format you need &mdash; screen reader accessible, Easy Read, or both. We will process it at no cost.</p>
+            <p>For Disabled People&rsquo;s Organisations and support services: We welcome partnerships to reach persons with disabilities who need accessible information but do not know where to find it.</p>
+            <p>For institutions and funders: We welcome collaborations that advance document equity across the Global South. Reach out to discuss partnership with the Document Equity initiative.</p>
+            <p>For developers and accessibility specialists: EquitableDocs is built on open-source tools and we welcome contributors. Our code lives on <a href="https://github.com/equitabledocs">GitHub</a>.</p>
+          </div>
+          <div>
+            <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST" aria-label="Contact form">
+              <div class="field">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="subject">I am a&hellip;</label>
+                <input type="text" id="subject" name="subject" placeholder="Person with a disability, DPO, Institution, Developer, Funder" autocomplete="off">
+              </div>
+              <div class="field">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        EquitableDocs
+        <span>A Document Equity Initiative</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#principles">Principles</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer-legal">
+        &copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of The EquitableAccess Suite.
+        Built with the &ldquo;Nothing About Us Without Us&rdquo; principle at its foundation.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
