@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EquitableDocs is a Document Equity initiative making academic documents accessible for students with disabilities across India and beyond. Learn about our mission and the accessibility gap in higher education.">
+<title>About — EquitableDocs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── About page-specific styles ── */
+.about-hero .hero-in { max-width:720px; text-align:center; }
+.about-hero .hero-sub { margin-left:auto; margin-right:auto; }
+.about-hero .hero-actions { justify-content:center; }
+
+.story-sec { background:#fff; }
+.story-layout { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+@media(max-width:760px){ .story-layout { grid-template-columns:1fr; gap:2.5rem; } }
+.story-text p { font-size:.95rem; color:var(--ink-mid); line-height:1.8; margin-bottom:1.25rem; }
+.story-text p:last-child { margin-bottom:0; }
+
+.story-sidebar { background:var(--cream-2); border-radius:18px; padding:2.5rem; }
+.story-sidebar h3 { font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--ink); margin-bottom:1.25rem; }
+.story-stat { margin-bottom:1.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
+.story-stat:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+.story-stat-num { font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--teal); display:block; margin-bottom:.2rem; }
+.story-stat-label { font-size:.85rem; color:var(--ink-muted); line-height:1.5; }
+
+.values-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
+.value-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; border-left:4px solid var(--teal); }
+.value-card h3 { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.value-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; }
+
+.cta-banner { background:var(--teal-deep); padding:4rem 1.5rem; text-align:center; }
+.cta-banner h2 { font-family:var(--serif); font-size:clamp(1.4rem,3vw,2rem); color:#fff; margin-bottom:1rem; }
+.cta-banner p { font-size:1rem; color:rgba(255,255,255,.7); max-width:520px; margin:0 auto 2rem; line-height:1.7; }
+.cta-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip">Skip to main content</a>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="universities.html">Universities</a></li>
+      <li><a href="guild.html">Join Guild</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="upload.html" class="nav-cta">Upload Document</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ══ HERO ══ -->
+<section class="hero about-hero" aria-labelledby="hero-h">
+  <div class="hero-in">
+    <span class="hero-eyebrow">About EquitableDocs</span>
+    <h1 id="hero-h">Nothing about us without us.</h1>
+    <p class="hero-sub">EquitableDocs exists because millions of students with disabilities cannot access the documents their education depends on. We are building the infrastructure to change that — openly, transparently, and at no cost to the students who need it.</p>
+    <div class="hero-actions">
+      <a href="universities.html" class="btn-white">Partner with us</a>
+      <a href="guild.html" class="btn-outline-w">Join the Guild</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE STORY ══ -->
+<section class="sec story-sec" aria-labelledby="story-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">The story</span>
+    <h2 class="sec-title" id="story-h">Why Document Equity matters</h2>
+
+    <div class="story-layout">
+      <div class="story-text">
+        <p>In Indian higher education, over 93% of PDFs fail basic accessibility checks. This means a blind student using a screen reader hears silence. A student with dyslexia cannot use text-to-speech. A student with a motor disability cannot navigate the document with a keyboard.</p>
+        <p>The problem is not technology. Tools exist to make documents accessible. The problem is that these tools are expensive, the expertise is scarce, and institutions do not have the infrastructure to use them at scale.</p>
+        <p>EquitableDocs addresses this by building two things: a free, automated pipeline that students can use directly, and a capacity-building programme that helps universities become self-sufficient in accessible document production within 12 to 18 months.</p>
+        <p>We are not a commercial remediation company. We do not charge students. We do not take a profit margin on university partnerships. Every cost is published openly on our transparency page. Our model is: capacity, not dependency.</p>
+        <p>The Remediation Guild gives document accessibility practitioners a structured career pathway with real credentials, professional standing, and a path to paid work. Guild Members are not volunteers in the casual sense. They are professionals building expertise in a growing field.</p>
+      </div>
+      <aside class="story-sidebar" aria-label="The accessibility gap in numbers">
+        <h3>The accessibility gap</h3>
+        <div class="story-stat">
+          <span class="story-stat-num">93%</span>
+          <span class="story-stat-label">Of PDFs in Indian higher education fail basic accessibility checks</span>
+        </div>
+        <div class="story-stat">
+          <span class="story-stat-num">2.68 Cr</span>
+          <span class="story-stat-label">People in India live with a disability (Census 2011 — the real number is higher)</span>
+        </div>
+        <div class="story-stat">
+          <span class="story-stat-num">Rs 150/page</span>
+          <span class="story-stat-label">What commercial remediators charge. Rs 12 reaches the person doing the work.</span>
+        </div>
+        <div class="story-stat">
+          <span class="story-stat-num">0</span>
+          <span class="story-stat-label">Indian universities with a systematic document accessibility pipeline</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OUR VALUES ══ -->
+<section class="sec" style="background:var(--cream-2);" aria-labelledby="values-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Our values</span>
+    <h2 class="sec-title" id="values-h">What guides every decision we make</h2>
+    <p class="sec-lead">These are not aspirations. They are constraints. Every feature, every page, every partnership is tested against them.</p>
+
+    <div class="values-grid" role="list">
+      <article class="value-card" role="listitem">
+        <h3>Capacity, not dependency</h3>
+        <p>We train university staff to run the pipeline independently. Our success is measured by how quickly we become unnecessary.</p>
+      </article>
+      <article class="value-card" role="listitem">
+        <h3>Nothing about us without us</h3>
+        <p>The disability community leads design decisions. Every feature is tested with the people who will use it. Accessibility is not an afterthought.</p>
+      </article>
+      <article class="value-card" role="listitem">
+        <h3>Radical transparency</h3>
+        <p>Every cost is published. Every process is documented. Universities see exactly what their money pays for. There is no hidden margin.</p>
+      </article>
+      <article class="value-card" role="listitem">
+        <h3>Professional standing for practitioners</h3>
+        <p>Guild Members are professionals, not casual volunteers. Their work earns credentials, builds a career, and leads to paid opportunities.</p>
+      </article>
+      <article class="value-card" role="listitem">
+        <h3>Free for students. Always.</h3>
+        <p>Students with disabilities never pay. University partnerships fund the infrastructure. This is non-negotiable.</p>
+      </article>
+      <article class="value-card" role="listitem">
+        <h3>Accessibility is the product</h3>
+        <p>The EquitableDocs website itself meets WCAG 2.1 AA and W3C COGA guidelines. If our own platform is not accessible, we have no right to offer accessibility services.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT DEEPA ══ -->
+<section class="sec" aria-labelledby="founder-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">The founder</span>
+    <h2 class="sec-title" id="founder-h">Deepa Palaniappan</h2>
+    <div class="story-layout">
+      <div class="story-text">
+        <p>Deepa Palaniappan founded EquitableDocs after years of working in accessibility and seeing the same pattern repeat: institutions wanted to do the right thing but lacked the tools, the training, and the infrastructure to make it happen at scale.</p>
+        <p>EquitableDocs is her answer to that gap: an open, transparent, mission-driven initiative that builds capacity where it is needed most — inside the institutions themselves — and gives document accessibility practitioners the professional recognition their work deserves.</p>
+      </div>
+      <div>
+        <!-- Contact info -->
+        <div class="story-sidebar">
+          <h3>Get in touch</h3>
+          <div class="story-stat">
+            <span class="story-stat-label">Email: <a href="mailto:deepa@equitabledocs.org" style="color:var(--teal);">deepa@equitabledocs.org</a></span>
+          </div>
+          <div class="story-stat">
+            <span class="story-stat-label">Website: <a href="https://equitabledocs.org" style="color:var(--teal);">equitabledocs.org</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BANNER ══ -->
+<section class="cta-banner" aria-labelledby="cta-h">
+  <h2 id="cta-h">Ready to make a difference?</h2>
+  <p>Whether you are a student who needs an accessible document, a university looking to build capacity, or a professional who wants to join the Guild — there is a place for you here.</p>
+  <div class="cta-actions">
+    <a href="upload.html" class="btn-white">Upload a document</a>
+    <a href="universities.html" class="btn-outline-w">University partnerships</a>
+    <a href="guild.html" class="btn-outline-w">Join the Guild</a>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">EquitableDocs</p>
+        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="upload.html">Upload document</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Universities</h3>
+          <ul>
+            <li><a href="universities.html#apply">Apply to partner</a></li>
+            <li><a href="universities.html#pipeline">How it works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="guild.html">Join the Guild</a></li>
+            <li><a href="training.html">Training pathways</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
+      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+})();
+</script>
+</body>
+</html>

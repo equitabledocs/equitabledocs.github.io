@@ -1,0 +1,5 @@
+# Project internals — not part of the public site
+.claude/
+CLAUDE.md
+*.docx
+~$*

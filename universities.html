@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EquitableDocs partners with universities to build in-house accessible document capacity using a dual-pipeline architecture — PDFix SDK for standard documents, ASU/Ohio State open-source pipeline for STEM. Capacity-building, not dependency.">
+<title>For Universities — EquitableDocs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="universities.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip">Skip to main content</a>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="universities.html" aria-current="page">Universities</a></li>
+      <li><a href="guild.html">Join Guild</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upload.html" class="nav-cta">Upload Document</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-in hero-grid">
+    <div>
+      <span class="hero-eyebrow">For universities and colleges</span>
+      <h1 id="hero-h">Build accessible document capacity at your institution — <em>then own it completely.</em></h1>
+      <p class="hero-sub">EquitableDocs gives universities a dual-pipeline architecture: PDFix SDK for standard documents, the ASU/Ohio State open-source pipeline for STEM content. We install it inside your infrastructure, train your staff to run it, and hand it over. Our goal is to make ourselves unnecessary.</p>
+      <div class="hero-actions">
+        <a href="#apply" class="btn-white">Request support for your institution</a>
+        <a href="#pipeline" class="btn-outline-w">See the two pipelines</a>
+      </div>
+    </div>
+    <div class="hero-cards" aria-label="Key statistics about document inaccessibility">
+      <div class="hero-card accent">
+        <span class="hero-card-num">1 in 5</span>
+        <span class="hero-card-label">Students has a print disability that affects how they read documents</span>
+      </div>
+      <div class="hero-card">
+        <span class="hero-card-num">93%</span>
+        <span class="hero-card-label">Of PDFs in Indian higher education fail basic accessibility checks</span>
+      </div>
+      <div class="hero-card">
+        <span class="hero-card-num">No profit</span>
+        <span class="hero-card-label">We are a mission-driven initiative. Costs passed on are actual, verifiable, and published.</span>
+      </div>
+      <div class="hero-card">
+        <span class="hero-card-num">12–18 mo.</span>
+        <span class="hero-card-label">To full in-house capability — your staff running the pipeline independently</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO BENEFITS ══════════════════════════════════════════════════════ -->
+<section class="sec" aria-labelledby="students-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Who benefits</span>
+    <h2 class="sec-title" id="students-h">Which students need accessible documents — and why it matters</h2>
+    <p class="sec-lead">Document inaccessibility is not a rare edge case. It affects a wide group of students who are rarely counted in institutional audits — because most have learned to manage quietly, or have simply stopped trying to access certain materials.</p>
+
+    <div class="students-grid" role="list">
+
+      <article class="student-card" aria-labelledby="s1" role="listitem">
+        <span class="student-icon" aria-hidden="true">👁️</span>
+        <h3 class="student-name" id="s1">Students who are blind or have low vision</h3>
+        <p class="student-desc">Screen readers such as NVDA and JAWS can only read a PDF that has been properly tagged — with headings, paragraphs, figures with alt text, and tables with headers. An untagged PDF produces silence or random noise. Students using screen magnification software face a different problem: a scanned PDF is just an image, and image content cannot be enlarged as readable text, reflowed, or read aloud. Both groups are entirely dependent on how a document was prepared.</p>
+        <span class="student-stat">Combined, the largest print disability group in Indian higher education</span>
+      </article>
+
+      <article class="student-card" aria-labelledby="s2" role="listitem">
+        <span class="student-icon" aria-hidden="true">📖</span>
+        <h3 class="student-name" id="s2">Students with specific learning disabilities</h3>
+        <p class="student-desc">Students with dyslexia rely on text-to-speech tools, font substitutions, and reading overlays. These tools only work when the underlying text is properly encoded and the reading order is correct. In multi-column academic layouts — common in Indian textbooks and research papers — incorrect reading order causes text-to-speech tools to read content out of sequence. Students with ADHD benefit from clear heading structures and bookmarks, which allow them to navigate directly to the section they need rather than scrolling through entire documents.</p>
+        <span class="student-stat">1 in 10 students has dyslexia. 5–7% of university-age students have ADHD.</span>
+      </article>
+
+      <article class="student-card" aria-labelledby="s3" role="listitem">
+        <span class="student-icon" aria-hidden="true">🤝</span>
+        <h3 class="student-name" id="s3">Students with motor and physical disabilities</h3>
+        <p class="student-desc">Students who cannot hold a physical textbook, or who use switch access, eye-gaze technology, or voice control, depend entirely on digital documents that are keyboard navigable and properly structured. A PDF without correct tab order effectively requires a mouse to use — which these students may not be able to operate. Accessible documents are not an accommodation for this group: they are the only viable format.</p>
+        <span class="student-stat">Often underreported in institutional disability statistics</span>
+      </article>
+
+      <article class="student-card" aria-labelledby="s4" role="listitem">
+        <span class="student-icon" aria-hidden="true">🧠</span>
+        <h3 class="student-name" id="s4">Neurodivergent students broadly</h3>
+        <p class="student-desc">Consistent heading structures, clear language, predictable document layouts, and logical reading order benefit a wide group of students — including those with autism, acquired brain injuries, processing disorders, and age-related cognitive changes. These students rarely identify themselves in formal disability registers, but they make up a significant proportion of the student population. Good document structure is good design for everyone. For this group, it is often the difference between engaging with course material independently or not.</p>
+        <span class="student-stat">15–20% of students identify as neurodivergent in some form</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE MYTH ══════════════════════════════════════════════════════════ -->
+<section class="sec myth-sec" aria-labelledby="myth-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">The common misunderstanding</span>
+    <h2 class="sec-title" id="myth-h">"We have a scanner and a braille printer."</h2>
+    <p class="sec-lead" style="color:rgba(255,255,255,.7)">This is the most common response when we ask universities about their document accessibility provision. It is also, unfortunately, not a solution — and it may be creating a false sense of coverage that leaves most students without support.</p>
+    <div class="myth-grid">
+      <div class="myth-card wrong" role="region" aria-label="What does not work">
+        <p class="myth-card-tag">
+          <span aria-hidden="true">✕</span> What doesn't work
+        </p>
+        <h3>The scanner-and-printer approach</h3>
+        <ul role="list">
+          <li>Scanning a physical textbook produces an image-only PDF. Screen readers cannot read images. The student receives a file they still cannot access.</li>
+          <li>Braille printers serve students who read braille — a small subset of the blind population. They do not serve low vision, dyslexic, ADHD, or motor-impaired students.</li>
+          <li>One staff member with Acrobat Pro "checking" documents cannot scale to a department's full document load — especially STEM content with equations and tables.</li>
+          <li>Ad-hoc, request-based systems mean a student must already know to ask, know who to ask, wait for a response, and receive something usable. Most students give up.</li>
+          <li>No institutional memory. When the staff member leaves, the process leaves with them.</li>
+        </ul>
+      </div>
+      <div class="myth-card right" role="region" aria-label="What actually works">
+        <p class="myth-card-tag">
+          <span aria-hidden="true">✓</span> What actually works
+        </p>
+        <h3>A systematic, pipeline-based approach</h3>
+        <ul role="list">
+          <li>Documents are remediated before students need them — not after a request. Proactive accessibility is the standard at leading universities worldwide.</li>
+          <li>Automated tagging tools (PDFix SDK for standard docs; the ASU/Ohio State pipeline for STEM) handle structure at volume — freeing human reviewers for complex decisions.</li>
+          <li>Trained volunteers and staff handle what automation cannot: alt text for figures, equation descriptions for STEM content, complex table markup.</li>
+          <li>Validated output — every document runs through veraPDF and PAC checks before delivery. A compliance certificate travels with the document.</li>
+          <li>Institutional knowledge is encoded in format templates and training, not in one person's head. Staff can change; the system remains.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GLOBAL EVIDENCE & PIPELINE PARTNERS ══════════════════════════════ -->
+<section class="sec models-sec" aria-labelledby="models-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Global evidence &amp; pipeline partners</span>
+    <h2 class="sec-title" id="models-h">What the world has built — and where EquitableDocs fits</h2>
+    <div class="models-intro">
+      <p class="sec-lead">Universities in North America, the UK, Australia, and Africa have been building systematic accessible document operations for over a decade. Their approaches share a consistent finding: accessibility works when it is built into institutional processes, not handled case by case. Two of these institutions are not just models — their open-source pipeline is the actual engine behind EquitableDocs Pipeline B.</p>
+    </div>
+    <div class="models-grid" role="list">
+
+      <article class="model-card partner-card" aria-labelledby="m3" role="listitem">
+        <span class="partner-badge" aria-label="Pipeline B Partner">⚡ Pipeline B Partner</span>
+        <p class="model-uni partner-uni">Arizona State University + Ohio State University</p>
+        <h3 id="m3">The pipeline that powers EquitableDocs institutional STEM remediation</h3>
+        <p>ASU's accessibility team, in collaboration with Ohio State University, built an open-source pipeline for high-volume STEM document remediation — automated tagging via the Adobe Auto-Tag API, alt-text generation via Amazon Bedrock LLM, and orchestration via AWS Step Functions. Their solution has been adopted by multiple US institutions and is designed for documents that standard auto-taggers cannot handle: equations, lab manuals, research papers, complex data tables.</p>
+        <p>This is not just a model for EquitableDocs to emulate. The ASU/Ohio State open-source pipeline is the actual engine behind Pipeline B — the institutional STEM track that processes high-complexity and bulk university batches through EquitableDocs.</p>
+        <p class="model-lesson partner-lesson">Pipeline B: Every STEM document submitted through the EquitableDocs institutional track passes through this pipeline. When your institution onboards, this is what we set up for your STEM content.</p>
+      </article>
+
+      <article class="model-card" aria-labelledby="m1" role="listitem">
+        <p class="model-uni">Penn State University</p>
+        <h3 id="m1">The maker-centred approach</h3>
+        <p>Penn State's accessibility initiative trains the document creators — faculty and staff — rather than centralising remediation in one office. Their web accessibility guidelines and document standards training mean accessibility is embedded in how content is made, not patched afterwards.</p>
+        <p class="model-lesson">Lesson for Indian universities: Train the people making the documents, not just the people fixing them. Faculty who know how to export accessible PDFs from InDesign or Word eliminate the remediation problem at source.</p>
+      </article>
+
+      <article class="model-card" aria-labelledby="m2" role="listitem">
+        <p class="model-uni">University of Washington — DO-IT</p>
+        <h3 id="m2">The proactive accessibility model</h3>
+        <p>UW's DO-IT centre pioneered the idea that accessibility should be designed in from the start — not retrofitted. Their electronic document accessibility programme produces guides, trains staff, and partners with IT to ensure all new content meets accessibility standards before publication.</p>
+        <p class="model-lesson">Lesson: Build the standard into procurement and publication workflows. Every new course pack should have an accessibility checkpoint before it reaches students.</p>
+      </article>
+
+      <article class="model-card" aria-labelledby="m4" role="listitem">
+        <p class="model-uni">Harvard University</p>
+        <h3 id="m4">The central resource model</h3>
+        <p>Harvard's IT Accessibility office provides institution-wide guidance, training, and document templates. Critically, they publish their standards openly — any faculty member can access the guidance without going through a helpdesk. They also run a remediation service for complex documents that departments cannot handle internally.</p>
+        <p class="model-lesson">Lesson: A central accessible template library removes the most common barrier — faculty who want to do the right thing but do not know how.</p>
+      </article>
+
+      <article class="model-card" aria-labelledby="m5" role="listitem">
+        <p class="model-uni">JISC — United Kingdom</p>
+        <h3 id="m5">The sector-wide shared infrastructure model</h3>
+        <p>JISC developed accessibility guidance and toolkits that universities adopt as baseline standards rather than each institution building from scratch. Their TechDis service provided accessible document production resources to institutions that lacked the staff to develop expertise independently — a model of shared infrastructure across a sector.</p>
+        <p class="model-lesson">Lesson: When individual institutions cannot build full capacity, shared standards and shared tools reduce the burden on each one. EquitableDocs plays this role for India — providing the pipeline, the templates, and the training that institutions can then run themselves.</p>
+      </article>
+
+      <article class="model-card" aria-labelledby="m6" role="listitem">
+        <p class="model-uni">Building on global practice</p>
+        <h3 id="m6">What global evidence teaches — and what India requires in addition</h3>
+        <p>Accessible document systems have been built across many contexts. The core logic is consistent everywhere: accessibility works when it is built into institutional processes, not handled case by case.</p>
+        <p>Indian universities share that core challenge, and also face additional ones: documents in multiple scripts and languages, large volumes of scanned regional language textbooks, government exam papers with time-sensitive access needs, and staff capacity constraints that make large centralised accessibility units impractical.</p>
+        <p class="model-lesson">EquitableDocs is built on global best practice and grounded in Indian reality. We are not importing a model — we are developing one that belongs here.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ PIPELINE ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="pipeline" aria-labelledby="pipeline-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">The process</span>
+    <h2 class="sec-title" id="pipeline-h">Two pipelines — one for every document type</h2>
+    <p class="sec-lead">Every document is routed to the right pipeline at intake. Standard documents go through Pipeline A — built on PDFix SDK, running inside your own infrastructure. STEM content and high-volume institutional batches go through Pipeline B — the ASU/Ohio State open-source engine on AWS. Both pipelines share the same OCR layer, the same Guild review network, and the same veraPDF validation output.</p>
+
+    <!-- Pipeline routing cards -->
+    <div class="pipeline-routes" aria-label="Document routing: two pipelines">
+      <div class="pipeline-route-card route-a">
+        <span class="route-badge route-badge-a">Pipeline A</span>
+        <h3>Standard documents</h3>
+        <p>Notes, textbooks, forms, letters, reading lists, government documents, scanned PDFs. Automated tagging running inside your university's own infrastructure.</p>
+        <div class="route-tools">
+          <span class="route-tool">PDFix SDK</span>
+          <span class="route-tool">Batch action configs</span>
+          <span class="route-tool">Document Format Templates</span>
+          <span class="route-tool">veraPDF</span>
+        </div>
+      </div>
+      <div class="pipeline-route-card route-b">
+        <span class="route-badge route-badge-b">Pipeline B</span>
+        <h3>STEM content &amp; institutional bulk batches</h3>
+        <p>Textbooks with equations, lab manuals, research papers, complex data tables. High-volume university batches. Runs on AWS infrastructure funded by institutional partnership fees.</p>
+        <div class="route-tools">
+          <span class="route-tool">ASU/Ohio State open-source pipeline</span>
+          <span class="route-tool">Adobe Auto-Tag API</span>
+          <span class="route-tool">Amazon Bedrock</span>
+          <span class="route-tool">Mathpix</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-intro">
+      <div class="pipeline-steps" aria-label="End-to-end accessible document pipeline">
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">1</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Document intake and classification</p>
+            <p class="pipe-desc">Every incoming document is assessed for type, language, complexity, and STEM content. This determines which pipeline it follows — Pipeline A for standard documents, Pipeline B for STEM and institutional bulk batches. Scanned documents go to OCR first.</p>
+            <div class="pipe-tools"><span class="pipe-tool">FastAPI worker</span><span class="pipe-tool">Claude API classifier</span><span class="pipe-tool">Both pipelines</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">2</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">OCR pre-processing for scanned documents</p>
+            <p class="pipe-desc">Scanned PDFs are run through Tesseract with language-specific models — covering all Indic scripts, Arabic, Amharic, Swahili, and 100+ languages. This converts image-only PDFs into searchable text before any accessibility work begins. PaddleOCR provides a fallback for complex, multi-column, or mixed-script layouts.</p>
+            <div class="pipe-tools"><span class="pipe-tool">OCRmyPDF</span><span class="pipe-tool">Tesseract 5</span><span class="pipe-tool">PaddleOCR</span><span class="pipe-tool">Both pipelines</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">3</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Automated structure tagging</p>
+            <p class="pipe-desc">Automated tagging analyses the document layout and applies accessibility tags — headings, paragraphs, lists, figures, tables, reading order. Document Format Templates built for your institution's specific recurring formats dramatically improve accuracy at this stage.</p>
+            <div class="pipe-fork-note" aria-label="Pipeline routing at tagging stage">
+              <span class="pipe-fork-lane lane-a"><strong>Pipeline A →</strong> PDFix SDK. Batch action configs. Document Format Templates built for your institution's document families. Runs inside your own infrastructure.</span>
+              <span class="pipe-fork-lane lane-b"><strong>Pipeline B →</strong> Adobe Auto-Tag API (ASU/Ohio State pipeline). Amazon Bedrock for alt-text generation on complex figures. Runs on AWS.</span>
+            </div>
+            <div class="pipe-tools" style="margin-top:.65rem">
+              <span class="pipe-tool">PDFix SDK</span>
+              <span class="pipe-tool">Document Format Templates</span>
+              <span class="pipe-tool pipe-tool-b">Adobe Auto-Tag API</span>
+              <span class="pipe-tool pipe-tool-b">Amazon Bedrock</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">4</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Equation extraction (STEM documents)</p>
+            <p class="pipe-desc">Mathematical equations are extracted using Mathpix Enterprise API, which converts them to LaTeX and MathML. MathML allows screen readers and braille displays to render equations mathematically — not just as "image" or silence. In Pipeline B, Amazon Bedrock Data Automation generates MathML for equations at scale.</p>
+            <div class="pipe-tools"><span class="pipe-tool">Mathpix API</span><span class="pipe-tool">MathML output</span><span class="pipe-tool">LaTeX source</span><span class="pipe-tool pipe-tool-b">Pipeline B (STEM only)</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">5</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Specialist human review — alt text, tables, equations</p>
+            <p class="pipe-desc">Trained specialists write alt text for figures, plain-language descriptions of equations, and table header markup. This is the layer automation cannot reliably provide. Work is split by type — an alt text specialist works in parallel with a table specialist — reducing turnaround time. Guild volunteers handle university-track documents alongside EquitableDocs senior remediators.</p>
+            <div class="pipe-tools"><span class="pipe-tool">Guild volunteers</span><span class="pipe-tool">Task-split workflow</span><span class="pipe-tool">Acrobat Pro</span><span class="pipe-tool">Both pipelines</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">6</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Quality assurance and validation</p>
+            <p class="pipe-desc">Every document runs through veraPDF — the industry-standard open-source PDF/UA validator — and PAC (PDF Accessibility Checker). A senior remediator reviews flagged issues and does a screen reader spot-test using NVDA before sign-off. PAC cross-validation provides additional compliance evidence for institutional reporting.</p>
+            <div class="pipe-tools"><span class="pipe-tool">veraPDF</span><span class="pipe-tool">PAC</span><span class="pipe-tool">NVDA screen reader</span><span class="pipe-tool">Both pipelines</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">7</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Delivery in your chosen format</p>
+            <p class="pipe-desc">Remediated documents are delivered as tagged PDF (PDF/UA compliant), accessible Word (.docx), or both — depending on your institution's needs and the student's assistive technology. A veraPDF compliance certificate is attached to every delivery. Documents are deleted from active storage 180 days after delivery.</p>
+            <div class="pipe-tools"><span class="pipe-tool">PDF/UA</span><span class="pipe-tool">Accessible DOCX</span><span class="pipe-tool">Compliance certificate</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-step">
+          <div class="pipe-num">
+            <div class="pipe-num-circle" aria-hidden="true">8</div>
+          </div>
+          <div class="pipe-content">
+            <p class="pipe-title">Institutional knowledge transfer</p>
+            <p class="pipe-desc">As we process your documents, we document every decision — what PDFix SDK batch configs were applied, what Document Format Templates were built, what manual corrections were made, how Pipeline B routes were configured. This becomes the training material for your own staff. The process does not live in our heads. It lives in your institution.</p>
+            <div class="pipe-tools"><span class="pipe-tool">Document Format Templates</span><span class="pipe-tool">Batch action configs</span><span class="pipe-tool">Staff training</span><span class="pipe-tool">In-house tool setup</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <aside class="pipeline-aside" aria-label="What this pipeline means for your institution">
+        <h3>What this means for your institution</h3>
+        <div class="aside-items">
+          <div class="aside-item">
+            <div class="aside-item-icon" aria-hidden="true">🔧</div>
+            <div>
+              <p class="aside-item-title">Pipeline A runs inside your walls</p>
+              <p class="aside-item-text">PDFix SDK is installed within your own infrastructure. Your IT team runs it. Your staff learn it. Nothing is locked inside EquitableDocs.</p>
+            </div>
+          </div>
+          <div class="aside-item">
+            <div class="aside-item-icon" aria-hidden="true">⚡</div>
+            <div>
+              <p class="aside-item-title">Pipeline B handles what standard tools cannot</p>
+              <p class="aside-item-text">The ASU/Ohio State open-source pipeline on AWS handles your STEM content — equations, complex layouts, high-volume batches. Funded by institutional partnership fees, not student fees.</p>
+            </div>
+          </div>
+          <div class="aside-item">
+            <div class="aside-item-icon" aria-hidden="true">👥</div>
+            <div>
+              <p class="aside-item-title">Your staff trained alongside ours</p>
+              <p class="aside-item-text">We do not train EquitableDocs staff and then train your staff separately. We train everyone at the same time — so the knowledge transfer is direct and immediate.</p>
+            </div>
+          </div>
+          <div class="aside-item">
+            <div class="aside-item-icon" aria-hidden="true">📐</div>
+            <div>
+              <p class="aside-item-title">Document Format Templates belong to you</p>
+              <p class="aside-item-text">During onboarding, we build Document Format Templates for your specific recurring document types. These templates belong to your institution and improve processing accuracy for every batch you run — permanently.</p>
+            </div>
+          </div>
+          <div class="aside-item">
+            <div class="aside-item-icon" aria-hidden="true">✅</div>
+            <div>
+              <p class="aside-item-title">Compliance certificates on every delivery</p>
+              <p class="aside-item-text">Every document comes with a veraPDF compliance report. If a student or regulator ever asks whether a document is accessible, you have proof — not just a promise.</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT WE OFFER ════════════════════════════════════════════════════ -->
+<section class="sec offer-sec" aria-labelledby="offer-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">What we offer</span>
+    <h2 class="sec-title" id="offer-h">What support looks like in practice</h2>
+    <p class="sec-lead">This is not a subscription or a service contract. It is practical, hands-on support for institutions that want to take accessible document production seriously — and build the skills to sustain it themselves.</p>
+    <div class="offer-grid" role="list">
+
+      <article class="offer-card highlight" role="listitem" aria-labelledby="o1">
+        <p class="offer-card-tag">Document remediation</p>
+        <h3 id="o1">Submit documents for remediation — at transparent cost, no profit</h3>
+        <p>Send us documents through the portal. We process them using the same dual-pipeline system we help you build internally — automated tagging, specialist human review, and veraPDF validation. We do not profit from this. Any cost we pass on is the direct, verifiable cost of running the process: server time, tooling licences, and volunteer hours. For institutions that cannot meet even these costs, tell us. We will find a way.</p>
+      </article>
+
+      <article class="offer-card" role="listitem" aria-labelledby="o2">
+        <p class="offer-card-tag">In-person or online</p>
+        <h3 id="o2">Training for your staff — at your campus or online</h3>
+        <p>We deliver structured training in PDF accessibility tools, PDFix SDK batch pipeline operations, Acrobat Pro remediation workflows, screen reader testing, and document design for accessibility. Sessions can be delivered on campus or online. We cover actual travel and accommodation costs in our transparent pricing — no surprise invoices.</p>
+      </article>
+
+      <article class="offer-card" role="listitem" aria-labelledby="o3">
+        <p class="offer-card-tag">Hands-on setup — Pipeline A</p>
+        <h3 id="o3">PDFix SDK installation and batch pipeline configuration inside your infrastructure</h3>
+        <p>We install and configure PDFix SDK within your institution's own infrastructure — on your servers, under your IT team's control. We build batch action JSON configurations for your recurring document types, train staff on the CLI and batch workflows, and set up manual correction and validation procedures. By the end of the engagement, your team runs Pipeline A without us.</p>
+      </article>
+
+      <article class="offer-card highlight-violet" role="listitem" aria-labelledby="o7">
+        <p class="offer-card-tag">Your institutional asset</p>
+        <h3 id="o7">Document Format Templates — built for your document families, owned by your institution</h3>
+        <p>Document Format Templates teach PDFix SDK exactly how your institution's specific document layouts work — where headings always appear, what footer zones look like, how multi-column content is structured. We build these during onboarding from your actual documents. These templates belong permanently to your institution and improve auto-tagging accuracy for every batch you run in future, without EquitableDocs involvement. They are a tangible, lasting deliverable from the partnership.</p>
+      </article>
+
+      <article class="offer-card" role="listitem" aria-labelledby="o4">
+        <p class="offer-card-tag">STEM capability — Pipeline B</p>
+        <h3 id="o4">Full STEM document pipeline — equations, MathML, high-volume batches</h3>
+        <p>STEM documents — textbooks with equations, lab manuals, research papers — are processed through Pipeline B: the ASU/Ohio State open-source pipeline running on AWS. This includes Mathpix equation extraction, MathML generation via Amazon Bedrock, and specialist human review of every equation description. Pipeline B is activated when your institution onboards and is funded by institutional partnership fees — not student fees. Volume target: 5,000–20,000 pages/month within 12 months of onboarding.</p>
+      </article>
+
+      <article class="offer-card" role="listitem" aria-labelledby="o5">
+        <p class="offer-card-tag">Community</p>
+        <h3 id="o5">Access to the Remediation Guild network</h3>
+        <p>Partner institutions gain access to the EquitableDocs Guild — a professional community of trained document remediators organised in five tiers from Guild Member through to Guild Trainer. Guild Trainers are available for structured training sessions at partner institutions. Strategic partners have first access to the placement pipeline when engaging Guild members for short-term or part-time work.</p>
+      </article>
+
+      <article class="offer-card" role="listitem" aria-labelledby="o6">
+        <p class="offer-card-tag">Long term</p>
+        <h3 id="o6">Annual accessibility audit included</h3>
+        <p>We audit 10 documents per year from your institution and provide a detailed accessibility health report. This gives you evidence for internal reporting, external compliance, and for tracking improvement over time. We also review your Document Format Templates annually and update batch configurations as your document formats evolve. No commercial provider includes this in their base offering.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CAPACITY NOT DEPENDENCY ══════════════════════════════════════════ -->
+<section class="sec capacity-sec" aria-labelledby="cap-h">
+  <div class="sec-in">
+    <div class="capacity-layout">
+      <div>
+        <span class="eyebrow" aria-hidden="true">Our philosophy</span>
+        <h2 class="sec-title" id="cap-h">We are here to build your capacity, not to create a dependency</h2>
+        <p style="font-size:1.02rem; color:var(--ink-mid); line-height:1.75; max-width:480px; margin-bottom:2.5rem; font-weight:300;">EquitableDocs is not primarily a remediation service. We are a capacity-building initiative. Our goal is to help your institution set up the tools — PDFix SDK for Pipeline A, the ASU/Ohio State pipeline for STEM — along with the processes and trained staff to run them independently. So that over time, you do not need to send documents to us at all.</p>
+        <div class="cap-timeline" aria-label="Timeline to institutional self-sufficiency">
+          <div class="cap-item">
+            <div class="cap-dot"><div class="cap-dot-inner"></div></div>
+            <p class="cap-month">Month 1–2</p>
+            <p class="cap-title">We remediate your documents and analyse your formats</p>
+            <p class="cap-desc">First batch processed. Document Format Templates built for your top 2–3 document families using PDFix SDK. Staff briefed on what accessible documents look like. MOU signed, scope defined.</p>
+          </div>
+          <div class="cap-item">
+            <div class="cap-dot"><div class="cap-dot-inner"></div></div>
+            <p class="cap-month">Month 3–6</p>
+            <p class="cap-title">PDFix SDK installed inside your infrastructure</p>
+            <p class="cap-desc">IT team learns to run Pipeline A. Designated staff join training on PDFix SDK batch action configurations, manual correction workflows, and veraPDF/PAC validation. Pilot batch of 50–100 documents processed together.</p>
+          </div>
+          <div class="cap-item">
+            <div class="cap-dot"><div class="cap-dot-inner"></div></div>
+            <p class="cap-month">Month 6–12</p>
+            <p class="cap-title">Your staff handle standard documents in-house</p>
+            <p class="cap-desc">Routine Pipeline A remediation runs internally. EquitableDocs handles STEM content via Pipeline B and provides QA support. Document Format Templates refined from real usage data. Volume growing toward 5,000 pages/month.</p>
+          </div>
+          <div class="cap-item">
+            <div class="cap-dot"><div class="cap-dot-inner"></div></div>
+            <p class="cap-month">Month 12–18</p>
+            <p class="cap-title">Full in-house capability</p>
+            <p class="cap-desc">Your institution produces accessible documents independently for most document types at 5,000–20,000 pages/month. EquitableDocs remains available for overflow, complex batches, and the annual audit. The pipeline — and the knowledge — belongs entirely to you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cap-quote-block">
+        <p class="quote-mark" aria-hidden="true">"</p>
+        <blockquote>The goal is not to make institutions permanently dependent on EquitableDocs. It is to train staff to run PDFix SDK internally, build and maintain their own Document Format Templates, perform manual corrections, and handle final revision for student-specific needs. Self-sufficiency within 12 to 18 months is the outcome we are working towards — not ongoing reliance on an external provider.</blockquote>
+        <cite>— Document Equity Initiative, EquitableDocs</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRAINING ECOSYSTEM ═══════════════════════════════════════════════ -->
+<section class="sec training-sec" id="training" aria-labelledby="training-h">
+  <div class="sec-in">
+
+    <div class="training-header">
+      <div class="training-header-text">
+        <span class="eyebrow" aria-hidden="true">Training ecosystem</span>
+        <h2 class="sec-title" id="training-h">A structured training programme in accessible document production</h2>
+        <p class="sec-lead" style="margin-bottom:1.5rem">These programmes are designed for the people who create, manage, and remediate documents inside universities — faculty, disability services staff, librarians, IT teams, and document coordinators. Each one covers a specific part of the accessible document production process, with practical skills that can be applied immediately.</p>
+        <p style="font-size:.95rem; color:var(--ink-muted); line-height:1.7; max-width:600px;">Each programme is available online or in-person at your campus. Registration links are designed to be forwarded — share them directly with colleagues, department heads, or your disability services team. There is no cost to attend except travel and accommodation for in-person sessions.</p>
+      </div>
+      <div class="training-header-aside">
+        <div class="training-stat-block">
+          <span class="training-stat-num">7</span>
+          <span class="training-stat-label">Training programmes</span>
+        </div>
+        <div class="training-stat-block">
+          <span class="training-stat-num">Online<br>&amp; in-person</span>
+          <span class="training-stat-label">Both formats available</span>
+        </div>
+        <div class="training-stat-block">
+          <span class="training-stat-num">Certificate</span>
+          <span class="training-stat-label">On completion of each programme</span>
+        </div>
+        <p class="training-aside-note">All programmes lead to an EquitableDocs completion certificate. Senior levels qualify for IAAP CPABE study credit and AMTZ certification pathway.</p>
+      </div>
+    </div>
+
+    <div class="training-grid" role="list">
+
+      <!-- T1 -->
+      <article class="training-card" aria-labelledby="t1-name" role="listitem">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-foundation">Foundation</span>
+            <span class="training-duration">Half day · 4 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t1-name">PDF Accessibility Essentials</h3>
+          <p class="training-card-desc">What makes a document accessible or inaccessible. How screen readers, magnification tools, and text-to-speech work with PDFs. What PDF/UA means and why it matters. How to do a basic accessibility check using free tools. This programme builds the foundational understanding every staff member needs before any specialist training.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            Faculty, administrative staff, librarians, disability services officers — anyone who creates or manages documents
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Explain what makes a PDF inaccessible and why standard scanned documents do not work</li>
+              <li>Run a basic accessibility check in Adobe Acrobat and read the results</li>
+              <li>Identify which documents in your institution most urgently need remediation</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t1" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t1-register', this)" aria-label="Copy shareable registration link for PDF Accessibility Essentials">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- T2 -->
+      <article class="training-card" aria-labelledby="t2-name" role="listitem">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-foundation">Foundation</span>
+            <span class="training-duration">Full day · 6 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t2-name">Creating Accessible Documents from Source</h3>
+          <p class="training-card-desc">The most efficient approach to accessible documents is making them accessible before they are exported as PDFs — in InDesign, Word, or PowerPoint. This programme trains the people who create course materials, official documents, and communication materials to build accessibility in from the start, so remediation is either minimal or unnecessary.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            Faculty preparing course packs, publication staff, communication teams, anyone using InDesign or Word to create documents
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Apply proper heading structures, reading order, and alt text in Word and InDesign</li>
+              <li>Export PDFs from InDesign with accessibility tags that survive export</li>
+              <li>Use Word's built-in Accessibility Checker before creating a PDF</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t2" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t2-register', this)" aria-label="Copy shareable registration link for Creating Accessible Documents from Source">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- T3 -->
+      <article class="training-card" aria-labelledby="t3-name" role="listitem">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-intermediate">Intermediate</span>
+            <span class="training-duration">2 days · 12 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t3-name">PDF Remediation with Acrobat Pro</h3>
+          <p class="training-card-desc">Hands-on training in Adobe Acrobat Pro's accessibility tools — the Tags panel, Reading Order tool, Table Editor, and built-in Accessibility Checker. Participants work on real documents from their own institutions throughout the programme. By the end, they can independently remediate standard documents to PDF/UA compliance and validate output using PAC.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            Disability services staff, library staff, document coordinators — anyone who will be doing hands-on remediation work
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Remediate standard PDF documents to PDF/UA-1 compliance using Acrobat Pro</li>
+              <li>Fix the most common failures: untagged content, wrong reading order, missing alt text, flat table structure</li>
+              <li>Validate remediated documents using PAC and interpret the results</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t3" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t3-register', this)" aria-label="Copy shareable registration link for PDF Remediation with Acrobat Pro">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- T4 — PDFix SDK Pipeline Operations (NEW) -->
+      <article class="training-card" aria-labelledby="t4-name" role="listitem" style="border-top:3px solid var(--teal);">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-intermediate">Intermediate</span>
+            <span class="training-duration">2 days · 10 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t4-name">PDFix SDK Batch Pipeline Operations</h3>
+          <p class="training-card-desc">Hands-on training in operating Pipeline A — the PDFix SDK batch processing pipeline installed within your institution's infrastructure. Covers running the PDFix CLI, writing and debugging JSON batch action configurations for your specific document types, building and maintaining Document Format Templates using the visual template builder, interpreting batch output logs, and running veraPDF validation. All exercises use your own institution's documents. This is the core operations training for the staff member who will run the pipeline day-to-day.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            IT staff, document operations staff, disability services technical leads — the person who will run PDFix SDK in-house after EquitableDocs hands over
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Run PDFix SDK batch jobs from the command line using your institution's JSON configuration files</li>
+              <li>Build and update Document Format Templates for new document families as your document catalogue evolves</li>
+              <li>Diagnose and fix common batch processing failures, validate output with veraPDF, and maintain the pipeline without external support</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t4" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t4-register', this)" aria-label="Copy shareable registration link for PDFix SDK Batch Pipeline Operations">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- T5 — Institutional Pipeline Setup (updated) -->
+      <article class="training-card" aria-labelledby="t5-name" role="listitem">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-intermediate">Intermediate</span>
+            <span class="training-duration">2 days · 10 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t5-name">Setting Up an Institutional Accessible Document Unit</h3>
+          <p class="training-card-desc">How to design and run a systematic document accessibility operation inside a university — from intake and classification through automated tagging (Pipeline A and B), specialist review by Guild volunteers and in-house staff, validation, and delivery. Covers how to route documents correctly between pipelines, build a review workflow that scales, manage volunteer task assignments, and use impact metrics to report progress to institutional leadership.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            Disability services leads, library systems managers, IT leads — the person responsible for the institutional accessibility operation overall
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Design a complete intake-to-delivery accessible document workflow for your institution</li>
+              <li>Manage dual-pipeline routing: which documents go to Pipeline A (PDFix SDK) and which to Pipeline B (STEM/ASU)</li>
+              <li>Report on institutional document accessibility progress using veraPDF compliance data</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t5" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t5-register', this)" aria-label="Copy shareable registration link for Setting Up an Institutional Document Unit">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- T6 -->
+      <article class="training-card" aria-labelledby="t6-name" role="listitem">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-advanced">Advanced</span>
+            <span class="training-duration">2 days · 12 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t6-name">STEM Document Accessibility — Equations, Tables, and Complex Layouts</h3>
+          <p class="training-card-desc">STEM documents present the hardest accessibility challenges because automation handles only the structural layer. This programme covers the full STEM remediation process: equation extraction using Mathpix, MathML generation, writing plain-language equation descriptions that screen readers can meaningfully convey, handling complex table structures with multi-level headers, and working within the Pipeline B review workflow. Designed for institutions with significant STEM content who will be handling QA review of Pipeline B output.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            Staff and faculty working with mathematics, sciences, engineering, or economics content; anyone doing QA review of STEM Pipeline B documents
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Write plain-language alt text descriptions for mathematical equations that convey meaning to screen reader users</li>
+              <li>Mark up complex tables with multi-level headers using correct TH/TD scope attributes</li>
+              <li>Review and correct Pipeline B output: verify MathML accuracy, approve or return Bedrock-generated alt text, complete manual corrections</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t6" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t6-register', this)" aria-label="Copy shareable registration link for STEM Document Accessibility">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- T7 -->
+      <article class="training-card" aria-labelledby="t7-name" role="listitem">
+        <div class="training-card-top">
+          <div class="training-card-meta">
+            <span class="training-level level-advanced">Advanced</span>
+            <span class="training-duration">3 days · 18 hours</span>
+          </div>
+          <h3 class="training-card-name" id="t7-name">Training the Trainer — Become a Certified Document Accessibility Trainer</h3>
+          <p class="training-card-desc">For experienced practitioners who want to deliver accessibility training inside or outside their own institution. Covers instructional design for accessibility training, adapting content for technical and non-technical audiences, delivering both the foundational and PDFix SDK pipeline modules, and the Guild Trainer application pathway. Certified Trainers are listed on the EquitableDocs platform and can deliver paid training sessions through the Guild network.</p>
+          <div class="training-card-for">
+            <span class="training-for-label">For:</span>
+            Experienced practitioners who have completed at least two EquitableDocs programmes and want to train others — inside or outside their institution
+          </div>
+        </div>
+        <div class="training-card-bottom">
+          <div class="training-card-outcomes">
+            <p class="outcomes-label">After this training you will be able to:</p>
+            <ul>
+              <li>Design and deliver PDF accessibility training sessions for audiences with varying technical backgrounds</li>
+              <li>Earn the EquitableDocs Certified Trainer credential and be listed as a trainer on the platform</li>
+              <li>Deliver paid external training sessions through the Guild network with a transparent revenue-sharing model</li>
+            </ul>
+          </div>
+          <div class="training-card-actions">
+            <a href="https://forms.gle/placeholder-t7" class="training-apply-btn" target="_blank" rel="noopener">Register for this programme →</a>
+            <button class="training-share-btn" onclick="copyLink('https://equitabledocs.org/universities/#t7-register', this)" aria-label="Copy shareable registration link for Training the Trainer">Copy link to share</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Custom training enquiry -->
+    <div class="training-custom">
+      <div class="training-custom-text">
+        <h3>Need a custom programme for your institution?</h3>
+        <p>If your institution has specific document types, language requirements, or staff training needs that do not fit the above programmes — or if you need an intensive on-campus setup session combining PDFix SDK installation with staff training — we can design a custom engagement.</p>
+      </div>
+      <a href="#apply" class="training-custom-btn">Request a custom training →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ PRICING PHILOSOPHY ══════════════════════════════════════════════ -->
+<section class="pricing-strip" aria-labelledby="pricing-h">
+  <div class="pricing-strip-in">
+    <div>
+      <h2 id="pricing-h">On pricing</h2>
+    </div>
+    <div>
+      <p>EquitableDocs is a mission-driven initiative, not a commercial service. We do not take a profit margin. Any costs we pass on reflect only what it genuinely costs to run the process — server time, PDFix SDK and tooling licences, AWS costs for Pipeline B, volunteer hours, and platform overhead. We publish this methodology openly on our Transparency page. You can see exactly where every rupee goes.</p>
+      <p>Pipeline B (STEM/institutional) runs on AWS infrastructure. These costs are covered by institutional partnership fees — they are not charged to individual students or cross-subsidised from Pipeline A. The cost breakdown for Pipeline B is itemised separately in the letter of understanding.</p>
+      <p>The only additional costs to your institution are <strong>travel and accommodation</strong> when in-person sessions are held at your campus. These are listed in the letter of understanding before anything is agreed.</p>
+      <div class="pricing-pills" aria-label="Pricing commitments">
+        <span class="pricing-pill yes">✓ Actual cost only</span>
+        <span class="pricing-pill yes">✓ No profit margin</span>
+        <span class="pricing-pill yes">✓ Published cost methodology</span>
+        <span class="pricing-pill yes">✓ STEM pipeline included</span>
+        <span class="pricing-pill yes">✓ Transparent Pipeline B cost breakdown</span>
+        <span class="pricing-pill no">✕ No subscription fees</span>
+        <span class="pricing-pill no">✕ No per-seat licences</span>
+        <span class="pricing-pill no">✕ No hidden costs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ APPLICATION FORM ════════════════════════════════════════════════ -->
+<section class="sec form-sec" id="apply" aria-labelledby="form-h">
+  <div class="sec-in">
+    <div class="form-layout">
+
+      <div class="form-explainer">
+        <span class="eyebrow" aria-hidden="true">Get in touch</span>
+        <h2 id="form-h">Accessible content support for higher education institutions</h2>
+        <p>Tell us about your institution and what you need. There is no commitment involved at this stage. We will get back to you within 48 hours to talk through the options.</p>
+        <p>You can request any combination of the following:</p>
+        <ul class="form-options-list" role="list">
+          <li>
+            <div class="fol-dot" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>Document remediation</strong> — submit in batches via the portal, we process and return accessible PDFs or Word files at cost, no profit</div>
+          </li>
+          <li>
+            <div class="fol-dot" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>PDFix SDK pipeline setup (Pipeline A)</strong> — we install and configure PDFix SDK inside your infrastructure, build Document Format Templates for your document families, and train your team to run it independently</div>
+          </li>
+          <li>
+            <div class="fol-dot violet" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>STEM Pipeline B access</strong> — full 8-stage STEM remediation for equations, lab manuals, research papers, and high-volume institutional batches via the ASU/Ohio State open-source pipeline on AWS</div>
+          </li>
+          <li>
+            <div class="fol-dot" aria-hidden="true">
+              <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div><strong>Accessibility training</strong> — in-person at your campus or online, from foundations through PDFix SDK batch operations to STEM remediation</div>
+          </li>
+        </ul>
+        <span class="no-cost-badge" role="note">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1l1.5 4.5H13L9.5 8l1.5 4.5L7 10l-4 2.5L4.5 8 1 5.5h4.5L7 1z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          No additional costs except travel &amp; accommodation for in-person sessions at your campus
+        </span>
+      </div>
+
+      <div class="form-card">
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          aria-labelledby="form-h"
+          novalidate
+          onsubmit="handleSubmit(event)"
+        >
+          <input type="hidden" name="_subject" value="University Partnership Application — EquitableDocs">
+
+          <p class="form-section-title">About your institution</p>
+
+          <div class="form-two">
+            <div class="fg">
+              <label class="fg-label" for="inst">Institution name <span class="req" aria-label="required">*</span></label>
+              <input class="fg-input" type="text" id="inst" name="institution" autocomplete="organization" required placeholder="University or college name">
+            </div>
+            <div class="fg">
+              <label class="fg-label" for="country">Country <span class="req" aria-label="required">*</span></label>
+              <select class="fg-select" id="country" name="country" required>
+                <option value="" disabled selected>Select country</option>
+                <option>India</option><option>Bangladesh</option><option>Sri Lanka</option>
+                <option>Nepal</option><option>Kenya</option><option>Nigeria</option>
+                <option>Ghana</option><option>South Africa</option><option>Other</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label class="fg-label" for="cname">Your name <span class="req" aria-label="required">*</span></label>
+              <input class="fg-input" type="text" id="cname" name="contact_name" autocomplete="name" required placeholder="Full name">
+            </div>
+            <div class="fg">
+              <label class="fg-label" for="cemail">Email address <span class="req" aria-label="required">*</span></label>
+              <input class="fg-input" type="email" id="cemail" name="contact_email" autocomplete="email" required placeholder="you@institution.edu">
+            </div>
+          </div>
+
+          <div class="fg">
+            <label class="fg-label" for="role">Your role at the institution</label>
+            <input class="fg-input" type="text" id="role" name="role" placeholder="e.g. Disability Services Officer, Librarian, IT Manager, Faculty">
+          </div>
+
+          <hr class="divider">
+          <p class="form-section-title">What you are applying for</p>
+
+          <div class="choice-group" role="group" aria-labelledby="services-label">
+            <p class="choice-group-label" id="services-label">Select everything that applies</p>
+
+            <label class="choice-opt">
+              <input type="checkbox" name="services" value="remediation">
+              <div class="choice-opt-text">
+                <strong>Document remediation (at cost, no profit)</strong>
+                <p class="choice-opt-desc">Submit documents in batches. We process and return accessible files with veraPDF compliance certificates.</p>
+              </div>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="services" value="pipeline_a_setup">
+              <div class="choice-opt-text">
+                <strong>Pipeline A setup — PDFix SDK in-house installation</strong>
+                <p class="choice-opt-desc">We install PDFix SDK inside your infrastructure, build Document Format Templates for your document families, and train your team to run the pipeline independently.</p>
+              </div>
+            </label>
+            <label class="choice-opt violet-opt">
+              <input type="checkbox" name="services" value="pipeline_b_stem">
+              <div class="choice-opt-text">
+                <strong>Pipeline B — STEM document remediation (ASU/Ohio State pipeline)</strong>
+                <p class="choice-opt-desc">For STEM content: equations, lab manuals, research papers, high-volume institutional batches. Runs on AWS. Funded by institutional partnership fees.</p>
+              </div>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="services" value="training_online">
+              <div class="choice-opt-text">
+                <strong>Accessibility training — online</strong>
+                <p class="choice-opt-desc">Virtual sessions including foundations, PDFix SDK pipeline operations, Acrobat Pro, and STEM remediation.</p>
+              </div>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="services" value="training_inperson">
+              <div class="choice-opt-text">
+                <strong>Accessibility training — in-person at our campus</strong>
+                <p class="choice-opt-desc">On-campus workshops including hands-on PDFix SDK setup. Travel and accommodation costs listed transparently in advance.</p>
+              </div>
+            </label>
+          </div>
+
+          <hr class="divider">
+          <p class="form-section-title">Your documents</p>
+
+          <div class="fg">
+            <label class="fg-label">Primary document languages</label>
+            <input class="fg-input" type="text" id="langs" name="languages" placeholder="e.g. English, Hindi, Tamil, Bengali, Telugu">
+          </div>
+
+          <div class="fg">
+            <label class="fg-label" for="volume">Estimated monthly document volume</label>
+            <select class="fg-select" id="volume" name="monthly_volume">
+              <option value="" disabled selected>Select approximate volume</option>
+              <option>Under 500 pages / month</option>
+              <option>500–2,000 pages / month</option>
+              <option>2,000–5,000 pages / month</option>
+              <option>5,000–10,000 pages / month</option>
+              <option>10,000–20,000 pages / month</option>
+              <option>Over 20,000 pages / month</option>
+              <option>Not sure yet</option>
+            </select>
+            <p class="fg-hint">Partner institutions typically reach 5,000–20,000 pages/month within 12 months of onboarding.</p>
+          </div>
+
+          <div class="fg">
+            <label class="fg-label" for="stem-share">Approximate proportion of STEM content</label>
+            <select class="fg-select" id="stem-share" name="stem_proportion">
+              <option value="" disabled selected>Select approximate proportion</option>
+              <option>No STEM content</option>
+              <option>Under 20% STEM</option>
+              <option>20–50% STEM</option>
+              <option>Over 50% STEM</option>
+              <option>Primarily STEM (engineering, medicine, sciences)</option>
+            </select>
+            <p class="fg-hint">STEM content routes to Pipeline B. Knowing the proportion helps us plan the right infrastructure from the start.</p>
+          </div>
+
+          <div class="fg">
+            <p class="fg-label" id="output-label">Preferred output format</p>
+            <div class="format-chips" role="group" aria-labelledby="output-label">
+              <span class="format-chip">
+                <input type="radio" name="output_format" id="fmt-pdf" value="pdf">
+                <label for="fmt-pdf">Accessible PDF</label>
+              </span>
+              <span class="format-chip">
+                <input type="radio" name="output_format" id="fmt-word" value="word">
+                <label for="fmt-word">Accessible Word (.docx)</label>
+              </span>
+              <span class="format-chip">
+                <input type="radio" name="output_format" id="fmt-both" value="both" checked>
+                <label for="fmt-both">Both formats</label>
+              </span>
+            </div>
+          </div>
+
+          <hr class="divider">
+
+          <div class="fg">
+            <label class="fg-label" for="message">Anything else we should know?</label>
+            <textarea class="fg-textarea" id="message" name="message" placeholder="Tell us about your current accessibility setup, document types, specific STEM challenges, language requirements, or what you most want to achieve for your students."></textarea>
+            <p class="fg-hint">No commitment required. This begins a conversation — not a contract.</p>
+          </div>
+
+          <button type="submit" class="btn-submit">Send your request</button>
+          <p class="form-privacy" aria-live="polite" id="form-status">No commitment needed. We will respond within 48 hours. Your information is used only to follow up on this request.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════════════════ -->
+<section class="sec" style="background:var(--cream-2)" aria-labelledby="faq-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Questions</span>
+    <h2 class="sec-title" id="faq-h">Common questions</h2>
+    <dl class="faq-list">
+
+      <div class="faq-item">
+        <details>
+          <summary><span>Is this really free? What is the catch?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Document remediation is charged at actual cost with a 10% sustainability buffer — no profit. For most standard Pipeline A documents this is a fraction of commercial market rates. Pipeline B (STEM/institutional) costs are itemised separately and reflect actual AWS infrastructure and tooling costs. Training, setup handholding, annual accessibility audit, and Document Format Template building are included in the partnership with no additional charge — except travel and accommodation for in-person sessions, which are listed transparently in advance. There is no catch. We are a social enterprise. The mission is accessible documents for students — not revenue.</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary><span>We are a small college with very limited staff. Can we still apply?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Yes. We have specifically designed this programme for institutions that do not have dedicated accessibility teams. You do not need existing expertise — that is what we provide. A single staff member who completes our PDFix SDK Pipeline Operations training can manage a significant document workflow using the batch configurations and Document Format Templates we help you build. Start with document remediation, learn as you go, and build capability gradually. The 12–18 month timeline is designed for institutions building from scratch.</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary><span>How does the in-house setup actually work for our IT team?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Pipeline A is built on PDFix SDK, which installs on a standard server running Windows or Linux. We configure the PDFix SDK CLI and batch action JSON configurations for your specific document types, run the first batch together with your IT staff present, and build Document Format Templates for your 2–3 most common document families using the visual template builder. Your IT team runs subsequent batches. We remain available for questions and produce written documentation of every configuration decision — so the knowledge lives in your institution, not in our heads. Pipeline B (STEM) runs on AWS; we handle the deployment and train your senior remediators to review and QA the output.</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary><span>What is the difference between Pipeline A and Pipeline B?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Pipeline A uses PDFix SDK and runs inside your own infrastructure — on your servers, under your IT team's control. It handles standard documents: notes, textbooks, forms, letters, scanned PDFs. Pipeline B uses the ASU/Ohio State open-source pipeline on AWS — it handles STEM content with equations, complex layouts, and high-volume institutional batches. The routing is automatic: at intake, the system classifies each document and sends it to the appropriate pipeline. Both pipelines share the same OCR preprocessing layer, the same Guild volunteer review network, and the same veraPDF validation output. The only difference is the auto-tagging engine and the infrastructure it runs on.</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary><span>What is the difference between PDF/UA and just "accessible"?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">PDF/UA (ISO 14289) is the international standard for universally accessible PDF. It is verifiable — tools like veraPDF can check compliance algorithmically and produce a certificate. "Accessible" without a standard is a claim without evidence. Every document EquitableDocs produces meets PDF/UA-1 and WCAG 2.2 AA standards, and comes with a veraPDF compliance report. If a regulator, funder, or student ever questions whether your documents are accessible, you have a certificate — not just a promise.</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary><span>We have documents in Hindi, Tamil, and other Indian languages. Can you handle those?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Yes. Our OCR pipeline — shared across both Pipeline A and Pipeline B — uses Tesseract 5 with language-specific models for all major Indic scripts: Devanagari, Tamil, Telugu, Kannada, Malayalam, Bengali, Gujarati, Marathi, Punjabi, Urdu, Odia, and Assamese. PaddleOCR provides a fallback for complex layouts. Guild members with regional language proficiency handle quality review for these documents. Multilingual capability is a deliberate design priority — the Global South context requires it, and we have built for it from the start.</div>
+        </details>
+      </div>
+
+      <div class="faq-item">
+        <details>
+          <summary><span>What happens to our documents after remediation?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Documents are processed on EquitableDocs servers (Pipeline A) or AWS infrastructure (Pipeline B) and deleted from active storage 180 days after delivery, or per your agreed institutional retention policy. Volunteers see only their assigned pages or elements — they cannot download the full document. No document content is shared with third parties except for specific API calls (Mathpix for equations). The letter of understanding signed before we process any documents specifies exactly what happens to your data and the data deletion schedule.</div>
+        </details>
+      </div>
+
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">EquitableDocs</p>
+        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="upload.html">Upload document</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Universities</h3>
+          <ul>
+            <li><a href="universities.html#apply">Apply to partner</a></li>
+            <li><a href="universities.html#pipeline">How it works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="guild.html">Join the Guild</a></li>
+            <li><a href="training.html">Training pathways</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
+      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  }
+
+  // Form submission feedback
+  var form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function() {
+      var status = document.getElementById('form-status');
+      if (status) status.textContent = 'Sending your request\u2026';
+    });
+  }
+})();
+function copyLink(url, btn) {
+  navigator.clipboard.writeText(url).then(function() {
+    var orig = btn.textContent;
+    btn.textContent = 'Link copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, 2200);
+  }).catch(function() {
+    btn.textContent = 'Copy: ' + url;
+  });
+}
+</script>
+</body>
+</html>

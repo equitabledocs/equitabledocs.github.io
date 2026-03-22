@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join the EquitableDocs Remediation Guild. Build a career in document accessibility with free training, real credentials, and a path from Apprentice to paid Trainer. Register today.">
+<title>Join the Remediation Guild — EquitableDocs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── Guild page-specific styles ── */
+.guild-hero .hero-in { max-width:720px; text-align:center; }
+.guild-hero .hero-sub { margin-left:auto; margin-right:auto; }
+.guild-hero .hero-actions { justify-content:center; }
+
+/* Tier cards */
+.tiers-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+.tier-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; position:relative; }
+.tier-card.tier-highlight { border-color:var(--teal-mid); border-top:3px solid var(--teal); }
+.tier-badge { display:inline-flex; align-items:center; gap:.4rem; font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:.25rem .7rem; border-radius:100px; margin-bottom:.85rem; }
+.tier-badge-1 { background:var(--teal-light); color:var(--teal-dark); }
+.tier-badge-2 { background:#FEF3C7; color:#92400E; }
+.tier-badge-3 { background:#EDE9FE; color:#4C1D95; }
+.tier-badge-4 { background:var(--amber-bg); color:var(--amber); }
+.tier-badge-5 { background:var(--teal-deep); color:#fff; }
+.tier-card h3 { font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.tier-entry { font-size:.82rem; color:var(--teal); font-weight:500; margin-bottom:.65rem; }
+.tier-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; margin-bottom:.75rem; }
+.tier-benefits { list-style:none; display:flex; flex-direction:column; gap:.4rem; }
+.tier-benefits li { font-size:.84rem; color:var(--ink-mid); display:flex; gap:.5rem; align-items:flex-start; line-height:1.55; }
+.tier-benefits li::before { content:''; display:block; min-width:12px; height:12px; background:var(--teal); border-radius:50%; margin-top:3px; }
+
+/* What you get */
+.benefits-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.25rem; }
+.benefit-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:1.75rem; }
+.benefit-icon { font-size:1.75rem; margin-bottom:.85rem; display:block; }
+.benefit-card h3 { font-family:var(--serif); font-size:1rem; color:#fff; margin-bottom:.5rem; font-weight:600; }
+.benefit-card p { font-size:.855rem; color:rgba(255,255,255,.65); line-height:1.6; }
+
+/* Specialisations */
+.spec-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+.spec-card { background:#fff; border:1px solid var(--border); border-radius:12px; padding:1.25rem 1.5rem; display:flex; align-items:center; gap:1rem; }
+.spec-card h3 { font-size:.92rem; font-weight:500; color:var(--ink); }
+.spec-tier { font-size:.75rem; color:var(--teal); font-weight:500; white-space:nowrap; }
+
+/* Registration form */
+.reg-layout { display:grid; grid-template-columns:1fr 1.4fr; gap:5rem; align-items:start; }
+@media(max-width:820px){ .reg-layout { grid-template-columns:1fr; gap:3rem; } }
+.reg-info h2 { font-family:var(--serif); font-size:1.7rem; font-weight:600; color:var(--ink); margin-bottom:1rem; }
+.reg-info p { font-size:.92rem; color:var(--ink-muted); line-height:1.7; margin-bottom:1rem; }
+.reg-checklist { list-style:none; margin-top:1.5rem; display:flex; flex-direction:column; gap:.6rem; }
+.reg-checklist li { display:flex; gap:.6rem; align-items:flex-start; font-size:.875rem; color:var(--ink-mid); line-height:1.5; }
+.reg-checklist li::before { content:''; display:block; min-width:16px; height:16px; background:var(--teal); border-radius:50%; margin-top:2px; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip">Skip to main content</a>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="universities.html">Universities</a></li>
+      <li><a href="guild.html" aria-current="page">Join Guild</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upload.html" class="nav-cta">Upload Document</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ══ HERO ══ -->
+<section class="hero guild-hero" aria-labelledby="hero-h">
+  <div class="hero-in">
+    <span class="hero-eyebrow">The Remediation Guild</span>
+    <h1 id="hero-h">Build a career in document accessibility.</h1>
+    <p class="hero-sub">Free training. Real documents. Professional credentials. Start as an Apprentice and progress through five tiers to become a certified Trainer earning fees for your expertise.</p>
+    <div class="hero-actions">
+      <a href="#register" class="btn-white">Register to join</a>
+      <a href="#tiers" class="btn-outline-w">See the tier structure</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT YOU GET ══ -->
+<section class="sec" style="background:var(--teal-deep);" aria-labelledby="benefits-h">
+  <div class="sec-in">
+    <span class="eyebrow" style="color:var(--teal-mid);" aria-hidden="true">What you get</span>
+    <h2 class="sec-title" style="color:#fff;" id="benefits-h">This is not volunteering. This is a professional pathway.</h2>
+    <p class="sec-lead" style="color:rgba(255,255,255,.7);">The Guild is a structured career programme. Every document you remediate builds your portfolio, your quality score, and your professional standing.</p>
+
+    <div class="benefits-grid" role="list">
+      <article class="benefit-card" role="listitem">
+        <span class="benefit-icon" aria-hidden="true">🎓</span>
+        <h3>Free training</h3>
+        <p>Six structured programmes from foundation to advanced. Learn PDF remediation, STEM accessibility, and how to train others.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <span class="benefit-icon" aria-hidden="true">📄</span>
+        <h3>Real documents, real impact</h3>
+        <p>Work on actual student documents. Every document you remediate helps a real student access their education.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <span class="benefit-icon" aria-hidden="true">🏅</span>
+        <h3>Recognised credentials</h3>
+        <p>Earn an EquitableDocs Guild Certificate after 10 documents. Senior members can pursue IAAP study support and AMTZ certification.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <span class="benefit-icon" aria-hidden="true">💼</span>
+        <h3>Path to paid work</h3>
+        <p>Tier 4 Trainers earn 15% of platform fees for sessions delivered. Guild Leads get first consideration for paid roles.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <span class="benefit-icon" aria-hidden="true">📝</span>
+        <h3>Reference letters</h3>
+        <p>Senior Remediators receive named reference letters. Your work is credited publicly on the platform.</p>
+      </article>
+      <article class="benefit-card" role="listitem">
+        <span class="benefit-icon" aria-hidden="true">🌐</span>
+        <h3>Work from anywhere</h3>
+        <p>Browser-based portal. No software to install. Work on any device, at any time, from anywhere in the world.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TIER STRUCTURE ══ -->
+<section class="sec" id="tiers" aria-labelledby="tiers-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Career pathway</span>
+    <h2 class="sec-title" id="tiers-h">Five tiers. Clear progression. Real credentials.</h2>
+    <p class="sec-lead">Every Guild Member starts at Tier 1. Progress is based on documents completed and quality scores from QA reviewers.</p>
+
+    <div class="tiers-grid" role="list">
+
+      <article class="tier-card tier-highlight" role="listitem">
+        <span class="tier-badge tier-badge-1">Tier 1</span>
+        <h3>Accessibility Apprentice</h3>
+        <p class="tier-entry">Entry: New to remediation</p>
+        <p>Write alt text, learn basic reading order, mark artifacts. You start here with mentorship and guided tasks.</p>
+        <ul class="tier-benefits" role="list">
+          <li>Portal profile and letter of participation</li>
+          <li>Free training access</li>
+          <li>Mentorship from Senior Remediators</li>
+        </ul>
+      </article>
+
+      <article class="tier-card" role="listitem">
+        <span class="tier-badge tier-badge-2">Tier 2</span>
+        <h3>Remediation Associate</h3>
+        <p class="tier-entry">Entry: 10+ documents completed</p>
+        <p>Full document remediation including table markup, forms, and basic STEM content. Priority task assignment.</p>
+        <ul class="tier-benefits" role="list">
+          <li>Associate certificate</li>
+          <li>Priority task assignment</li>
+          <li>Access to complex documents</li>
+        </ul>
+      </article>
+
+      <article class="tier-card" role="listitem">
+        <span class="tier-badge tier-badge-3">Tier 3</span>
+        <h3>Senior Remediator</h3>
+        <p class="tier-entry">Entry: 30+ documents, 80%+ quality score</p>
+        <p>Handle complex and STEM documents. QA review authority. Final sign-off on documents before delivery.</p>
+        <ul class="tier-benefits" role="list">
+          <li>Named on portal publicly</li>
+          <li>Professional reference letter</li>
+          <li>AMTZ certification referral</li>
+          <li>IAAP CPABE study support</li>
+        </ul>
+      </article>
+
+      <article class="tier-card" role="listitem">
+        <span class="tier-badge tier-badge-4">Tier 4</span>
+        <h3>Remediation Trainer</h3>
+        <p class="tier-entry">Entry: Senior + trainer pathway completed</p>
+        <p>Deliver training sessions to universities and Guild Members. Earn fees directly for your expertise.</p>
+        <ul class="tier-benefits" role="list">
+          <li>15% revenue share on platform fees</li>
+          <li>AMTZ Trainer credential</li>
+          <li>Named trainer profile</li>
+        </ul>
+      </article>
+
+      <article class="tier-card" role="listitem">
+        <span class="tier-badge tier-badge-5">Tier 5</span>
+        <h3>Guild Lead</h3>
+        <p class="tier-entry">Entry: Invitation only, top 5%</p>
+        <p>Set quality standards, mentor new members, represent the Guild externally. Advisory role in platform decisions.</p>
+        <ul class="tier-benefits" role="list">
+          <li>Advisory role</li>
+          <li>First consideration for paid work</li>
+          <li>External representation</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ SPECIALISATIONS ══ -->
+<section class="sec" style="background:var(--cream-2);" aria-labelledby="specs-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Specialisations</span>
+    <h2 class="sec-title" id="specs-h">Choose your focus area</h2>
+    <p class="sec-lead">As you progress, you can specialise in the types of accessibility work that interest you most.</p>
+
+    <div class="spec-grid" role="list">
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>Alt Text Specialist</h3>
+          <p class="spec-tier">Tier 1+ (standard) / Tier 2-3 (complex)</p>
+        </div>
+      </div>
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>STEM / Equation Specialist</h3>
+          <p class="spec-tier">Tier 3+ (requires mathematical literacy)</p>
+        </div>
+      </div>
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>Table Accessibility Specialist</h3>
+          <p class="spec-tier">Tier 2+</p>
+        </div>
+      </div>
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>Reading Order Reviewer</h3>
+          <p class="spec-tier">Tier 2+</p>
+        </div>
+      </div>
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>Form and Field Specialist</h3>
+          <p class="spec-tier">Tier 2+</p>
+        </div>
+      </div>
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>Language Specialist</h3>
+          <p class="spec-tier">Any tier (by language proficiency)</p>
+        </div>
+      </div>
+      <div class="spec-card" role="listitem">
+        <div>
+          <h3>QA Reviewer</h3>
+          <p class="spec-tier">Tier 3+ (gatekeeper before delivery)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec" aria-labelledby="faq-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Common questions</span>
+    <h2 class="sec-title" id="faq-h">Frequently asked questions</h2>
+
+    <dl class="faq-list">
+      <details>
+        <summary><span>Do I need any experience to join?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">No. Tier 1 (Accessibility Apprentice) is designed for people with no prior remediation experience. You receive free training, mentorship, and guided tasks. All you need is a computer, a web browser, and the willingness to learn.</div>
+      </details>
+      <details>
+        <summary><span>How much time do I need to commit?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">There is no minimum time commitment. Tasks have a 4-hour lock window — if you accept a task, you have 4 hours to complete it. After that, it goes back to the queue for someone else. You can work as much or as little as your schedule allows.</div>
+      </details>
+      <details>
+        <summary><span>Is this paid work?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">Tiers 1 to 3 are unpaid but provide real credentials, reference letters, and professional experience. Tier 4 (Remediation Trainer) earns 15% of platform fees for training sessions delivered. Tier 5 (Guild Lead) gets first consideration for paid roles. The value at every tier is genuine career development in a growing field.</div>
+      </details>
+      <details>
+        <summary><span>What credentials will I earn?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">After completing 10 documents with a passing quality score, you earn the EquitableDocs Guild Certificate. Senior Remediators (Tier 3+) can pursue AMTZ certification and IAAP CPABE study support. Tier 4 members earn the EquitableDocs Certified Trainer credential. All tiers may earn CPD credits from partner universities.</div>
+      </details>
+      <details>
+        <summary><span>What software do I need?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">None. The Guild portal is entirely browser-based. You see your assigned pages or elements in the browser, submit your work in the browser, and track your progress in the browser. It works on any device — desktop, laptop, tablet, or phone.</div>
+      </details>
+      <details>
+        <summary><span>Can I join from outside India?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">Yes. The Guild is open to anyone, anywhere. Language Specialists are particularly valuable if you are fluent in languages that our OCR and remediation pipeline supports. All work is remote and browser-based.</div>
+      </details>
+    </dl>
+  </div>
+</section>
+
+<!-- ══ REGISTRATION FORM ══ -->
+<section class="sec" id="register" style="background:#fff;" aria-labelledby="reg-h">
+  <div class="sec-in">
+    <div class="reg-layout">
+      <div class="reg-info">
+        <h2 id="reg-h">Register your interest</h2>
+        <p>We are building the Guild now. Register below and we will contact you when the portal opens for your cohort. Early registrants get priority onboarding and first access to training.</p>
+        <ul class="reg-checklist">
+          <li>No commitment required at this stage</li>
+          <li>We will email you when the portal opens</li>
+          <li>Early registrants get priority placement</li>
+          <li>Training begins before the portal launches</li>
+        </ul>
+      </div>
+      <div>
+        <form class="form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Guild registration form">
+          <p class="form-section-title">Your details</p>
+
+          <div class="form-two">
+            <div class="fg">
+              <label class="fg-label" for="guild-name">Full name <span class="req" aria-label="required">*</span></label>
+              <input class="fg-input" type="text" id="guild-name" name="name" required autocomplete="name">
+            </div>
+            <div class="fg">
+              <label class="fg-label" for="guild-email">Email address <span class="req" aria-label="required">*</span></label>
+              <input class="fg-input" type="email" id="guild-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="fg">
+            <label class="fg-label" for="guild-location">City / Country</label>
+            <input class="fg-input" type="text" id="guild-location" name="location" autocomplete="country-name">
+          </div>
+
+          <hr class="divider">
+          <p class="form-section-title">Your background</p>
+
+          <div class="choice-group" role="group" aria-labelledby="exp-label">
+            <p class="choice-group-label" id="exp-label">Experience with document accessibility</p>
+            <label class="choice-opt">
+              <input type="radio" name="experience" value="none" checked>
+              <div>
+                <span class="choice-opt-text">None — I am new to this</span>
+              </div>
+            </label>
+            <label class="choice-opt">
+              <input type="radio" name="experience" value="some">
+              <div>
+                <span class="choice-opt-text">Some — I have done basic remediation</span>
+              </div>
+            </label>
+            <label class="choice-opt">
+              <input type="radio" name="experience" value="experienced">
+              <div>
+                <span class="choice-opt-text">Experienced — I work with accessibility tools regularly</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="choice-group" role="group" aria-labelledby="interest-label">
+            <p class="choice-group-label" id="interest-label">Areas of interest (select all that apply)</p>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="alt-text">
+              <span class="choice-opt-text">Alt text and image descriptions</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="stem">
+              <span class="choice-opt-text">STEM and equation accessibility</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="tables">
+              <span class="choice-opt-text">Tables and complex layouts</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="languages">
+              <span class="choice-opt-text">Regional languages and translation</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="training">
+              <span class="choice-opt-text">Training and mentoring others</span>
+            </label>
+          </div>
+
+          <div class="fg">
+            <label class="fg-label" for="guild-languages">Languages you are fluent in</label>
+            <input class="fg-input" type="text" id="guild-languages" name="languages" placeholder="e.g. English, Hindi, Tamil">
+            <span class="fg-hint">Separate with commas. Language specialists are especially needed.</span>
+          </div>
+
+          <div class="fg">
+            <label class="fg-label" for="guild-why">Why do you want to join? (optional)</label>
+            <textarea class="fg-textarea" id="guild-why" name="motivation" rows="3"></textarea>
+          </div>
+
+          <hr class="divider">
+          <button type="submit" class="btn-submit">Register your interest</button>
+          <p class="form-privacy">We will only use your information to contact you about Guild membership. No spam. <a href="privacy.html" style="color:var(--teal);">Privacy policy</a></p>
+          <p id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">EquitableDocs</p>
+        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="upload.html">Upload document</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Universities</h3>
+          <ul>
+            <li><a href="universities.html#apply">Apply to partner</a></li>
+            <li><a href="universities.html#pipeline">How it works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="guild.html">Join the Guild</a></li>
+            <li><a href="training.html">Training pathways</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
+      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  // Form submission feedback
+  var form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function() {
+      document.getElementById('form-status').textContent = 'Sending your registration\u2026';
+    });
+  }
+})();
+</script>
+</body>
+</html>
