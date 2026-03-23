@@ -19,6 +19,7 @@ The portal application (upload, processing pipeline, admin dashboard) is under a
 - `equitabledocs-portal` — Upload and tracking interface for persons with disabilities
 - `equitabledocs-pipeline` — Document processing pipeline (OCR, auto-tagging, Easy Read conversion, validation)
 - `equitabledocs-admin` — Remediator review dashboard
+- `equitabledocs-university` — institutional partnership portal
 
 ## The Document Equity Initiative
 
@@ -46,11 +47,11 @@ The remediation pipeline is built on open-source tools:
 - **Validation**: veraPDF (PDF/UA compliance checking)
 - **Easy Read**: AI-assisted content simplification with expert human review
 - **Backend**: Python (FastAPI), PostgreSQL, Redis + Celery
-- **Infrastructure**: Docker, hosted on VPS with Cloudflare DNS
+- **Infrastructure**: Docker, static site on GitHub Pages with GoDaddy DNS
 
 ## Contributing
 
-We welcome contributions from developers, accessibility specialists, Easy Read authors, Disabled People's Organisations, and disability rights advocates. If you want to help make educational documents and public information accessible for persons with disabilities who need them most, please reach out at deepa@equitabledocs.org or open an issue in this repository.
+We welcome contributions from developers, accessibility specialists, Easy Read authors, Disabled People's Organisations, and disability rights advocates. If you want to help make educational documents and public information accessible for persons with disabilities who need them most, please reach out at deepa@equitabledocs.org or open an issue in this repository. You can also join the Document Accessibility Guild — our volunteer community of trained accessibility specialists. Visit equitabledocs.org/guild.html to register.
 
 ## Part of The EquitableAccess Suite
 
