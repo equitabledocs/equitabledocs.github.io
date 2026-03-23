@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="EquitableDocs partners with universities to build in-house accessible document capacity using a dual-pipeline architecture — PDFix SDK for standard documents, ASU/Ohio State open-source pipeline for STEM. Capacity-building, not dependency.">
+<meta name="description" content="EquitableDocs partners with universities to build in-house accessible document capacity. We assess your documents, set up the right tools, train your staff, and step back. Capacity-building, not dependency.">
 <title>For Universities — EquitableDocs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
     <div>
       <span class="hero-eyebrow">For universities and colleges</span>
       <h1 id="hero-h">Build accessible document capacity at your institution — <em>then own it completely.</em></h1>
-      <p class="hero-sub">EquitableDocs gives universities a dual-pipeline architecture: PDFix SDK for standard documents, the ASU/Ohio State open-source pipeline for STEM content. We install it inside your infrastructure, train your staff to run it, and hand it over. Our goal is to make ourselves unnecessary.</p>
+      <p class="hero-sub">EquitableDocs helps universities make their documents accessible — standard and STEM. We assess your documents, set up the right tools inside your infrastructure, train your staff to run them, and step back. Our goal is to make ourselves unnecessary.</p>
       <div class="hero-actions">
         <a href="#apply" class="btn-white">Request support for your institution</a>
         <a href="#pipeline" class="btn-outline-w">See the two pipelines</a>
@@ -135,7 +135,7 @@
         <h3>A systematic, pipeline-based approach</h3>
         <ul role="list">
           <li>Documents are remediated before students need them — not after a request. Proactive accessibility is the standard at leading universities worldwide.</li>
-          <li>Automated tagging tools (PDFix SDK for standard docs; the ASU/Ohio State pipeline for STEM) handle structure at volume — freeing human reviewers for complex decisions.</li>
+          <li>Automated tagging tools handle document structure at volume — freeing human reviewers for the decisions automation cannot make: image descriptions, equation alt text, complex table markup.</li>
           <li>Trained volunteers and staff handle what automation cannot: alt text for figures, equation descriptions for STEM content, complex table markup.</li>
           <li>Validated output — every document runs through veraPDF and PAC checks before delivery. A compliance certificate travels with the document.</li>
           <li>Institutional knowledge is encoded in format templates and training, not in one person's head. Staff can change; the system remains.</li>
@@ -151,17 +151,15 @@
     <span class="eyebrow" aria-hidden="true">Global evidence &amp; pipeline partners</span>
     <h2 class="sec-title" id="models-h">What the world has built — and where EquitableDocs fits</h2>
     <div class="models-intro">
-      <p class="sec-lead">Universities in North America, the UK, Australia, and Africa have been building systematic accessible document operations for over a decade. Their approaches share a consistent finding: accessibility works when it is built into institutional processes, not handled case by case. Two of these institutions are not just models — their open-source pipeline is the actual engine behind EquitableDocs Pipeline B.</p>
+      <p class="sec-lead">Universities in North America, the UK, Australia, and Africa have been building systematic accessible document operations for over a decade. Their approaches share a consistent finding: accessibility works when it is built into institutional processes, not handled case by case. EquitableDocs draws on these proven models.</p>
     </div>
     <div class="models-grid" role="list">
 
-      <article class="model-card partner-card" aria-labelledby="m3" role="listitem">
-        <span class="partner-badge" aria-label="Pipeline B Partner">⚡ Pipeline B Partner</span>
-        <p class="model-uni partner-uni">Arizona State University + Ohio State University</p>
-        <h3 id="m3">The pipeline that powers EquitableDocs institutional STEM remediation</h3>
-        <p>ASU's accessibility team, in collaboration with Ohio State University, built an open-source pipeline for high-volume STEM document remediation — automated tagging via the Adobe Auto-Tag API, alt-text generation via Amazon Bedrock LLM, and orchestration via AWS Step Functions. Their solution has been adopted by multiple US institutions and is designed for documents that standard auto-taggers cannot handle: equations, lab manuals, research papers, complex data tables.</p>
-        <p>This is not just a model for EquitableDocs to emulate. The ASU/Ohio State open-source pipeline is the actual engine behind Pipeline B — the institutional STEM track that processes high-complexity and bulk university batches through EquitableDocs.</p>
-        <p class="model-lesson partner-lesson">Pipeline B: Every STEM document submitted through the EquitableDocs institutional track passes through this pipeline. When your institution onboards, this is what we set up for your STEM content.</p>
+      <article class="model-card" aria-labelledby="m3" role="listitem">
+        <p class="model-uni">Arizona State University + Ohio State University</p>
+        <h3 id="m3">Open-source STEM remediation at scale</h3>
+        <p>ASU and Ohio State built an open-source approach to high-volume STEM document remediation — combining automated tagging, AI-generated descriptions for complex figures, and orchestrated processing workflows. Their work demonstrates that STEM accessibility can be handled systematically, not document by document.</p>
+        <p class="model-lesson">Lesson: STEM documents need a different approach from standard documents. Automation handles structure; trained specialists handle equations and complex figures. Both are needed at scale.</p>
       </article>
 
       <article class="model-card" aria-labelledby="m1" role="listitem">
@@ -208,32 +206,20 @@
 <section class="sec" id="pipeline" aria-labelledby="pipeline-h">
   <div class="sec-in">
     <span class="eyebrow" aria-hidden="true">The process</span>
-    <h2 class="sec-title" id="pipeline-h">Two pipelines — one for every document type</h2>
-    <p class="sec-lead">Every document is routed to the right pipeline at intake. Standard documents go through Pipeline A — built on PDFix SDK, running inside your own infrastructure. STEM content and high-volume institutional batches go through Pipeline B — the ASU/Ohio State open-source engine on AWS. Both pipelines share the same OCR layer, the same Guild review network, and the same veraPDF validation output.</p>
+    <h2 class="sec-title" id="pipeline-h">How we make your documents accessible</h2>
+    <p class="sec-lead">Every document goes through a structured process — from assessment to validated delivery. Standard documents and STEM content follow different processing tracks, but both deliver the same outcome: documents that work with screen readers, braille displays, and assistive technology, validated against international standards.</p>
 
     <!-- Pipeline routing cards -->
-    <div class="pipeline-routes" aria-label="Document routing: two pipelines">
+    <div class="pipeline-routes" aria-label="Two processing tracks">
       <div class="pipeline-route-card route-a">
-        <span class="route-badge route-badge-a">Pipeline A</span>
-        <h3>Standard documents</h3>
-        <p>Notes, textbooks, forms, letters, reading lists, government documents, scanned PDFs. Automated tagging running inside your university's own infrastructure.</p>
-        <div class="route-tools">
-          <span class="route-tool">PDFix SDK</span>
-          <span class="route-tool">Batch action configs</span>
-          <span class="route-tool">Document Format Templates</span>
-          <span class="route-tool">veraPDF</span>
-        </div>
+        <span class="route-badge route-badge-a">Standard documents</span>
+        <h3>Notes, textbooks, forms, letters, scanned PDFs</h3>
+        <p>Automated tagging and batch processing using tools installed inside your own infrastructure. Your IT team learns to run these independently.</p>
       </div>
       <div class="pipeline-route-card route-b">
-        <span class="route-badge route-badge-b">Pipeline B</span>
-        <h3>STEM content &amp; institutional bulk batches</h3>
-        <p>Textbooks with equations, lab manuals, research papers, complex data tables. High-volume university batches. Runs on AWS infrastructure funded by institutional partnership fees.</p>
-        <div class="route-tools">
-          <span class="route-tool">ASU/Ohio State open-source pipeline</span>
-          <span class="route-tool">Adobe Auto-Tag API</span>
-          <span class="route-tool">Amazon Bedrock</span>
-          <span class="route-tool">Mathpix</span>
-        </div>
+        <span class="route-badge route-badge-b">STEM content</span>
+        <h3>Textbooks with equations, lab manuals, research papers, complex data tables</h3>
+        <p>Specialised processing for equations, complex layouts, and high-volume batches. AI-powered tagging combined with specialist human review.</p>
       </div>
     </div>
 
@@ -245,9 +231,8 @@
             <div class="pipe-num-circle" aria-hidden="true">1</div>
           </div>
           <div class="pipe-content">
-            <p class="pipe-title">Document intake and classification</p>
-            <p class="pipe-desc">Every incoming document is assessed for type, language, complexity, and STEM content. This determines which pipeline it follows — Pipeline A for standard documents, Pipeline B for STEM and institutional bulk batches. Scanned documents go to OCR first.</p>
-            <div class="pipe-tools"><span class="pipe-tool">FastAPI worker</span><span class="pipe-tool">Claude API classifier</span><span class="pipe-tool">Both pipelines</span></div>
+            <p class="pipe-title">Document assessment and classification</p>
+            <p class="pipe-desc">We analyse every incoming document for type, language, complexity, and STEM content. This determines which processing track it follows. Scanned documents go through OCR first to convert images into searchable text.</p>
           </div>
         </div>
 
@@ -256,9 +241,8 @@
             <div class="pipe-num-circle" aria-hidden="true">2</div>
           </div>
           <div class="pipe-content">
-            <p class="pipe-title">OCR pre-processing for scanned documents</p>
-            <p class="pipe-desc">Scanned PDFs are run through Tesseract with language-specific models — covering all Indic scripts, Arabic, Amharic, Swahili, and 100+ languages. This converts image-only PDFs into searchable text before any accessibility work begins. PaddleOCR provides a fallback for complex, multi-column, or mixed-script layouts.</p>
-            <div class="pipe-tools"><span class="pipe-tool">OCRmyPDF</span><span class="pipe-tool">Tesseract 5</span><span class="pipe-tool">PaddleOCR</span><span class="pipe-tool">Both pipelines</span></div>
+            <p class="pipe-title">OCR for scanned documents</p>
+            <p class="pipe-desc">Scanned PDFs are processed through OCR with language-specific models — covering all Indic scripts, Arabic, Amharic, Swahili, and 100+ languages. This converts image-only PDFs into searchable text before any accessibility work begins.</p>
           </div>
         </div>
 
@@ -268,17 +252,7 @@
           </div>
           <div class="pipe-content">
             <p class="pipe-title">Automated structure tagging</p>
-            <p class="pipe-desc">Automated tagging analyses the document layout and applies accessibility tags — headings, paragraphs, lists, figures, tables, reading order. Document Format Templates built for your institution's specific recurring formats dramatically improve accuracy at this stage.</p>
-            <div class="pipe-fork-note" aria-label="Pipeline routing at tagging stage">
-              <span class="pipe-fork-lane lane-a"><strong>Pipeline A →</strong> PDFix SDK. Batch action configs. Document Format Templates built for your institution's document families. Runs inside your own infrastructure.</span>
-              <span class="pipe-fork-lane lane-b"><strong>Pipeline B →</strong> Adobe Auto-Tag API (ASU/Ohio State pipeline). Amazon Bedrock for alt-text generation on complex figures. Runs on AWS.</span>
-            </div>
-            <div class="pipe-tools" style="margin-top:.65rem">
-              <span class="pipe-tool">PDFix SDK</span>
-              <span class="pipe-tool">Document Format Templates</span>
-              <span class="pipe-tool pipe-tool-b">Adobe Auto-Tag API</span>
-              <span class="pipe-tool pipe-tool-b">Amazon Bedrock</span>
-            </div>
+            <p class="pipe-desc">Automated tools analyse the document layout and apply accessibility tags — headings, paragraphs, lists, figures, tables, reading order. Document Format Templates built for your institution's specific document types dramatically improve accuracy at this stage.</p>
           </div>
         </div>
 
@@ -288,8 +262,7 @@
           </div>
           <div class="pipe-content">
             <p class="pipe-title">Equation extraction (STEM documents)</p>
-            <p class="pipe-desc">Mathematical equations are extracted using Mathpix Enterprise API, which converts them to LaTeX and MathML. MathML allows screen readers and braille displays to render equations mathematically — not just as "image" or silence. In Pipeline B, Amazon Bedrock Data Automation generates MathML for equations at scale.</p>
-            <div class="pipe-tools"><span class="pipe-tool">Mathpix API</span><span class="pipe-tool">MathML output</span><span class="pipe-tool">LaTeX source</span><span class="pipe-tool pipe-tool-b">Pipeline B (STEM only)</span></div>
+            <p class="pipe-desc">Mathematical equations are extracted and converted to formats that screen readers and braille displays can render meaningfully — not just as silence or 'image'. Every equation receives a plain-language description written by a trained specialist.</p>
           </div>
         </div>
 
@@ -298,9 +271,8 @@
             <div class="pipe-num-circle" aria-hidden="true">5</div>
           </div>
           <div class="pipe-content">
-            <p class="pipe-title">Specialist human review — alt text, tables, equations</p>
-            <p class="pipe-desc">Trained specialists write alt text for figures, plain-language descriptions of equations, and table header markup. This is the layer automation cannot reliably provide. Work is split by type — an alt text specialist works in parallel with a table specialist — reducing turnaround time. Guild volunteers handle university-track documents alongside EquitableDocs senior remediators.</p>
-            <div class="pipe-tools"><span class="pipe-tool">Guild volunteers</span><span class="pipe-tool">Task-split workflow</span><span class="pipe-tool">Acrobat Pro</span><span class="pipe-tool">Both pipelines</span></div>
+            <p class="pipe-title">Specialist human review</p>
+            <p class="pipe-desc">Trained accessibility specialists handle what automation cannot — image descriptions, equation alt text, complex table markup. Work is split by type so specialists work in parallel, reducing turnaround time.</p>
           </div>
         </div>
 
@@ -310,8 +282,7 @@
           </div>
           <div class="pipe-content">
             <p class="pipe-title">Quality assurance and validation</p>
-            <p class="pipe-desc">Every document runs through veraPDF — the industry-standard open-source PDF/UA validator — and PAC (PDF Accessibility Checker). A senior remediator reviews flagged issues and does a screen reader spot-test using NVDA before sign-off. PAC cross-validation provides additional compliance evidence for institutional reporting.</p>
-            <div class="pipe-tools"><span class="pipe-tool">veraPDF</span><span class="pipe-tool">PAC</span><span class="pipe-tool">NVDA screen reader</span><span class="pipe-tool">Both pipelines</span></div>
+            <p class="pipe-desc">Every document is validated against international accessibility standards using industry-standard tools. A senior reviewer does a screen reader spot-test before sign-off. A compliance certificate accompanies every delivery.</p>
           </div>
         </div>
 
@@ -321,8 +292,7 @@
           </div>
           <div class="pipe-content">
             <p class="pipe-title">Delivery in your chosen format</p>
-            <p class="pipe-desc">Remediated documents are delivered as tagged PDF (PDF/UA compliant), accessible Word (.docx), or both — depending on your institution's needs and the student's assistive technology. A veraPDF compliance certificate is attached to every delivery. Documents are deleted from active storage 180 days after delivery.</p>
-            <div class="pipe-tools"><span class="pipe-tool">PDF/UA</span><span class="pipe-tool">Accessible DOCX</span><span class="pipe-tool">Compliance certificate</span></div>
+            <p class="pipe-desc">Remediated documents are delivered as tagged PDF (PDF/UA compliant), accessible Word (.docx), or both — depending on your institution's needs. A compliance certificate is attached to every delivery. Documents are deleted from active storage after an agreed retention period.</p>
           </div>
         </div>
 
@@ -331,9 +301,8 @@
             <div class="pipe-num-circle" aria-hidden="true">8</div>
           </div>
           <div class="pipe-content">
-            <p class="pipe-title">Institutional knowledge transfer</p>
-            <p class="pipe-desc">As we process your documents, we document every decision — what PDFix SDK batch configs were applied, what Document Format Templates were built, what manual corrections were made, how Pipeline B routes were configured. This becomes the training material for your own staff. The process does not live in our heads. It lives in your institution.</p>
-            <div class="pipe-tools"><span class="pipe-tool">Document Format Templates</span><span class="pipe-tool">Batch action configs</span><span class="pipe-tool">Staff training</span><span class="pipe-tool">In-house tool setup</span></div>
+            <p class="pipe-title">Knowledge transfer to your team</p>
+            <p class="pipe-desc">As we process your documents, we document every decision — what configurations were applied, what templates were built, what corrections were made. This becomes the training material for your own staff. The process lives in your institution, not in our heads.</p>
           </div>
         </div>
 
@@ -345,15 +314,15 @@
           <div class="aside-item">
             <div class="aside-item-icon" aria-hidden="true">🔧</div>
             <div>
-              <p class="aside-item-title">Pipeline A runs inside your walls</p>
-              <p class="aside-item-text">PDFix SDK is installed within your own infrastructure. Your IT team runs it. Your staff learn it. Nothing is locked inside EquitableDocs.</p>
+              <p class="aside-item-title">Your tools run on your own servers</p>
+              <p class="aside-item-text">Processing tools are installed within your own infrastructure. Your IT team runs them. Your staff learn them. Nothing is locked inside EquitableDocs.</p>
             </div>
           </div>
           <div class="aside-item">
             <div class="aside-item-icon" aria-hidden="true">⚡</div>
             <div>
-              <p class="aside-item-title">Pipeline B handles what standard tools cannot</p>
-              <p class="aside-item-text">The ASU/Ohio State open-source pipeline on AWS handles your STEM content — equations, complex layouts, high-volume batches. Funded by institutional partnership fees, not student fees.</p>
+              <p class="aside-item-title">STEM content gets specialised processing</p>
+              <p class="aside-item-text">Documents with equations, complex layouts, and high-volume batches go through a dedicated STEM track with AI-powered tagging and specialist human review.</p>
             </div>
           </div>
           <div class="aside-item">
@@ -404,9 +373,9 @@
       </article>
 
       <article class="offer-card" role="listitem" aria-labelledby="o3">
-        <p class="offer-card-tag">Hands-on setup — Pipeline A</p>
+        <p class="offer-card-tag">Hands-on setup</p>
         <h3 id="o3">PDFix SDK installation and batch pipeline configuration inside your infrastructure</h3>
-        <p>We install and configure PDFix SDK within your institution's own infrastructure — on your servers, under your IT team's control. We build batch action JSON configurations for your recurring document types, train staff on the CLI and batch workflows, and set up manual correction and validation procedures. By the end of the engagement, your team runs Pipeline A without us.</p>
+        <p>We install and configure PDFix SDK within your institution's own infrastructure — on your servers, under your IT team's control. We build batch action JSON configurations for your recurring document types, train staff on the CLI and batch workflows, and set up manual correction and validation procedures. By the end of the engagement, your team runs the pipeline without us.</p>
       </article>
 
       <article class="offer-card highlight-violet" role="listitem" aria-labelledby="o7">
@@ -416,14 +385,14 @@
       </article>
 
       <article class="offer-card" role="listitem" aria-labelledby="o4">
-        <p class="offer-card-tag">STEM capability — Pipeline B</p>
-        <h3 id="o4">Full STEM document pipeline — equations, MathML, high-volume batches</h3>
-        <p>STEM documents — textbooks with equations, lab manuals, research papers — are processed through Pipeline B: the ASU/Ohio State open-source pipeline running on AWS. This includes Mathpix equation extraction, MathML generation via Amazon Bedrock, and specialist human review of every equation description. Pipeline B is activated when your institution onboards and is funded by institutional partnership fees — not student fees. Volume target: 5,000–20,000 pages/month within 12 months of onboarding.</p>
+        <p class="offer-card-tag">STEM document processing</p>
+        <h3 id="o4">Full STEM document processing — equations, MathML, specialist review</h3>
+        <p>STEM documents — textbooks with equations, lab manuals, research papers — go through a specialised processing track. This includes equation extraction, MathML generation for screen readers and braille displays, and specialist human review of every equation description. The STEM track is activated when your institution onboards and is funded by institutional partnership fees — not student fees.</p>
       </article>
 
       <article class="offer-card" role="listitem" aria-labelledby="o5">
         <p class="offer-card-tag">Community</p>
-        <h3 id="o5">Access to the Remediation Guild network</h3>
+        <h3 id="o5">Access to the Document Accessibility Guild network</h3>
         <p>Partner institutions gain access to the EquitableDocs Guild — a professional community of trained document remediators organised in five tiers from Guild Member through to Guild Trainer. Guild Trainers are available for structured training sessions at partner institutions. Strategic partners have first access to the placement pipeline when engaging Guild members for short-term or part-time work.</p>
       </article>
 
@@ -444,7 +413,7 @@
       <div>
         <span class="eyebrow" aria-hidden="true">Our philosophy</span>
         <h2 class="sec-title" id="cap-h">We are here to build your capacity, not to create a dependency</h2>
-        <p style="font-size:1.02rem; color:var(--ink-mid); line-height:1.75; max-width:480px; margin-bottom:2.5rem; font-weight:300;">EquitableDocs is not primarily a remediation service. We are a capacity-building initiative. Our goal is to help your institution set up the tools — PDFix SDK for Pipeline A, the ASU/Ohio State pipeline for STEM — along with the processes and trained staff to run them independently. So that over time, you do not need to send documents to us at all.</p>
+        <p style="font-size:1.02rem; color:var(--ink-mid); line-height:1.75; max-width:480px; margin-bottom:2.5rem; font-weight:300;">EquitableDocs is not primarily a remediation service. We are a capacity-building initiative. Our goal is to help your institution set up the tools, processes, and trained staff to produce accessible documents independently. So that over time, you do not need to send documents to us at all.</p>
         <div class="cap-timeline" aria-label="Timeline to institutional self-sufficiency">
           <div class="cap-item">
             <div class="cap-dot"><div class="cap-dot-inner"></div></div>
@@ -456,13 +425,13 @@
             <div class="cap-dot"><div class="cap-dot-inner"></div></div>
             <p class="cap-month">Month 3–6</p>
             <p class="cap-title">PDFix SDK installed inside your infrastructure</p>
-            <p class="cap-desc">IT team learns to run Pipeline A. Designated staff join training on PDFix SDK batch action configurations, manual correction workflows, and veraPDF/PAC validation. Pilot batch of 50–100 documents processed together.</p>
+            <p class="cap-desc">IT team learns to run the batch processing tools. Designated staff join training on PDFix SDK batch action configurations, manual correction workflows, and veraPDF/PAC validation. Pilot batch of 50–100 documents processed together.</p>
           </div>
           <div class="cap-item">
             <div class="cap-dot"><div class="cap-dot-inner"></div></div>
             <p class="cap-month">Month 6–12</p>
             <p class="cap-title">Your staff handle standard documents in-house</p>
-            <p class="cap-desc">Routine Pipeline A remediation runs internally. EquitableDocs handles STEM content via Pipeline B and provides QA support. Document Format Templates refined from real usage data. Volume growing toward 5,000 pages/month.</p>
+            <p class="cap-desc">Routine document processing runs internally. EquitableDocs handles STEM content and provides QA support. Document Format Templates refined from real usage data. Volume growing toward 5,000 pages/month.</p>
           </div>
           <div class="cap-item">
             <div class="cap-dot"><div class="cap-dot-inner"></div></div>
@@ -474,7 +443,7 @@
       </div>
       <div class="cap-quote-block">
         <p class="quote-mark" aria-hidden="true">"</p>
-        <blockquote>The goal is not to make institutions permanently dependent on EquitableDocs. It is to train staff to run PDFix SDK internally, build and maintain their own Document Format Templates, perform manual corrections, and handle final revision for student-specific needs. Self-sufficiency within 12 to 18 months is the outcome we are working towards — not ongoing reliance on an external provider.</blockquote>
+        <blockquote>The goal is not to make institutions permanently dependent on EquitableDocs. It is to train your staff to run the tools internally, build and maintain their own Document Format Templates, perform manual corrections, and handle final review. Self-sufficiency within 12 to 18 months is the outcome we are working towards — not ongoing reliance on an external provider.</blockquote>
         <cite>— Document Equity Initiative, EquitableDocs</cite>
       </div>
     </div>
@@ -609,7 +578,7 @@
             <span class="training-duration">2 days · 10 hours</span>
           </div>
           <h3 class="training-card-name" id="t4-name">PDFix SDK Batch Pipeline Operations</h3>
-          <p class="training-card-desc">Hands-on training in operating Pipeline A — the PDFix SDK batch processing pipeline installed within your institution's infrastructure. Covers running the PDFix CLI, writing and debugging JSON batch action configurations for your specific document types, building and maintaining Document Format Templates using the visual template builder, interpreting batch output logs, and running veraPDF validation. All exercises use your own institution's documents. This is the core operations training for the staff member who will run the pipeline day-to-day.</p>
+          <p class="training-card-desc">Hands-on training in operating the PDFix SDK batch processing pipeline installed within your institution's infrastructure. Covers running the PDFix CLI, writing and debugging JSON batch action configurations for your specific document types, building and maintaining Document Format Templates using the visual template builder, interpreting batch output logs, and running veraPDF validation. All exercises use your own institution's documents. This is the core operations training for the staff member who will run the pipeline day-to-day.</p>
           <div class="training-card-for">
             <span class="training-for-label">For:</span>
             IT staff, document operations staff, disability services technical leads — the person who will run PDFix SDK in-house after EquitableDocs hands over
@@ -639,7 +608,7 @@
             <span class="training-duration">2 days · 10 hours</span>
           </div>
           <h3 class="training-card-name" id="t5-name">Setting Up an Institutional Accessible Document Unit</h3>
-          <p class="training-card-desc">How to design and run a systematic document accessibility operation inside a university — from intake and classification through automated tagging (Pipeline A and B), specialist review by Guild volunteers and in-house staff, validation, and delivery. Covers how to route documents correctly between pipelines, build a review workflow that scales, manage volunteer task assignments, and use impact metrics to report progress to institutional leadership.</p>
+          <p class="training-card-desc">How to design and run a systematic document accessibility operation inside a university — from intake and classification through automated tagging (standard and STEM tracks), specialist review by Guild volunteers and in-house staff, validation, and delivery. Covers how to route documents correctly between pipelines, build a review workflow that scales, manage volunteer task assignments, and use impact metrics to report progress to institutional leadership.</p>
           <div class="training-card-for">
             <span class="training-for-label">For:</span>
             Disability services leads, library systems managers, IT leads — the person responsible for the institutional accessibility operation overall
@@ -650,7 +619,7 @@
             <p class="outcomes-label">After this training you will be able to:</p>
             <ul>
               <li>Design a complete intake-to-delivery accessible document workflow for your institution</li>
-              <li>Manage dual-pipeline routing: which documents go to Pipeline A (PDFix SDK) and which to Pipeline B (STEM/ASU)</li>
+              <li>Manage dual-pipeline routing: which documents follow the standard track and which need specialised STEM processing</li>
               <li>Report on institutional document accessibility progress using veraPDF compliance data</li>
             </ul>
           </div>
@@ -669,10 +638,10 @@
             <span class="training-duration">2 days · 12 hours</span>
           </div>
           <h3 class="training-card-name" id="t6-name">STEM Document Accessibility — Equations, Tables, and Complex Layouts</h3>
-          <p class="training-card-desc">STEM documents present the hardest accessibility challenges because automation handles only the structural layer. This programme covers the full STEM remediation process: equation extraction using Mathpix, MathML generation, writing plain-language equation descriptions that screen readers can meaningfully convey, handling complex table structures with multi-level headers, and working within the Pipeline B review workflow. Designed for institutions with significant STEM content who will be handling QA review of Pipeline B output.</p>
+          <p class="training-card-desc">STEM documents present the hardest accessibility challenges because automation handles only the structural layer. This programme covers the full STEM remediation process: equation extraction using Mathpix, MathML generation, writing plain-language equation descriptions that screen readers can meaningfully convey, handling complex table structures with multi-level headers, and working within the STEM review workflow. Designed for institutions with significant STEM content who will be handling QA review of STEM processing output.</p>
           <div class="training-card-for">
             <span class="training-for-label">For:</span>
-            Staff and faculty working with mathematics, sciences, engineering, or economics content; anyone doing QA review of STEM Pipeline B documents
+            Staff and faculty working with mathematics, sciences, engineering, or economics content; anyone doing QA review of STEM documents
           </div>
         </div>
         <div class="training-card-bottom">
@@ -681,7 +650,7 @@
             <ul>
               <li>Write plain-language alt text descriptions for mathematical equations that convey meaning to screen reader users</li>
               <li>Mark up complex tables with multi-level headers using correct TH/TD scope attributes</li>
-              <li>Review and correct Pipeline B output: verify MathML accuracy, approve or return Bedrock-generated alt text, complete manual corrections</li>
+              <li>Review and correct STEM processing output: verify MathML accuracy, review AI-generated alt text, complete manual corrections</li>
             </ul>
           </div>
           <div class="training-card-actions">
@@ -742,15 +711,15 @@
       <h2 id="pricing-h">On pricing</h2>
     </div>
     <div>
-      <p>EquitableDocs is a mission-driven initiative, not a commercial service. We do not take a profit margin. Any costs we pass on reflect only what it genuinely costs to run the process — server time, PDFix SDK and tooling licences, AWS costs for Pipeline B, volunteer hours, and platform overhead. We publish this methodology openly on our Transparency page. You can see exactly where every rupee goes.</p>
-      <p>Pipeline B (STEM/institutional) runs on AWS infrastructure. These costs are covered by institutional partnership fees — they are not charged to individual students or cross-subsidised from Pipeline A. The cost breakdown for Pipeline B is itemised separately in the letter of understanding.</p>
+      <p>EquitableDocs is a mission-driven initiative, not a commercial service. We do not take a profit margin. Any costs we pass on reflect only what it genuinely costs to run the process — server time, PDFix SDK and tooling licences, STEM processing infrastructure, volunteer hours, and platform overhead. We publish this methodology openly on our Transparency page. You can see exactly where every rupee goes.</p>
+      <p>STEM processing infrastructure costs are covered by institutional partnership fees — they are not charged to individual students. The cost breakdown is itemised separately in the letter of understanding.</p>
       <p>The only additional costs to your institution are <strong>travel and accommodation</strong> when in-person sessions are held at your campus. These are listed in the letter of understanding before anything is agreed.</p>
       <div class="pricing-pills" aria-label="Pricing commitments">
         <span class="pricing-pill yes">✓ Actual cost only</span>
         <span class="pricing-pill yes">✓ No profit margin</span>
         <span class="pricing-pill yes">✓ Published cost methodology</span>
         <span class="pricing-pill yes">✓ STEM pipeline included</span>
-        <span class="pricing-pill yes">✓ Transparent Pipeline B cost breakdown</span>
+        <span class="pricing-pill yes">✓ Transparent cost breakdown</span>
         <span class="pricing-pill no">✕ No subscription fees</span>
         <span class="pricing-pill no">✕ No per-seat licences</span>
         <span class="pricing-pill no">✕ No hidden costs</span>
@@ -780,13 +749,13 @@
             <div class="fol-dot" aria-hidden="true">
               <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <div><strong>PDFix SDK pipeline setup (Pipeline A)</strong> — we install and configure PDFix SDK inside your infrastructure, build Document Format Templates for your document families, and train your team to run it independently</div>
+            <div><strong>In-house tool setup</strong> — we install and configure processing tools inside your infrastructure, build Document Format Templates for your document families, and train your team to run the pipeline independently</div>
           </li>
           <li>
             <div class="fol-dot violet" aria-hidden="true">
               <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
-            <div><strong>STEM Pipeline B access</strong> — full 8-stage STEM remediation for equations, lab manuals, research papers, and high-volume institutional batches via the ASU/Ohio State open-source pipeline on AWS</div>
+            <div><strong>STEM document processing</strong> — for STEM content: equations, lab manuals, research papers, and high-volume institutional batches. Specialised processing with AI-powered tagging and specialist human review.</div>
           </li>
           <li>
             <div class="fol-dot" aria-hidden="true">
@@ -858,15 +827,15 @@
             <label class="choice-opt">
               <input type="checkbox" name="services" value="pipeline_a_setup">
               <div class="choice-opt-text">
-                <strong>Pipeline A setup — PDFix SDK in-house installation</strong>
+                <strong>In-house tool setup — PDFix SDK installation</strong>
                 <p class="choice-opt-desc">We install PDFix SDK inside your infrastructure, build Document Format Templates for your document families, and train your team to run the pipeline independently.</p>
               </div>
             </label>
             <label class="choice-opt violet-opt">
               <input type="checkbox" name="services" value="pipeline_b_stem">
               <div class="choice-opt-text">
-                <strong>Pipeline B — STEM document remediation (ASU/Ohio State pipeline)</strong>
-                <p class="choice-opt-desc">For STEM content: equations, lab manuals, research papers, high-volume institutional batches. Runs on AWS. Funded by institutional partnership fees.</p>
+                <strong>STEM document processing</strong>
+                <p class="choice-opt-desc">For STEM content: equations, lab manuals, research papers, high-volume institutional batches. Specialised processing funded by institutional partnership fees.</p>
               </div>
             </label>
             <label class="choice-opt">
@@ -918,7 +887,7 @@
               <option>Over 50% STEM</option>
               <option>Primarily STEM (engineering, medicine, sciences)</option>
             </select>
-            <p class="fg-hint">STEM content routes to Pipeline B. Knowing the proportion helps us plan the right infrastructure from the start.</p>
+            <p class="fg-hint">STEM content requires specialised processing. Knowing the proportion helps us plan the right infrastructure from the start.</p>
           </div>
 
           <div class="fg">
@@ -966,7 +935,7 @@
       <div class="faq-item">
         <details>
           <summary><span>Is this really free? What is the catch?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-          <div class="faq-body">Document remediation is charged at actual cost with a 10% sustainability buffer — no profit. For most standard Pipeline A documents this is a fraction of commercial market rates. Pipeline B (STEM/institutional) costs are itemised separately and reflect actual AWS infrastructure and tooling costs. Training, setup handholding, annual accessibility audit, and Document Format Template building are included in the partnership with no additional charge — except travel and accommodation for in-person sessions, which are listed transparently in advance. There is no catch. We are a social enterprise. The mission is accessible documents for students — not revenue.</div>
+          <div class="faq-body">Document remediation is charged at actual cost with a 10% sustainability buffer — no profit. For most standard documents this is a fraction of commercial market rates. STEM processing costs are itemised separately and reflect actual infrastructure and tooling costs. Training, setup handholding, annual accessibility audit, and Document Format Template building are included in the partnership with no additional charge — except travel and accommodation for in-person sessions, which are listed transparently in advance. There is no catch. We are a social enterprise. The mission is accessible documents for students — not revenue.</div>
         </details>
       </div>
 
@@ -980,14 +949,14 @@
       <div class="faq-item">
         <details>
           <summary><span>How does the in-house setup actually work for our IT team?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-          <div class="faq-body">Pipeline A is built on PDFix SDK, which installs on a standard server running Windows or Linux. We configure the PDFix SDK CLI and batch action JSON configurations for your specific document types, run the first batch together with your IT staff present, and build Document Format Templates for your 2–3 most common document families using the visual template builder. Your IT team runs subsequent batches. We remain available for questions and produce written documentation of every configuration decision — so the knowledge lives in your institution, not in our heads. Pipeline B (STEM) runs on AWS; we handle the deployment and train your senior remediators to review and QA the output.</div>
+          <div class="faq-body">The standard processing tools install on a standard server running Windows or Linux. We configure the PDFix SDK CLI and batch action JSON configurations for your specific document types, run the first batch together with your IT staff present, and build Document Format Templates for your 2–3 most common document families using the visual template builder. Your IT team runs subsequent batches. We remain available for questions and produce written documentation of every configuration decision — so the knowledge lives in your institution, not in our heads. STEM processing runs on dedicated infrastructure; we handle the deployment and train your senior remediators to review and QA the output.</div>
         </details>
       </div>
 
       <div class="faq-item">
         <details>
-          <summary><span>What is the difference between Pipeline A and Pipeline B?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-          <div class="faq-body">Pipeline A uses PDFix SDK and runs inside your own infrastructure — on your servers, under your IT team's control. It handles standard documents: notes, textbooks, forms, letters, scanned PDFs. Pipeline B uses the ASU/Ohio State open-source pipeline on AWS — it handles STEM content with equations, complex layouts, and high-volume institutional batches. The routing is automatic: at intake, the system classifies each document and sends it to the appropriate pipeline. Both pipelines share the same OCR preprocessing layer, the same Guild volunteer review network, and the same veraPDF validation output. The only difference is the auto-tagging engine and the infrastructure it runs on.</div>
+          <summary><span>How do you handle standard documents versus STEM content?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+          <div class="faq-body">Standard documents — notes, textbooks, forms, letters, scanned PDFs — are processed using tools installed inside your own infrastructure, under your IT team's control. STEM content — documents with equations, complex layouts, and high-volume institutional batches — goes through a specialised processing track with AI-powered tagging and specialist human review. The routing is automatic: at intake, the system classifies each document and sends it to the appropriate track. Both tracks share the same OCR preprocessing, the same specialist review network, and the same validation output.</div>
         </details>
       </div>
 
@@ -1001,14 +970,14 @@
       <div class="faq-item">
         <details>
           <summary><span>We have documents in Hindi, Tamil, and other Indian languages. Can you handle those?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-          <div class="faq-body">Yes. Our OCR pipeline — shared across both Pipeline A and Pipeline B — uses Tesseract 5 with language-specific models for all major Indic scripts: Devanagari, Tamil, Telugu, Kannada, Malayalam, Bengali, Gujarati, Marathi, Punjabi, Urdu, Odia, and Assamese. PaddleOCR provides a fallback for complex layouts. Guild members with regional language proficiency handle quality review for these documents. Multilingual capability is a deliberate design priority — the Global South context requires it, and we have built for it from the start.</div>
+          <div class="faq-body">Yes. Our OCR pipeline — shared across both standard and STEM processing tracks — uses Tesseract 5 with language-specific models for all major Indic scripts: Devanagari, Tamil, Telugu, Kannada, Malayalam, Bengali, Gujarati, Marathi, Punjabi, Urdu, Odia, and Assamese. PaddleOCR provides a fallback for complex layouts. Guild members with regional language proficiency handle quality review for these documents. Multilingual capability is a deliberate design priority — the Global South context requires it, and we have built for it from the start.</div>
         </details>
       </div>
 
       <div class="faq-item">
         <details>
           <summary><span>What happens to our documents after remediation?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-          <div class="faq-body">Documents are processed on EquitableDocs servers (Pipeline A) or AWS infrastructure (Pipeline B) and deleted from active storage 180 days after delivery, or per your agreed institutional retention policy. Volunteers see only their assigned pages or elements — they cannot download the full document. No document content is shared with third parties except for specific API calls (Mathpix for equations). The letter of understanding signed before we process any documents specifies exactly what happens to your data and the data deletion schedule.</div>
+          <div class="faq-body">Documents are processed on EquitableDocs servers or dedicated STEM infrastructure and deleted from active storage 180 days after delivery, or per your agreed institutional retention policy. Volunteers see only their assigned pages or elements — they cannot download the full document. No document content is shared with third parties except for specific API calls (Mathpix for equations). The letter of understanding signed before we process any documents specifies exactly what happens to your data and the data deletion schedule.</div>
         </details>
       </div>
 
