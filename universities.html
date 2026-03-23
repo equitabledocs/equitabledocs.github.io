@@ -900,21 +900,26 @@
           </div>
 
           <div class="fg">
-            <p class="fg-label" id="output-label">Preferred output format</p>
+            <p class="fg-label" id="output-label">Preferred output formats (select all that apply)</p>
             <div class="format-chips" role="group" aria-labelledby="output-label">
               <span class="format-chip">
-                <input type="radio" name="output_format" id="fmt-pdf" value="pdf">
+                <input type="checkbox" name="output_format" id="fmt-pdf" value="pdf">
                 <label for="fmt-pdf">Accessible PDF</label>
               </span>
               <span class="format-chip">
-                <input type="radio" name="output_format" id="fmt-word" value="word">
+                <input type="checkbox" name="output_format" id="fmt-word" value="word">
                 <label for="fmt-word">Accessible Word (.docx)</label>
               </span>
               <span class="format-chip">
-                <input type="radio" name="output_format" id="fmt-both" value="both" checked>
-                <label for="fmt-both">Both formats</label>
+                <input type="checkbox" name="output_format" id="fmt-epub" value="epub">
+                <label for="fmt-epub">Accessible EPUB</label>
+              </span>
+              <span class="format-chip">
+                <input type="checkbox" name="output_format" id="fmt-tactile" value="tactile">
+                <label for="fmt-tactile">Tactile content (STEM)</label>
               </span>
             </div>
+            <p class="fg-hint">Tactile content for STEM subjects (diagrams, graphs, maps) involves specialist human production and may have additional cost implications.</p>
           </div>
 
           <hr class="divider">
