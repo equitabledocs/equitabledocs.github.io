@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Join the EquitableDocs Document Accessibility Guild. Volunteer your document accessibility skills to help students with disabilities in the Global South. Free training, recognised credentials, and a clear pathway from Apprentice to Trainer. Register today.">
+<meta name="description" content="Join the Document Accessibility Guild. Volunteer your skills to make academic documents accessible for students with disabilities across the Global South. Free training, skill building, and community recognition.">
 <title>Join the Document Accessibility Guild — EquitableDocs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,35 +15,28 @@
 .guild-hero .hero-sub { margin-left:auto; margin-right:auto; }
 .guild-hero .hero-actions { justify-content:center; }
 
-/* Tier cards */
-.tiers-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
-.tier-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; position:relative; }
-.tier-card.tier-highlight { border-color:var(--teal-mid); border-top:3px solid var(--teal); }
-.tier-badge { display:inline-flex; align-items:center; gap:.4rem; font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; padding:.25rem .7rem; border-radius:100px; margin-bottom:.85rem; }
-.tier-badge-1 { background:var(--teal-light); color:var(--teal-dark); }
-.tier-badge-2 { background:#FEF3C7; color:#92400E; }
-.tier-badge-3 { background:#EDE9FE; color:#4C1D95; }
-.tier-badge-4 { background:var(--amber-bg); color:var(--amber); }
-.tier-badge-5 { background:var(--teal-deep); color:#fff; }
-.tier-card h3 { font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
-.tier-entry { font-size:.82rem; color:var(--teal); font-weight:500; margin-bottom:.65rem; }
-.tier-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; margin-bottom:.75rem; }
-.tier-benefits { list-style:none; display:flex; flex-direction:column; gap:.4rem; }
-.tier-benefits li { font-size:.84rem; color:var(--ink-mid); display:flex; gap:.5rem; align-items:flex-start; line-height:1.55; }
-.tier-benefits li::before { content:''; display:block; min-width:12px; height:12px; background:var(--teal); border-radius:50%; margin-top:3px; }
+/* Skills grid */
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.25rem; }
+.skill-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:1.75rem; }
+.skill-card h3 { font-family:var(--serif); font-size:1rem; color:#fff; margin-bottom:.5rem; font-weight:600; }
+.skill-card p { font-size:.855rem; color:rgba(255,255,255,.65); line-height:1.6; }
 
-/* What you get */
-.benefits-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.25rem; }
-.benefit-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:1.75rem; }
-.benefit-icon { font-size:1.75rem; margin-bottom:.85rem; display:block; }
-.benefit-card h3 { font-family:var(--serif); font-size:1rem; color:#fff; margin-bottom:.5rem; font-weight:600; }
-.benefit-card p { font-size:.855rem; color:rgba(255,255,255,.65); line-height:1.6; }
+/* Focus areas */
+.focus-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
+.focus-card { background:#fff; border:1px solid var(--border); border-radius:12px; padding:1.25rem 1.5rem; }
+.focus-card h3 { font-size:.92rem; font-weight:500; color:var(--ink); margin-bottom:.25rem; }
+.focus-card p { font-size:.78rem; color:var(--ink-muted); line-height:1.5; }
 
-/* Specialisations */
-.spec-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
-.spec-card { background:#fff; border:1px solid var(--border); border-radius:12px; padding:1.25rem 1.5rem; display:flex; align-items:center; gap:1rem; }
-.spec-card h3 { font-size:.92rem; font-weight:500; color:var(--ink); }
-.spec-tier { font-size:.75rem; color:var(--teal); font-weight:500; white-space:nowrap; }
+/* Recognition list */
+.recognition-list { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1rem; }
+.recognition-list li { background:#fff; border:1px solid var(--border); border-radius:12px; padding:1.25rem 1.5rem; font-size:.9rem; color:var(--ink-mid); line-height:1.6; display:flex; gap:.75rem; align-items:flex-start; }
+.recognition-list li::before { content:''; display:block; min-width:14px; height:14px; background:var(--teal); border-radius:50%; margin-top:4px; flex-shrink:0; }
+
+/* Role cards */
+.roles-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; }
+.role-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; border-top:3px solid var(--teal); }
+.role-card h3 { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.role-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; }
 
 /* Registration form */
 .reg-layout { display:grid; grid-template-columns:1fr 1.4fr; gap:5rem; align-items:start; }
@@ -82,185 +75,197 @@
 <section class="hero guild-hero" aria-labelledby="hero-h">
   <div class="hero-in">
     <span class="hero-eyebrow">The Document Accessibility Guild</span>
-    <h1 id="hero-h">Build a career in document accessibility.</h1>
-    <p class="hero-sub">Free training. Real documents. Professional credentials. Start as an Apprentice and progress through five tiers to become a certified Trainer — helping students with disabilities access their education across the Global South.</p>
+    <h1 id="hero-h">Join hands with us. Make education accessible, one document at a time.</h1>
+    <p class="hero-sub">Volunteer your skills to help students with disabilities across the Global South access their education. Learn document accessibility, contribute to real impact, and become part of a global community of practitioners.</p>
     <div class="hero-actions">
       <a href="#register" class="btn-white">Register to join</a>
-      <a href="#tiers" class="btn-outline-w">See the tier structure</a>
+      <a href="#learn" class="btn-outline-w">What you will learn</a>
     </div>
   </div>
 </section>
 
-<!-- ══ WHAT YOU GET ══ -->
-<section class="sec" style="background:var(--teal-deep);" aria-labelledby="benefits-h">
+<!-- ══ WHAT YOU'LL LEARN ══ -->
+<section class="sec" id="learn" style="background:var(--teal-deep);" aria-labelledby="learn-h">
   <div class="sec-in">
-    <span class="eyebrow" style="color:var(--teal-mid);" aria-hidden="true">What you get</span>
-    <h2 class="sec-title" style="color:#fff;" id="benefits-h">This is skilled volunteering — with professional recognition and real social impact.</h2>
-    <p class="sec-lead" style="color:rgba(255,255,255,.7);">The Document Accessibility Guild is a community of skilled practitioners who make academic documents accessible for students with disabilities in the Global South. Every document you work on helps a real student access content their education depends on.</p>
+    <span class="eyebrow" style="color:var(--teal-mid);" aria-hidden="true">Skill building</span>
+    <h2 class="sec-title" style="color:#fff;" id="learn-h">What you will learn</h2>
+    <p class="sec-lead" style="color:rgba(255,255,255,.7);">The Guild is built around learning by doing. You work on real documents, receive structured training, and build practical skills in document accessibility — a field where skilled practitioners are urgently needed worldwide.</p>
 
-    <div class="benefits-grid" role="list">
-      <article class="benefit-card" role="listitem">
-        <span class="benefit-icon" aria-hidden="true">🎓</span>
-        <h3>Free training</h3>
-        <p>Six structured programmes from foundation to advanced. Learn PDF remediation, STEM accessibility, and how to train others.</p>
+    <div class="skills-grid" role="list">
+      <article class="skill-card" role="listitem">
+        <h3>PDF remediation</h3>
+        <p>Learn to tag PDFs for screen readers — headings, reading order, lists, figures, and metadata. Understand PDF/UA compliance and how to validate your work.</p>
       </article>
-      <article class="benefit-card" role="listitem">
-        <span class="benefit-icon" aria-hidden="true">📄</span>
-        <h3>Real documents, real impact</h3>
-        <p>Work on actual student documents. Every document you remediate helps a real student access their education.</p>
+      <article class="skill-card" role="listitem">
+        <h3>Word and PowerPoint accessibility</h3>
+        <p>Create accessible documents from source — proper heading structures, alt text, table markup, and slide design that works with assistive technology.</p>
       </article>
-      <article class="benefit-card" role="listitem">
-        <span class="benefit-icon" aria-hidden="true">🏅</span>
-        <h3>Recognised credentials</h3>
-        <p>Earn a Guild Certificate issued by The Document Equity Initiative after 10 documents. Senior members receive professional reference letters and public recognition on the platform.</p>
+      <article class="skill-card" role="listitem">
+        <h3>Alt text and image descriptions</h3>
+        <p>Write meaningful descriptions for images, charts, diagrams, and complex figures — the skill that most directly helps students using screen readers.</p>
       </article>
-      <article class="benefit-card" role="listitem">
-        <span class="benefit-icon" aria-hidden="true">💼</span>
-        <h3>Grow into a trainer</h3>
-        <p>Experienced members can become certified trainers, delivering accessibility training at partner universities and mentoring new Guild Members.</p>
+      <article class="skill-card" role="listitem">
+        <h3>STEM and equation accessibility</h3>
+        <p>Make mathematical equations, scientific notation, and data tables accessible using MathML and plain-language descriptions.</p>
       </article>
-      <article class="benefit-card" role="listitem">
-        <span class="benefit-icon" aria-hidden="true">📝</span>
-        <h3>Reference letters</h3>
-        <p>Senior Accessibility Specialists receive named reference letters. Your work is credited publicly on the platform.</p>
+      <article class="skill-card" role="listitem">
+        <h3>OCR and scanned documents</h3>
+        <p>Learn how optical character recognition converts scanned pages into searchable text, and how to handle multi-language and complex layout documents.</p>
       </article>
-      <article class="benefit-card" role="listitem">
-        <span class="benefit-icon" aria-hidden="true">🌐</span>
-        <h3>Work from anywhere</h3>
-        <p>Browser-based portal. No software to install. Work on any device, at any time, from anywhere in the world.</p>
+      <article class="skill-card" role="listitem">
+        <h3>Easy Read content creation</h3>
+        <p>Simplify complex academic content into Easy Read format — clear language, short sentences, meaningful images — for students with learning and intellectual disabilities.</p>
+      </article>
+      <article class="skill-card" role="listitem">
+        <h3>EPUB accessibility</h3>
+        <p>Understand accessible digital publishing — semantic structure, navigation, media overlays, and how EPUB works with reading apps and assistive technology.</p>
+      </article>
+      <article class="skill-card" role="listitem">
+        <h3>Quality assurance and validation</h3>
+        <p>Learn to use industry-standard tools to validate documents against international accessibility standards, and how to do screen reader spot-tests.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ══ TIER STRUCTURE ══ -->
-<section class="sec" id="tiers" aria-labelledby="tiers-h">
+<!-- ══ HOW YOU CONTRIBUTE ══ -->
+<section class="sec" aria-labelledby="contribute-h">
   <div class="sec-in">
-    <span class="eyebrow" aria-hidden="true">Volunteer pathway</span>
-    <h2 class="sec-title" id="tiers-h">Join hands with us. Become part of a volunteer task force of document accessibility specialists — making education accessible, one document at a time.</h2>
-    <p class="sec-lead">Every volunteer starts at Tier 1. Progress is based on documents completed and quality scores from reviewers.</p>
+    <span class="eyebrow" aria-hidden="true">Your contribution</span>
+    <h2 class="sec-title" id="contribute-h">How your work helps students</h2>
+    <p class="sec-lead">Every document you make accessible goes directly to a student who needs it. Your work supports schools, colleges, and universities in the Global South that cannot afford commercial document remediation services.</p>
 
-    <div class="tiers-grid" role="list">
-
-      <article class="tier-card tier-highlight" role="listitem">
-        <span class="tier-badge tier-badge-1">Tier 1</span>
-        <h3>Document Accessibility Volunteer — Learner</h3>
-        <p class="tier-entry">No experience needed</p>
-        <p>You start by learning the foundations — writing image descriptions, understanding reading order, and marking decorative elements. Every task you complete makes a real document accessible for a student who otherwise could not read it.</p>
-        <ul class="tier-benefits" role="list">
-          <li>Mentorship from experienced Guild Members</li>
-          <li>Free structured training</li>
-          <li>Volunteer Certificate issued by The Document Equity Initiative after 6 months</li>
-        </ul>
-        <p style="margin-top:.75rem;font-size:.84rem;"><a href="sample-certificate.html" style="color:var(--teal);">See sample certificate</a></p>
+    <div class="skills-grid" style="margin-top:2rem;" role="list">
+      <article style="background:#fff; border:1px solid var(--border); border-radius:14px; padding:1.75rem;" role="listitem">
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:.5rem;">Real documents, real students</h3>
+        <p style="font-size:.875rem; color:var(--ink-muted); line-height:1.65;">You work on actual academic documents — textbooks, reading lists, exam papers, course materials — submitted by students and institutions who need them made accessible.</p>
       </article>
-
-      <article class="tier-card" role="listitem">
-        <span class="tier-badge tier-badge-2">Tier 2</span>
-        <h3>Document Accessibility Volunteer — Contributor</h3>
-        <p class="tier-entry">6 months active + foundational training completed</p>
-        <p>You handle full document remediation — tables, forms, reading order, and basic STEM content. Your work directly supports universities in the Global South that cannot afford commercial remediation services.</p>
-        <ul class="tier-benefits" role="list">
-          <li>Certificate of Recognition from The Document Equity Initiative</li>
-          <li>Access to more complex and impactful documents</li>
-          <li>Priority assignment on urgent student requests</li>
-        </ul>
-        <p style="margin-top:.75rem;font-size:.84rem;"><a href="sample-certificate.html" style="color:var(--teal);">See sample certificate</a> · <a href="sample-letter.html" style="color:var(--teal);">See sample letter</a></p>
+      <article style="background:#fff; border:1px solid var(--border); border-radius:14px; padding:1.75rem;" role="listitem">
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:.5rem;">Flexible hours, remote work</h3>
+        <p style="font-size:.875rem; color:var(--ink-muted); line-height:1.65;">We ask for a few hours each week — but the schedule is yours. Work from anywhere, on any device, at any time that suits you. What matters is consistency, not clock hours.</p>
       </article>
-
-      <article class="tier-card" role="listitem">
-        <span class="tier-badge tier-badge-3">Tier 3</span>
-        <h3>Document Accessibility Volunteer — Reviewer</h3>
-        <p class="tier-entry">12 months active + supported at least 2 university partners</p>
-        <p>You take on the hardest documents — STEM textbooks, complex layouts, multi-language content. You review other members' work before it reaches students. Your quality decisions set the standard for the entire Guild.</p>
-        <ul class="tier-benefits" role="list">
-          <li>Named publicly on the platform</li>
-          <li>Professional reference letter</li>
-          <li>Pathway to recognised accessibility certifications</li>
-        </ul>
-        <p style="margin-top:.75rem;font-size:.84rem;"><a href="sample-certificate.html" style="color:var(--teal);">See sample certificate</a> · <a href="sample-letter.html" style="color:var(--teal);">See sample letter</a></p>
+      <article style="background:#fff; border:1px solid var(--border); border-radius:14px; padding:1.75rem;" role="listitem">
+        <h3 style="font-family:var(--serif); font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:.5rem;">Learn and share together</h3>
+        <p style="font-size:.875rem; color:var(--ink-muted); line-height:1.65;">Community learning sessions, knowledge sharing, and the chance to co-author accessibility guides and best practice resources with fellow volunteers.</p>
       </article>
-
-      <article class="tier-card" role="listitem">
-        <span class="tier-badge tier-badge-4">Tier 4</span>
-        <h3>Document Accessibility Volunteer — Trainer</h3>
-        <p class="tier-entry">2 years active + supported 10+ university partners + trainer pathway completed</p>
-        <p>You train university staff and new Guild Members — helping institutions build the capacity to produce accessible documents themselves. This is the "capacity, not dependency" model in action.</p>
-        <ul class="tier-benefits" role="list">
-          <li>Deliver training at partner universities</li>
-          <li>Certified Trainer credential from The Document Equity Initiative</li>
-          <li>Recognised expertise in document accessibility</li>
-        </ul>
-        <p style="margin-top:.75rem;font-size:.84rem;"><a href="sample-certificate.html" style="color:var(--teal);">See sample certificate</a> · <a href="sample-letter.html" style="color:var(--teal);">See sample letter</a></p>
-      </article>
-
-      <article class="tier-card" role="listitem">
-        <span class="tier-badge tier-badge-5">Tier 5</span>
-        <h3>Document Accessibility Volunteer — Mentor</h3>
-        <p class="tier-entry">Invitation only</p>
-        <p>You shape the Guild's standards, mentor members, and represent the initiative externally. You help decide how EquitableDocs grows and which institutions we support next.</p>
-        <ul class="tier-benefits" role="list">
-          <li>Advisory role in platform decisions</li>
-          <li>Represent the Guild at conferences and with partners</li>
-          <li>Mentor the next generation of accessibility specialists</li>
-        </ul>
-        <p style="margin-top:.75rem;font-size:.84rem;"><a href="sample-certificate.html" style="color:var(--teal);">See sample certificate</a> · <a href="sample-letter.html" style="color:var(--teal);">See sample letter</a></p>
-      </article>
-
     </div>
   </div>
 </section>
 
-<!-- ══ SPECIALISATIONS ══ -->
-<section class="sec" style="background:var(--cream-2);" aria-labelledby="specs-h">
+<!-- ══ FOCUS AREAS ══ -->
+<section class="sec" style="background:var(--cream-2);" aria-labelledby="focus-h">
   <div class="sec-in">
-    <span class="eyebrow" aria-hidden="true">Specialisations</span>
-    <h2 class="sec-title" id="specs-h">Choose your focus area</h2>
-    <p class="sec-lead">As you progress, you can specialise in the types of accessibility work that interest you most.</p>
+    <span class="eyebrow" aria-hidden="true">Focus areas</span>
+    <h2 class="sec-title" id="focus-h">Choose what interests you most</h2>
+    <p class="sec-lead">You can focus on one area or work across several. Your interests guide the training and documents you are assigned.</p>
 
-    <div class="spec-grid" role="list">
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>Alt Text Specialist</h3>
-          <p class="spec-tier">Tier 1+ (standard) / Tier 2-3 (complex)</p>
-        </div>
+    <div class="focus-grid" role="list">
+      <div class="focus-card" role="listitem">
+        <h3>PDF remediation</h3>
+        <p>Tagging, reading order, heading structure, metadata, PDF/UA compliance</p>
       </div>
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>STEM / Equation Specialist</h3>
-          <p class="spec-tier">Tier 3+ (requires mathematical literacy)</p>
-        </div>
+      <div class="focus-card" role="listitem">
+        <h3>Word document accessibility</h3>
+        <p>Accessible formatting, styles, alt text, table structure in Word</p>
       </div>
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>Table Accessibility Specialist</h3>
-          <p class="spec-tier">Tier 2+</p>
-        </div>
+      <div class="focus-card" role="listitem">
+        <h3>PowerPoint accessibility</h3>
+        <p>Slide structure, reading order, alt text, accessible charts and diagrams</p>
       </div>
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>Reading Order Reviewer</h3>
-          <p class="spec-tier">Tier 2+</p>
-        </div>
+      <div class="focus-card" role="listitem">
+        <h3>Accessible document creation</h3>
+        <p>Creating accessible PDFs and Word documents from source — InDesign, Word, Google Docs</p>
       </div>
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>Form and Field Specialist</h3>
-          <p class="spec-tier">Tier 2+</p>
-        </div>
+      <div class="focus-card" role="listitem">
+        <h3>Alt text and image descriptions</h3>
+        <p>Writing meaningful descriptions for images, charts, diagrams, and complex figures</p>
       </div>
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>Language Specialist</h3>
-          <p class="spec-tier">Any tier (by language proficiency)</p>
-        </div>
+      <div class="focus-card" role="listitem">
+        <h3>STEM and equation accessibility</h3>
+        <p>MathML, LaTeX, equation descriptions, scientific notation, data tables</p>
       </div>
-      <div class="spec-card" role="listitem">
-        <div>
-          <h3>QA Reviewer</h3>
-          <p class="spec-tier">Tier 3+ (gatekeeper before delivery)</p>
-        </div>
+      <div class="focus-card" role="listitem">
+        <h3>Tables and complex layouts</h3>
+        <p>Multi-level headers, merged cells, data tables, multi-column layouts</p>
       </div>
+      <div class="focus-card" role="listitem">
+        <h3>OCR and scanned documents</h3>
+        <p>Optical character recognition, multi-language documents, layout analysis</p>
+      </div>
+      <div class="focus-card" role="listitem">
+        <h3>Easy Read content</h3>
+        <p>Simplifying complex content into plain language with meaningful images</p>
+      </div>
+      <div class="focus-card" role="listitem">
+        <h3>EPUB accessibility</h3>
+        <p>Accessible digital publishing, semantic structure, navigation, media overlays</p>
+      </div>
+      <div class="focus-card" role="listitem">
+        <h3>Forms and interactive documents</h3>
+        <p>Accessible form fields, labels, tab order, and interactive PDF elements</p>
+      </div>
+      <div class="focus-card" role="listitem">
+        <h3>Regional languages</h3>
+        <p>Working with documents in Hindi, Tamil, Telugu, Bengali, and other languages</p>
+      </div>
+      <div class="focus-card" role="listitem">
+        <h3>Quality assurance</h3>
+        <p>Validation tools, screen reader testing, compliance checking, review workflows</p>
+      </div>
+      <div class="focus-card" role="listitem">
+        <h3>Training and mentoring</h3>
+        <p>Helping new volunteers learn, delivering training sessions, writing guides</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMMUNITY RECOGNITION ══ -->
+<section class="sec" aria-labelledby="recognition-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Recognition</span>
+    <h2 class="sec-title" id="recognition-h">Your contribution is recognised</h2>
+    <p class="sec-lead">We document every contribution you make. Your work is visible, credited, and formally recognised by The Document Equity Initiative.</p>
+
+    <ul class="recognition-list" role="list">
+      <li>Certificate from The Document Equity Initiative documenting your volunteer contribution</li>
+      <li>Listed on the EquitableDocs website as an active contributor to the Document Accessibility Guild</li>
+      <li>Part of a global community of document accessibility volunteers supporting the Global South</li>
+      <li>Invitation to community learning sessions, knowledge-sharing events, and collaborative projects</li>
+      <li>Opportunity to co-author accessibility guides and best practice resources</li>
+      <li>Every document you help make accessible is a tangible, credited contribution to students' education</li>
+    </ul>
+
+    <p style="margin-top:1.5rem; font-size:.9rem; color:var(--ink-muted);">
+      <a href="sample-certificate.html" style="color:var(--teal);">See a sample certificate</a> · <a href="sample-letter.html" style="color:var(--teal);">See a sample letter of recognition</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══ FOUR ROLES ══ -->
+<section class="sec" style="background:var(--cream-2);" id="roles" aria-labelledby="roles-h">
+  <div class="sec-in">
+    <span class="eyebrow" aria-hidden="true">Volunteer roles</span>
+    <h2 class="sec-title" id="roles-h">Four roles. A natural progression.</h2>
+    <p class="sec-lead">Everyone starts as a Learner. As you build skills and contribute, you grow naturally into roles with more responsibility. There are no exams, no scores — just consistent contribution and a willingness to learn and share.</p>
+
+    <div class="roles-grid" role="list">
+      <article class="role-card" role="listitem">
+        <h3>Learner</h3>
+        <p>You are new to document accessibility. You receive structured training, work on guided tasks, and learn the foundations alongside experienced volunteers. No prior experience needed.</p>
+      </article>
+      <article class="role-card" role="listitem">
+        <h3>Contributor</h3>
+        <p>You work independently on document remediation tasks across your chosen focus areas. Your work directly supports students and institutions. You participate in community learning sessions and share what you have learned.</p>
+      </article>
+      <article class="role-card" role="listitem">
+        <h3>Trainer</h3>
+        <p>You help train new volunteers and deliver accessibility training at partner universities. You contribute to training materials and accessibility guides. Certified Trainer credential from The Document Equity Initiative.</p>
+      </article>
+      <article class="role-card" role="listitem">
+        <h3>Mentor</h3>
+        <p>You guide the Guild community — shaping standards, mentoring volunteers, and representing the initiative externally. You help decide which institutions the Guild supports next and how the community grows.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -274,7 +279,7 @@
     <dl class="faq-list">
       <details>
         <summary><span>Do I need any experience to join?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-        <div class="faq-body">No. Tier 1 (Document Accessibility Volunteer — Learner) is designed for people with no prior experience. You receive free training, mentorship, and guided tasks. All you need is a computer, a web browser, and the willingness to learn.</div>
+        <div class="faq-body">No. The Learner role is designed for people with no prior experience. You receive free training, mentorship, and guided tasks. All you need is a computer, a web browser, and the willingness to learn.</div>
       </details>
       <details>
         <summary><span>How much time do I need to commit?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
@@ -282,19 +287,19 @@
       </details>
       <details>
         <summary><span>Is this paid work?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-        <div class="faq-body">The Document Accessibility Guild is volunteer-driven. You contribute your skills and time to help students with disabilities access their education. In return, you receive structured training, recognised credentials, professional reference letters, and a clear pathway from apprentice to trainer. The value at every tier is genuine professional growth in a field where skilled practitioners are urgently needed.</div>
+        <div class="faq-body">The Document Accessibility Guild is volunteer-driven. You contribute your skills and time to help students with disabilities access their education. In return, you receive structured training, recognised certificates, and the opportunity to be part of a global community making a real difference. The value is genuine skill building, social impact, and being part of something meaningful.</div>
       </details>
       <details>
-        <summary><span>What credentials will I earn?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-        <div class="faq-body">After 6 months as an active volunteer, you receive a Volunteer Certificate issued by The Document Equity Initiative. As you progress through the tiers, you earn a Certificate of Recognition from The Document Equity Initiative, professional reference letters, and public recognition on the platform. Volunteer Trainers earn the Certified Trainer credential from The Document Equity Initiative. Every tier documents your contribution and the impact your work has had on students.</div>
+        <summary><span>What recognition will I receive?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">Every volunteer receives a certificate from The Document Equity Initiative documenting their contribution. You are listed on the EquitableDocs website as a Guild contributor. Trainers receive a Certified Trainer credential. Every tier documents your contribution and the impact your work has had on students.</div>
       </details>
       <details>
-        <summary><span>What software do I need?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-        <div class="faq-body">None. The Guild portal is entirely browser-based. You see your assigned pages or elements in the browser, submit your work in the browser, and track your progress in the browser. It works on any device — desktop, laptop, tablet, or phone.</div>
+        <summary><span>What tools or software do I need?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">A computer and a web browser — that is all. The Guild works through a browser-based portal. No software to install. It works on any device — desktop, laptop, tablet, or phone.</div>
       </details>
       <details>
-        <summary><span>Can I join from outside India?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
-        <div class="faq-body">Yes. The Guild is open to anyone, anywhere. Language Specialists are particularly valuable if you are fluent in languages that our OCR and remediation pipeline supports. All work is remote and browser-based.</div>
+        <summary><span>Can I join from anywhere in the world?</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+        <div class="faq-body">Yes. The Guild is open to anyone, anywhere. Volunteers who speak regional languages are especially valuable — our work covers documents in Hindi, Tamil, Telugu, Bengali, and many other languages. All work is remote and browser-based.</div>
       </details>
     </dl>
   </div>
@@ -310,7 +315,7 @@
         <ul class="reg-checklist">
           <li>No commitment required at this stage</li>
           <li>We will email you when the portal opens</li>
-          <li>Early registrants get priority placement</li>
+          <li>Early registrants get priority onboarding</li>
           <li>Training begins before the portal launches</li>
         </ul>
       </div>
@@ -348,7 +353,7 @@
             <label class="choice-opt">
               <input type="radio" name="experience" value="some">
               <div>
-                <span class="choice-opt-text">Some — I have done basic remediation</span>
+                <span class="choice-opt-text">Some — I have done basic remediation or accessible document creation</span>
               </div>
             </label>
             <label class="choice-opt">
@@ -360,7 +365,23 @@
           </div>
 
           <div class="choice-group" role="group" aria-labelledby="interest-label">
-            <p class="choice-group-label" id="interest-label">Areas of interest (select all that apply)</p>
+            <p class="choice-group-label" id="interest-label">Focus areas you are interested in (select all that apply)</p>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="pdf-remediation">
+              <span class="choice-opt-text">PDF remediation</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="word-accessibility">
+              <span class="choice-opt-text">Word document accessibility</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="ppt-accessibility">
+              <span class="choice-opt-text">PowerPoint accessibility</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="accessible-creation">
+              <span class="choice-opt-text">Accessible document creation (PDF / Word from source)</span>
+            </label>
             <label class="choice-opt">
               <input type="checkbox" name="interest" value="alt-text">
               <span class="choice-opt-text">Alt text and image descriptions</span>
@@ -374,8 +395,28 @@
               <span class="choice-opt-text">Tables and complex layouts</span>
             </label>
             <label class="choice-opt">
+              <input type="checkbox" name="interest" value="ocr">
+              <span class="choice-opt-text">OCR and scanned documents</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="easy-read">
+              <span class="choice-opt-text">Easy Read content creation</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="epub">
+              <span class="choice-opt-text">EPUB accessibility</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="forms">
+              <span class="choice-opt-text">Forms and interactive documents</span>
+            </label>
+            <label class="choice-opt">
               <input type="checkbox" name="interest" value="languages">
               <span class="choice-opt-text">Regional languages and translation</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="interest" value="qa">
+              <span class="choice-opt-text">Quality assurance and validation</span>
             </label>
             <label class="choice-opt">
               <input type="checkbox" name="interest" value="training">
@@ -383,10 +424,57 @@
             </label>
           </div>
 
+          <hr class="divider">
+          <p class="form-section-title">Training and upskilling</p>
+
+          <div class="choice-group" role="group" aria-labelledby="training-label">
+            <p class="choice-group-label" id="training-label">What areas of training are you looking to upskill in? (select all that apply)</p>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="pdf-basics">
+              <span class="choice-opt-text">PDF accessibility fundamentals</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="acrobat-pro">
+              <span class="choice-opt-text">PDF remediation with Adobe Acrobat Pro</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="word-ppt">
+              <span class="choice-opt-text">Creating accessible Word and PowerPoint documents</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="stem-math">
+              <span class="choice-opt-text">STEM content — equations, MathML, scientific documents</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="easy-read">
+              <span class="choice-opt-text">Easy Read content creation</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="epub">
+              <span class="choice-opt-text">EPUB and digital publishing accessibility</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="ocr-tools">
+              <span class="choice-opt-text">OCR tools and scanned document processing</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="screen-readers">
+              <span class="choice-opt-text">Screen reader testing (NVDA, JAWS, VoiceOver)</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="validation">
+              <span class="choice-opt-text">Accessibility validation tools (veraPDF, PAC)</span>
+            </label>
+            <label class="choice-opt">
+              <input type="checkbox" name="training" value="train-trainer">
+              <span class="choice-opt-text">Training the trainer — how to teach accessibility</span>
+            </label>
+          </div>
+
           <div class="fg">
             <label class="fg-label" for="guild-languages">Languages you are fluent in</label>
             <input class="fg-input" type="text" id="guild-languages" name="languages" placeholder="e.g. English, Hindi, Tamil">
-            <span class="fg-hint">Separate with commas. Language specialists are especially needed.</span>
+            <span class="fg-hint">Separate with commas. Volunteers who speak regional languages are especially needed.</span>
           </div>
 
           <div class="fg">

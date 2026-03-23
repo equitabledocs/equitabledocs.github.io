@@ -61,7 +61,7 @@ EquitableDocs is the flagship platform of The EquitableAccess Suite, which will 
 
 ## License
 
-This website is released under the MIT License. The remediation pipeline repositories will specify their own licences upon release.
+Copyright © 2026 The Document Equity Initiative. All rights reserved. The remediation pipeline repositories will specify their own licences upon release.
 
 ---
 
