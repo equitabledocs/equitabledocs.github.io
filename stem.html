@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EquitableDocs remediates STEM textbooks with equations, complex tables, and multi-column layouts. MathML output, plain-language equation descriptions, and PDF/UA compliance for university STEM content.">
+<title>STEM Document Accessibility — EquitableDocs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── STEM page-specific overrides ── */
+.stem-hero .hero-in { max-width:720px; text-align:center; }
+.stem-hero .hero-sub { margin-left:auto; margin-right:auto; }
+.stem-hero .hero-actions { justify-content:center; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip">Skip to main content</a>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="/" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/universities/">Universities</a></li>
+      <li><a href="/universities/#training">Training</a></li>
+      <li><a href="/stem/" aria-current="page">STEM</a></li>
+      <li><a href="/guild/">Join Guild</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/upload/" class="nav-cta">Upload Document</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <div class="breadcrumb-in">
+    <ol role="list">
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">›</li>
+      <li><a href="/universities/">Universities</a></li>
+      <li aria-hidden="true">›</li>
+      <li><span aria-current="page">STEM Remediation</span></li>
+    </ol>
+  </div>
+</nav>
+
+<section class="hero stem-hero" aria-labelledby="hero-h">
+  <div class="hero-in">
+    <span class="hero-eyebrow">STEM Document Accessibility</span>
+    <h1 id="hero-h">Equations, tables, and complex layouts — made accessible.</h1>
+    <p class="hero-sub">STEM textbooks are the hardest documents to remediate. Standard tools cannot handle equations, multi-level tables, or multi-column research layouts. Our 8-stage pipeline is designed specifically for this content.</p>
+    <div class="hero-actions">
+      <a href="/universities/" class="btn-white">Partner with us</a>
+      <a href="#pipeline" class="btn-outline-w">See the pipeline</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="problem-h">
+  <div class="sec-in">
+    <span class="eyebrow">The challenge</span>
+    <h2 class="sec-title" id="problem-h">Why STEM content needs a dedicated pipeline</h2>
+    <p class="sec-lead">Standard auto-tagging tools fail on STEM content. Equations become unreadable strings. Complex tables lose their header associations. Multi-column layouts break reading order. Students using screen readers hear noise instead of mathematics.</p>
+    <div class="eq-grid">
+      <div class="eq-card">
+        <h3>Equations</h3>
+        <p>A screen reader cannot interpret an image of an equation. Every equation needs three things: plain-language alt text, MathML markup for braille displays, and the original LaTeX source for re-use.</p>
+      </div>
+      <div class="eq-card">
+        <h3>Complex tables</h3>
+        <p>STEM tables often have multi-level headers, merged cells, and spanning rows. Without correct header-cell associations, a screen reader cannot tell a student which column or row a value belongs to.</p>
+      </div>
+      <div class="eq-card">
+        <h3>Multi-column layouts</h3>
+        <p>Research papers, lab manuals, and many textbooks use two-column layouts. Auto-taggers frequently read across columns instead of down them, producing garbled output for screen reader users.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline" class="sec" style="background:var(--cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" aria-labelledby="pipeline-h">
+  <div class="sec-in">
+    <span class="eyebrow">The pipeline</span>
+    <h2 class="sec-title" id="pipeline-h">8 stages from intake to delivery</h2>
+    <p class="sec-lead">Every STEM document passes through all 8 stages. Automation handles bulk processing. Trained Guild Contributors with STEM expertise handle what automation cannot.</p>
+
+    <div class="pipeline-status" role="note">
+      <strong>Development status:</strong> The STEM pipeline is in active development. We are accepting early university partner enquiries now, with full pipeline availability planned for later in 2026. <a href="/universities/#apply">Get in touch</a> to discuss your institution's needs.
+    </div>
+
+    <div class="pipeline-list" style="margin-top:2.5rem">
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">1</div>
+        <div class="stage-content">
+          <h3>Intake and classification</h3>
+          <p>Document enters the queue. The system detects STEM content via keyword and structure analysis and routes it to the STEM pipeline.</p>
+          <div class="stage-tools"><span class="stage-tool">AI classifier</span><span class="stage-tool">FastAPI</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">2</div>
+        <div class="stage-content">
+          <h3>OCR pre-processing</h3>
+          <p>Scanned documents are processed with OCR. Complex layouts use a fallback engine for better accuracy on multi-column and table-heavy pages.</p>
+          <div class="stage-tools"><span class="stage-tool">OCRmyPDF</span><span class="stage-tool">Tesseract 5</span><span class="stage-tool">PaddleOCR</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">3</div>
+        <div class="stage-content">
+          <h3>Equation extraction</h3>
+          <p>All equations are identified and extracted. Each equation is converted to LaTeX and MathML. Display equations and inline equations are flagged separately.</p>
+          <div class="stage-tools"><span class="stage-tool">Mathematical OCR engine</span><span class="stage-tool">LaTeX</span><span class="stage-tool">MathML</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">4</div>
+        <div class="stage-content">
+          <h3>Auto-tagging</h3>
+          <p>The document is auto-tagged with structural markup: headings, paragraphs, lists, tables, and figures. STEM-specific rules handle equation placement and reading order.</p>
+          <div class="stage-tools"><span class="stage-tool">Auto-tag engine</span><span class="stage-tool">AI alt-text</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">5</div>
+        <div class="stage-content">
+          <h3>Specialist task assignment</h3>
+          <p>The system generates a work order and assigns tasks to Guild Contributors with STEM training: equation alt text, table markup, complex figure descriptions, and reading order review.</p>
+          <div class="stage-tools"><span class="stage-tool">Task queue</span><span class="stage-tool">Guild Contributors — STEM</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">6</div>
+        <div class="stage-content">
+          <h3>Equation alt-text writing</h3>
+          <p>A Guild Contributor with STEM training writes a plain-language description of every equation. This is what a screen reader will announce. MathML is attached for braille display rendering.</p>
+          <div class="stage-tools"><span class="stage-tool">Human-written</span><span class="stage-tool">MathML</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">7</div>
+        <div class="stage-content">
+          <h3>Validation</h3>
+          <p>Full PDF/UA compliance check. Screen reader spot-test by a Guild Mentor. Cross-validation for university deliverables.</p>
+          <div class="stage-tools"><span class="stage-tool">veraPDF</span><span class="stage-tool">NVDA</span><span class="stage-tool">PAC</span></div>
+        </div>
+      </div>
+
+      <div class="pipeline-stage">
+        <div class="stage-num" aria-hidden="true">8</div>
+        <div class="stage-content">
+          <h3>Delivery</h3>
+          <p>The remediated document is delivered via the portal, email, or WhatsApp. A compliance certificate is attached for university deliverables. EPUB and tactile diagram formats are available on request for STEM content.</p>
+          <div class="stage-tools"><span class="stage-tool">Download</span><span class="stage-tool">Email</span><span class="stage-tool">WhatsApp</span><span class="stage-tool">EPUB</span><span class="stage-tool">Tactile</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="eq-standards-h">
+  <div class="sec-in">
+    <span class="eyebrow">Equation accessibility</span>
+    <h2 class="sec-title" id="eq-standards-h">Every equation gets three forms of accessibility</h2>
+    <p class="sec-lead">Mathematical meaning is too easy to misrepresent with automation alone. That is why the plain-language description is always written by a Guild Contributor with STEM training.</p>
+    <div class="eq-grid">
+      <div class="eq-card">
+        <h3>Plain-language alt text</h3>
+        <p>Written by a Guild Contributor with STEM training. Describes what the equation says in natural language. This is what screen readers announce.</p>
+        <div class="eq-example">"The quadratic formula: x equals negative b plus or minus the square root of b squared minus 4ac, all divided by 2a."</div>
+      </div>
+      <div class="eq-card">
+        <h3>MathML markup</h3>
+        <p>Generated from the LaTeX output and embedded in the PDF. Allows advanced screen readers and braille displays to render the equation natively in mathematical notation.</p>
+      </div>
+      <div class="eq-card">
+        <h3>LaTeX source</h3>
+        <p>Stored in document metadata and in the EquitableDocs database. Available for institutions who want to re-use equations in other formats, LMS platforms, or accessible EPUB exports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" aria-labelledby="tables-h">
+  <div class="sec-in">
+    <span class="eyebrow">Table accessibility</span>
+    <h2 class="sec-title" id="tables-h">STEM tables need precise markup</h2>
+    <p class="sec-lead">A screen reader user navigates tables cell by cell. Without correct header associations, the data is meaningless. We apply different rules for different table types.</p>
+    <div class="table-types">
+      <div class="table-type">
+        <h3>Value tables</h3>
+        <p>Trigonometric values, physical constants, periodic table sections. Row 1 headers marked with column scope. Column 1 headers marked with row scope. All blank cells tagged as empty.</p>
+        <span class="table-type-rule">TH Scope=Col + TH Scope=Row</span>
+      </div>
+      <div class="table-type">
+        <h3>Multi-level header tables</h3>
+        <p>Common in research papers and lab reports. Each header span gets correct ColSpan or RowSpan attributes. Complex associations are documented in the work order for the Guild Contributor.</p>
+        <span class="table-type-rule">ColSpan + RowSpan attributes</span>
+      </div>
+      <div class="table-type">
+        <h3>Layout tables</h3>
+        <p>Answer grids, exercise boxes, and visual arrangements that look like tables but contain no data relationships. These are marked as artifacts or restructured as lists. Never tagged as data tables.</p>
+        <span class="table-type-rule">Artifact or restructured as list</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="who-h">
+  <div class="sec-in">
+    <span class="eyebrow">Who this serves</span>
+    <h2 class="sec-title" id="who-h">For universities with STEM content</h2>
+    <p class="sec-lead">The STEM pipeline is available to university partners. It handles the content that standard remediation services cannot.</p>
+    <div class="who-grid">
+      <div class="eq-card">
+        <h3>What we handle</h3>
+        <p>Mathematics, physics, chemistry, engineering, economics, and biology textbooks. Lab manuals. Research papers. Exam papers (UPSC, state boards, JEE, NEET). Any document with equations, complex tables, or multi-column layouts.</p>
+      </div>
+      <div class="eq-card">
+        <h3>What universities get</h3>
+        <p>PDF/UA compliant output with MathML equations. EPUB export and tactile diagram formats for braille-ready delivery. Dedicated Guild Contributor assignment with STEM expertise. MathML delivery option for LMS integration (Moodle, Canvas, Blackboard). Annual STEM accessibility training included for Tier 2+ partners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" aria-labelledby="cta-h">
+  <h2 id="cta-h">Discuss your institution's STEM accessibility needs</h2>
+  <p>We are working with early university partners to shape the STEM pipeline. Get in touch to tell us about your content — and we will tell you exactly how we can help.</p>
+  <div class="cta-actions">
+    <a href="/universities/" class="btn-white">Start a conversation</a>
+    <a href="mailto:deepa@equitabledocs.org" class="btn-outline-w">Email us directly</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">EquitableDocs</p>
+        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="/upload/">Upload document</a></li>
+            <li><a href="/track/">Track your document</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Universities</h3>
+          <ul>
+            <li><a href="/universities/#apply">Apply to partner</a></li>
+            <li><a href="/universities/#pipeline">How it works</a></li>
+            <li><a href="/transparency/">Our cost methodology</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="/guild/">Join the Guild</a></li>
+            <li><a href="/training/">Training pathways</a></li>
+            <li><a href="/stem/" aria-current="page">STEM remediation</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="/">The EquitableAccess Suite</a>.</p>
+      <p><a href="/accessibility/">Accessibility statement</a> &middot; <a href="/privacy/">Privacy policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.nav-toggle');
+  var menu=document.getElementById('nav-menu');
+  if(!toggle||!menu)return;
+  toggle.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open);
+  });
+})();
+</script>
+</body>
+</html>

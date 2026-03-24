@@ -157,6 +157,56 @@ details[open] .faq-plus { transform:rotate(45deg); background:var(--teal); color
 .footer-bottom { display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:.78rem; }
 .footer-bottom a { color:rgba(255,255,255,.38); text-decoration:underline; text-underline-offset:2px; }
 
+/* ── Breadcrumb ── */
+.breadcrumb { background:var(--cream-2); border-bottom:1px solid var(--border); }
+.breadcrumb-in { max-width:var(--max); margin:0 auto; padding:.65rem 1.5rem; }
+.breadcrumb ol { display:flex; align-items:center; gap:.5rem; list-style:none; flex-wrap:wrap; }
+.breadcrumb li { font-size:.82rem; color:var(--ink-muted); }
+.breadcrumb a { color:var(--teal-dark); text-decoration:none; }
+.breadcrumb a:hover { text-decoration:underline; }
+.breadcrumb [aria-current="page"] { color:var(--ink-mid); font-weight:500; }
+
+/* ── Pipeline stages ── */
+.pipeline-list { max-width:740px; }
+.pipeline-stage { display:grid; grid-template-columns:3.5rem 1fr; gap:1.25rem; padding:1.5rem 0; border-bottom:1px solid var(--border); align-items:start; }
+.pipeline-stage:last-child { border-bottom:none; }
+.stage-num { width:3rem; height:3rem; background:var(--teal); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-weight:600; font-size:1rem; flex-shrink:0; }
+.stage-content h3 { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.35rem; }
+.stage-content p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; }
+.stage-tools { display:inline-flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem; }
+.stage-tool { font-size:.72rem; font-weight:500; background:var(--teal-light); color:var(--teal-dark); padding:.15rem .55rem; border-radius:100px; }
+
+/* ── Pipeline status note ── */
+.pipeline-status { background:var(--amber-bg); border:1px solid #FDE68A; border-radius:10px; padding:.875rem 1.25rem; margin-top:2rem; font-size:.875rem; color:var(--amber); line-height:1.65; max-width:740px; }
+.pipeline-status strong { font-weight:600; }
+.pipeline-status a { color:var(--amber); font-weight:600; }
+
+/* ── Equation / feature cards ── */
+.eq-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+@media(max-width:700px){ .eq-grid { grid-template-columns:1fr; } }
+.eq-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; border-top:3px solid var(--teal); }
+.eq-card h3 { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.eq-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; }
+.eq-example { background:var(--cream-2); border-radius:8px; padding:.75rem 1rem; margin-top:.75rem; font-size:.82rem; color:var(--ink-mid); line-height:1.6; font-style:italic; }
+
+/* ── Table type cards ── */
+.table-types { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.25rem; }
+@media(max-width:700px){ .table-types { grid-template-columns:1fr; } }
+.table-type { background:#fff; border:1px solid var(--border); border-radius:16px; padding:1.75rem; }
+.table-type h3 { font-family:var(--serif); font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.table-type p { font-size:.85rem; color:var(--ink-muted); line-height:1.65; }
+.table-type-rule { display:block; margin-top:.65rem; font-size:.78rem; font-weight:500; color:var(--teal-dark); background:var(--teal-light); padding:.2rem .6rem; border-radius:100px; }
+
+/* ── Two-column content grid ── */
+.who-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+@media(max-width:700px){ .who-grid { grid-template-columns:1fr; } }
+
+/* ── CTA banner ── */
+.cta-banner { background:var(--teal-deep); padding:4rem 1.5rem; text-align:center; }
+.cta-banner h2 { font-family:var(--serif); font-size:clamp(1.4rem,3vw,2rem); color:#fff; margin-bottom:1rem; }
+.cta-banner p { font-size:1rem; color:rgba(255,255,255,.7); max-width:520px; margin:0 auto 2rem; line-height:1.7; }
+.cta-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
 /* ── Responsive ── */
 @media(max-width:680px){
   .nav-links { display:none; }
