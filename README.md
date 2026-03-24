@@ -1,8 +1,8 @@
 # EquitableDocs — A Document Equity Initiative
 
-**Accessible documents for every student, in every language, at no cost.**
+**Accessible documents for students with print disabilities across the Global South — including STEM, scanned PDFs, and complex layouts.**
 
-EquitableDocs is a free document accessibility remediation and Easy Read conversion service for persons with disabilities across the Global South.
+EquitableDocs is a free document accessibility remediation and Easy Read conversion service for students with print disabilities at higher education institutions across the Global South. Free for students, always. Cost-recovery pricing for universities — your independence is the goal.
 
 We address two distinct but equally critical information barriers identified under UNCRPD Articles 9, 21, and 24:
 
@@ -16,7 +16,7 @@ This repository hosts the public website for EquitableDocs at [equitabledocs.org
 
 The portal application (upload, processing pipeline, admin dashboard) is under active development and will be published in separate repositories:
 
-- `equitabledocs-portal` — Upload and tracking interface for persons with disabilities
+- `equitabledocs-portal` — Upload and tracking interface for students with print disabilities
 - `equitabledocs-pipeline` — Document processing pipeline (OCR, auto-tagging, Easy Read conversion, validation)
 - `equitabledocs-admin` — Remediator review dashboard
 - `equitabledocs-university` — institutional partnership portal
@@ -35,7 +35,7 @@ The Document Equity initiative exists to close this gap through a combination of
 - **Information accessibility is a human right** — Aligned with UNCRPD Articles 9, 21, and 24; India's RPwD Act 2016; and the European Accessibility Act
 - **Multiple formats for multiple barriers** — Screen reader accessible PDFs and Easy Read documents are equally essential
 - **Automation with human accountability** — AI handles bulk processing; expert remediators ensure quality
-- **Free for persons with disabilities. Always.** — EquitableDocs will never charge for remediation or Easy Read conversion
+- **Free for students with print disabilities. Always.** — EquitableDocs will never charge students for remediation or Easy Read conversion. Universities pay cost-recovery pricing only — no profit margin
 
 ## Technology
 
