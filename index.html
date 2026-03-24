@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="EquitableDocs makes academic documents accessible for higher education institutions and students in the Global South. Upload your document and get a screen-reader-ready or easy-read version.">
+<meta name="description" content="EquitableDocs — a document accessibility initiative for higher education in the Global South. Students get screen-reader-ready documents. Universities get structured guidance, training, and remediation at actual cost.">
 <title>EquitableDocs — Accessible Documents for Higher Education</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,9 @@
 /* ── Homepage-specific styles ── */
 .hero-home .hero-in { display:grid; grid-template-columns:1.1fr .9fr; gap:4rem; align-items:center; }
 @media(max-width:760px){ .hero-home .hero-in { grid-template-columns:1fr; gap:2.5rem; } }
+
+/* Hero subtitle */
+.hero-subtitle { font-size:1.1rem; color:rgba(255,255,255,.75); font-weight:400; margin-top:-.25rem; margin-bottom:1rem; line-height:1.5; }
 
 /* How it works */
 .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; counter-reset:step; }
@@ -72,9 +75,10 @@
 <section class="hero hero-home" aria-labelledby="hero-h">
   <div class="hero-in">
     <div>
-      <span class="hero-eyebrow">A Document Equity Initiative</span>
-      <h1 id="hero-h">Accessible documents for higher education institutions and students in the Global South.</h1>
-      <p class="hero-sub">Upload inaccessible PDFs, Word documents, or scanned textbooks. We remediate them to work with screen readers, braille displays, and text-to-speech tools — and train your institution to do the same.</p>
+      <span class="hero-eyebrow">A Document Accessibility Initiative for Higher Education in the Global South</span>
+      <h1 id="hero-h">Every student deserves documents they can read.</h1>
+      <p class="hero-subtitle">For universities, libraries, and students with disabilities.</p>
+      <p class="hero-sub">Students upload inaccessible documents and get screen-reader-ready versions back. Universities get structured guidance, hands-on training, and remediated documents at actual cost — until their own pipeline is up and running.</p>
       <div class="hero-actions">
         <a href="upload.html" class="btn-white">Upload your document</a>
         <a href="universities.html" class="btn-outline-w">Partner with us (universities)</a>
