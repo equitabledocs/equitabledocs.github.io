@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EquitableDocs publishes its costs, methodology, and progress openly. See exactly what university partners pay for, how we measure impact, and where we stand against our Year 1 targets.">
+<title>Transparency — EquitableDocs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ── Transparency page-specific styles ── */
+.transparency-hero .hero-in { max-width:720px; text-align:center; }
+.transparency-hero .hero-sub { margin-left:auto; margin-right:auto; }
+
+/* Progress cards */
+.progress-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
+@media(max-width:760px){ .progress-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:420px){ .progress-grid { grid-template-columns:1fr; } }
+.progress-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:1.5rem; text-align:center; }
+.progress-target { font-family:var(--serif); font-size:2rem; font-weight:600; color:var(--teal); display:block; margin-bottom:.15rem; }
+.progress-current { font-size:.85rem; font-weight:500; color:var(--ink-mid); display:block; margin-bottom:.5rem; }
+.progress-label { font-size:.8rem; color:var(--ink-muted); line-height:1.5; }
+.progress-bar-track { background:var(--cream-2); border-radius:100px; height:8px; margin-top:.75rem; overflow:hidden; }
+.progress-bar-fill { background:var(--teal); height:100%; border-radius:100px; min-width:4px; }
+
+/* Cost table */
+.cost-table { width:100%; border-collapse:collapse; margin-top:2rem; font-size:.9rem; }
+.cost-table caption { font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--ink); text-align:left; margin-bottom:1rem; caption-side:top; }
+.cost-table thead th { background:var(--teal-deep); color:#fff; font-weight:500; font-size:.82rem; letter-spacing:.03em; text-align:left; padding:.75rem 1rem; }
+.cost-table thead th:first-child { border-radius:8px 0 0 0; }
+.cost-table thead th:last-child { border-radius:0 8px 0 0; }
+.cost-table tbody td { padding:.75rem 1rem; border-bottom:1px solid var(--border); color:var(--ink-mid); vertical-align:top; }
+.cost-table tbody tr:last-child td { border-bottom:none; }
+.cost-table tbody tr:nth-child(even) td { background:var(--cream-2); }
+.cost-note { font-size:.8rem; color:var(--ink-muted); margin-top:.75rem; font-style:italic; }
+
+/* Methodology cards */
+.method-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+@media(max-width:680px){ .method-grid { grid-template-columns:1fr; } }
+.method-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; }
+.method-card h3 { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.method-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; }
+
+/* Commitment list */
+.commitments { list-style:none; max-width:680px; }
+.commitments li { padding:1rem 0; border-bottom:1px solid var(--border); font-size:.9rem; color:var(--ink-mid); line-height:1.7; display:flex; gap:.75rem; align-items:flex-start; }
+.commitments li:last-child { border-bottom:none; }
+.commit-check { color:var(--teal); font-weight:600; font-size:1.1rem; flex-shrink:0; line-height:1.5; }
+
+/* CTA banner */
+.cta-banner { background:var(--teal-deep); padding:4rem 1.5rem; text-align:center; }
+.cta-banner h2 { font-family:var(--serif); font-size:clamp(1.4rem,3vw,2rem); color:#fff; margin-bottom:1rem; }
+.cta-banner p { font-size:1rem; color:rgba(255,255,255,.7); max-width:520px; margin:0 auto 2rem; line-height:1.7; }
+.cta-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip">Skip to main content</a>
+
+<!-- Nav -->
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="universities.html">Universities</a></li>
+      <li><a href="guild.html">Join the Guild</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="upload.html" class="nav-cta">Request remediation</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ── Hero ── -->
+<section class="hero transparency-hero" aria-labelledby="hero-h">
+  <div class="hero-in">
+    <span class="hero-eyebrow">Transparency</span>
+    <h1 id="hero-h">We publish everything openly.</h1>
+    <p class="hero-sub">Our costs, our progress, our methodology. If we ask universities to trust us with their documents, we owe them full visibility into how we operate.</p>
+  </div>
+</section>
+
+<!-- ── Year 1 Targets ── -->
+<section class="sec" aria-labelledby="targets-h">
+  <div class="sec-in">
+    <span class="eyebrow">Year 1 targets</span>
+    <h2 class="sec-title" id="targets-h">Where we are and where we are headed</h2>
+    <p class="sec-lead">We launched in 2026. These targets are openly stated so you can hold us accountable. We update this page as progress is made.</p>
+
+    <div class="progress-grid">
+      <div class="progress-card">
+        <span class="progress-target">500</span>
+        <span class="progress-current">0 completed</span>
+        <span class="progress-label">Documents remediated in Year 1</span>
+        <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="500" aria-label="Documents remediated: 0 of 500">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="progress-card">
+        <span class="progress-target">3+</span>
+        <span class="progress-current">0 at launch</span>
+        <span class="progress-label">Languages supported — growing with Guild capacity</span>
+        <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="3" aria-label="Languages supported: 0 of 3">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="progress-card">
+        <span class="progress-target">25</span>
+        <span class="progress-current">0 trained</span>
+        <span class="progress-label">Trained Guild Members by end of Year 1</span>
+        <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" aria-label="Guild Members trained: 0 of 25">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="progress-card">
+        <span class="progress-target">5</span>
+        <span class="progress-current">0 onboarded</span>
+        <span class="progress-label">University partners working toward independence</span>
+        <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5" aria-label="University partners: 0 of 5">
+          <div class="progress-bar-fill" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="cost-note">These are aspirational targets, not guarantees. We publish progress openly and update this page regularly.</p>
+  </div>
+</section>
+
+<!-- ── Cost Breakdown ── -->
+<section class="sec" style="background:var(--cream-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);" aria-labelledby="cost-h">
+  <div class="sec-in">
+    <span class="eyebrow">Cost structure</span>
+    <h2 class="sec-title" id="cost-h">What university partners pay for</h2>
+    <p class="sec-lead">Students with print disabilities never pay. University pricing is cost-recovery only: actual infrastructure costs plus a 10% sustainability buffer. No profit margin. No hidden fees.</p>
+
+    <table class="cost-table">
+      <caption>Indicative pricing for university partnerships (INR, as of March 2026)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Document type</th>
+          <th scope="col">Specification</th>
+          <th scope="col">Indicative price</th>
+          <th scope="col">What drives the cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Standard document</td>
+          <td>1-20 pages, native PDF</td>
+          <td>Rs 2-4 per page</td>
+          <td>Server compute + volunteer review time</td>
+        </tr>
+        <tr>
+          <td>Standard document</td>
+          <td>1-20 pages, scanned (OCR required)</td>
+          <td>Rs 4-7 per page</td>
+          <td>Adds OCR processing + quality review</td>
+        </tr>
+        <tr>
+          <td>STEM document</td>
+          <td>Any length, equations present</td>
+          <td>Rs 8-15 per page</td>
+          <td>Equation extraction API + STEM specialist time</td>
+        </tr>
+        <tr>
+          <td>Complex layout</td>
+          <td>Multi-column, heavy tables, forms</td>
+          <td>Rs 6-10 per page</td>
+          <td>Additional reading order + table markup time</td>
+        </tr>
+        <tr>
+          <td>Bulk batch (50+ pages)</td>
+          <td>Standard documents</td>
+          <td>Rs 1.5-3 per page</td>
+          <td>Volume discount on server and queue costs</td>
+        </tr>
+        <tr>
+          <td>Bulk batch (50+ pages)</td>
+          <td>STEM documents</td>
+          <td>Rs 6-10 per page</td>
+          <td>Volume discount on tooling; STEM specialist time constant</td>
+        </tr>
+        <tr>
+          <td>Document Format Template</td>
+          <td>One-time build per document family</td>
+          <td>Rs 800-1,500</td>
+          <td>Template creation + testing on 5 sample files</td>
+        </tr>
+        <tr>
+          <td>Annual training session</td>
+          <td>Full day, up to 15 staff</td>
+          <td>Rs 8,000-12,000</td>
+          <td>Trainer fee (paid to Guild Trainer) + platform cost</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="cost-note">Prices are denominated in INR for Indian institutions. International pricing on application. These rates are reviewed quarterly.</p>
+  </div>
+</section>
+
+<!-- ── What pricing covers ── -->
+<section class="sec" aria-labelledby="method-h">
+  <div class="sec-in">
+    <span class="eyebrow">Methodology</span>
+    <h2 class="sec-title" id="method-h">How we calculate costs</h2>
+    <p class="sec-lead">Every component of our pricing is derived from actual operating costs. Here is what each line item covers.</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <h3>Server compute</h3>
+        <p>Time on our VPS or cloud infrastructure per document page. Calculated from actual processing logs. Infrastructure runs on Docker containers hosted on Linux VPS.</p>
+      </div>
+      <div class="method-card">
+        <h3>Tooling costs</h3>
+        <p>Software licence costs amortised per page. Equation extraction API cost per equation for STEM content. Open-source tools (Tesseract, veraPDF) carry zero licence cost.</p>
+      </div>
+      <div class="method-card">
+        <h3>Guild Member time</h3>
+        <p>Estimated at Rs 150 per hour fair value. Minutes per task type published openly. Guild Members are skilled practitioners contributing their expertise — not underpaid labour.</p>
+      </div>
+      <div class="method-card">
+        <h3>Platform overhead</h3>
+        <p>Hosting, domain, backups, monitoring, email delivery. Fixed costs divided by documents processed per month.</p>
+      </div>
+      <div class="method-card">
+        <h3>Sustainability buffer</h3>
+        <p>10% above total cost. Funds development of new features, the training programme, and Guild infrastructure. This is the full margin — there is no additional profit.</p>
+      </div>
+      <div class="method-card">
+        <h3>What is NOT included</h3>
+        <p>There is no sales margin, no investor return, no executive compensation. EquitableDocs is a mission-driven initiative, not a commercial business. Every rupee is accounted for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Our commitments ── -->
+<section class="sec" style="background:var(--cream-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);" aria-labelledby="commit-h">
+  <div class="sec-in">
+    <span class="eyebrow">Accountability</span>
+    <h2 class="sec-title" id="commit-h">Our transparency commitments</h2>
+    <p class="sec-lead">These are binding commitments, not aspirations. If we fail to meet them, we expect to be held accountable.</p>
+
+    <ul class="commitments">
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>Free for students with print disabilities — always.</strong> No fees, no freemium, no upselling. Students with print disabilities at higher education institutions in the Global South will never be charged for document remediation.</span>
+      </li>
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>Cost-recovery pricing only for universities.</strong> University partners pay actual infrastructure costs plus a 10% sustainability buffer. No profit margin. The full cost breakdown is published on this page.</span>
+      </li>
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>Quarterly cost updates.</strong> This page is updated every quarter with current pricing components, any changes to rates, and an explanation of what changed and why.</span>
+      </li>
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>Open progress reporting.</strong> Year 1 targets and actual progress are published on this page. We do not hide behind vague language when targets are missed — we explain what happened and what we are doing about it.</span>
+      </li>
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>Guild Members are fairly valued.</strong> Guild Member time is valued at Rs 150 per hour — a fair rate, not an exploitative one. This rate is published and reviewed annually.</span>
+      </li>
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>No data monetisation.</strong> Documents uploaded to EquitableDocs are never used for training AI models, sold to third parties, or shared beyond the remediation process. Our <a href="privacy.html" style="color:var(--teal);">privacy policy</a> details exactly what happens to every document.</span>
+      </li>
+      <li>
+        <span class="commit-check" aria-hidden="true">&#10003;</span>
+        <span><strong>Independence is the goal.</strong> University partnerships are designed to end. Our measure of success is how quickly an institution no longer needs us. Most should reach full independence within 12 to 18 months.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner" aria-labelledby="cta-h">
+  <h2 id="cta-h">Questions about our costs or methodology?</h2>
+  <p>We are happy to walk through every line item. Transparency is not a marketing claim — it is how we operate.</p>
+  <div class="cta-actions">
+    <a href="mailto:deepa@equitabledocs.org" class="btn-white">Email us</a>
+    <a href="universities.html" class="btn-outline-w">University partnerships</a>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-in">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">EquitableDocs</p>
+        <p class="footer-tag">Accessible documents for every student with a print disability, in every language, at no cost.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer navigation">
+        <div class="footer-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="upload.html">Request remediation</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Universities</h3>
+          <ul>
+            <li><a href="universities.html#apply">Apply to partner</a></li>
+            <li><a href="universities.html#pipeline">How it works</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="guild.html">Join the Guild</a></li>
+            <li><a href="training.html">Training pathways</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
+      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+})();
+</script>
+</body>
+</html>
