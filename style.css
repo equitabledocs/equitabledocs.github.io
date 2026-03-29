@@ -252,7 +252,7 @@ nav[aria-label="Main navigation"] a[aria-current="page"] {
   border-color: var(--teal-dark);
 }
 .btn-outline {
-  background: transparent;
+  background: var(--teal-light);
   color: var(--teal);
   border-color: var(--teal);
 }
@@ -262,7 +262,7 @@ nav[aria-label="Main navigation"] a[aria-current="page"] {
 }
 /* White outline — for use on dark/teal backgrounds */
 .btn-outline-w {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.15);
   color: var(--white);
   border-color: var(--white);
 }
