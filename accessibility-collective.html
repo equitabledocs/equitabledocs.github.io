@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Accessibility Collective — EquitableDocs</title>
+  <style>
+    /* === RESET === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* === DESIGN TOKENS === */
+    :root {
+      --teal: #0D7377;
+      --teal-dark: #095456;
+      --teal-light: #e6f3f3;
+      --cream: #FAFAF5;
+      --text: #1a1a1a;
+      --text-light: #4a4a4a;
+      --white: #ffffff;
+      --border: #d4d4d4;
+      --focus: #0D7377;
+      --section-gap: 3.5rem;
+    }
+
+    /* === BASE === */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--cream);
+    }
+
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.3; }
+    h1 { font-size: 2.25rem; margin-bottom: 1rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+
+    p { margin-bottom: 1rem; max-width: 65ch; }
+
+    a { color: var(--teal); text-decoration: underline; }
+    a:hover { color: var(--teal-dark); }
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    /* === SKIP LINK === */
+    .skip-link {
+      position: absolute;
+      top: -3rem;
+      left: 1rem;
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      z-index: 100;
+      text-decoration: none;
+      border-radius: 0 0 0.25rem 0.25rem;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* === LAYOUT === */
+    .container {
+      max-width: 64rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: var(--section-gap) 0;
+    }
+
+    section + section {
+      border-top: 2px solid var(--border);
+    }
+
+    /* === HEADER / NAV === */
+    header {
+      background: var(--white);
+      border-bottom: 2px solid var(--teal);
+      padding: 1rem 0;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .site-name {
+      font-family: Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--teal);
+      text-decoration: none;
+    }
+    .site-name:hover { color: var(--teal-dark); }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--teal); text-decoration: underline; }
+    nav a[aria-current="page"] {
+      color: var(--teal);
+      border-bottom: 2px solid var(--teal);
+      padding-bottom: 0.125rem;
+    }
+
+    /* === HERO === */
+    .hero {
+      background: var(--teal);
+      color: var(--white);
+      padding: 3rem 0;
+    }
+    .hero h1 { color: var(--white); }
+    .hero p { color: var(--white); opacity: 0.95; font-size: 1.125rem; }
+
+    /* === PROBLEM === */
+    .problem { background: var(--white); }
+    .problem-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .problem-point {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      padding: 1.25rem;
+      border-radius: 0.25rem;
+    }
+    .problem-point p {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+
+    /* === PHILOSOPHY === */
+    .philosophy { background: var(--cream); }
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .principle {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+    }
+    .principle h3 { color: var(--teal); }
+    .principle p {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+    }
+
+    /* === CONTRIBUTION TYPES === */
+    .contributions { background: var(--white); }
+    .contrib-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .contrib-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+    }
+    .contrib-card h3 {
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+    .contrib-card .what {
+      margin-bottom: 0.75rem;
+    }
+    .contrib-card .ready {
+      background: var(--teal-light);
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      color: var(--teal-dark);
+    }
+    .contrib-card .ready strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    /* === STUDENT ADVOCATES === */
+    .advocates { background: var(--cream); }
+    .advocate-roles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .advocate-role {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 0.25rem;
+    }
+    .advocate-role h3 {
+      color: var(--teal);
+      font-size: 1rem;
+    }
+    .advocate-role p {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+    }
+
+    /* === CREDENTIALS === */
+    .credentials { background: var(--white); }
+    .cred-list {
+      margin-top: 1.5rem;
+    }
+    .cred-item {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .cred-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+    .cred-name {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      color: var(--teal);
+      min-width: 14rem;
+    }
+    .cred-desc {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+    }
+
+    /* === CTA === */
+    .cta-section {
+      background: var(--teal);
+      color: var(--white);
+      text-align: center;
+      padding: 3rem 0;
+    }
+    .cta-section h2 { color: var(--white); }
+    .cta-section p { color: var(--white); opacity: 0.95; margin: 0 auto 1.5rem; }
+
+    /* === FAQ === */
+    .faq { background: var(--cream); }
+    .faq-list { margin-top: 1.5rem; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 0;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-item h3 {
+      color: var(--teal);
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+    .faq-item p {
+      color: var(--text-light);
+      font-size: 0.9375rem;
+    }
+
+    /* === BUTTONS === */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .btn:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .btn-primary {
+      background: var(--white);
+      color: var(--teal);
+      border-color: var(--white);
+    }
+    .btn-primary:hover { background: var(--teal-light); color: var(--teal-dark); }
+
+    .btn-secondary {
+      background: var(--teal);
+      color: var(--white);
+      border-color: var(--teal);
+    }
+    .btn-secondary:hover { background: var(--teal-dark); border-color: var(--teal-dark); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--teal);
+      border-color: var(--teal);
+    }
+    .btn-outline:hover { background: var(--teal); color: var(--white); }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    /* === FOOTER === */
+    footer {
+      background: var(--teal-dark);
+      color: var(--white);
+      padding: 2.5rem 0 1.5rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    footer h3 { color: var(--white); font-size: 1rem; margin-bottom: 0.75rem; }
+    footer a { color: var(--white); opacity: 0.9; }
+    footer a:hover { opacity: 1; }
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 0.5rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1.5rem;
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 48rem) {
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.5rem; }
+      .hero { padding: 2rem 0; }
+      section { padding: 2.5rem 0; }
+      .cred-item { flex-direction: column; gap: 0.25rem; }
+      .cred-name { min-width: auto; }
+    }
+
+    /* === HIGH CONTRAST MODE === */
+    @media (forced-colors: active) {
+      .btn { border: 2px solid ButtonText; }
+      .problem-point { border-left-color: ButtonText; }
+      .contrib-card .ready { border: 1px solid ButtonText; }
+    }
+
+    /* === REDUCED MOTION === */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+  <div class="container header-inner">
+    <a href="/" class="site-name" aria-label="EquitableDocs home">EquitableDocs</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/universities">Universities</a></li>
+        <li><a href="/accessibility-collective" aria-current="page">Accessibility Collective</a></li>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/transparency">Transparency</a></li>
+        <li><a href="/get-help">Get Help</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================ -->
+<!-- SECTION 1: HERO                              -->
+<!-- ============================================ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <h1 id="hero-heading">The Accessibility Collective</h1>
+    <p>A community of practice for people who want to build professional skills in document accessibility — and use those skills to serve students with disabilities in India.</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 2: THE PROBLEM                       -->
+<!-- ============================================ -->
+<section class="problem" aria-labelledby="problem-heading">
+  <div class="container">
+    <h2 id="problem-heading">The problem we exist to solve</h2>
+    <p>Document remediation in India is informal work. The people doing it deserve better.</p>
+
+    <div class="problem-points">
+      <div class="problem-point">
+        <p><strong>No training.</strong> Most people learn document remediation by trial and error. There are no structured programmes, no mentors, no curriculum.</p>
+      </div>
+      <div class="problem-point">
+        <p><strong>No credentials.</strong> You can remediate hundreds of documents and have nothing to show for it. No certificate, no portfolio, no professional recognition.</p>
+      </div>
+      <div class="problem-point">
+        <p><strong>No career path.</strong> There is no progression from beginner to expert. No specialisation. No professional identity. The industry depends on this work but does not invest in the people who do it.</p>
+      </div>
+      <div class="problem-point">
+        <p><strong>No collaboration.</strong> Practitioners work in isolation. Knowledge is hoarded, not shared. People who could learn from each other never meet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 3: PHILOSOPHY                        -->
+<!-- ============================================ -->
+<section class="philosophy" aria-labelledby="philosophy-heading">
+  <div class="container">
+    <h2 id="philosophy-heading">How the Collective works</h2>
+    <p>The Accessibility Collective is hosted by EquitableDocs. Members join because they share the mission. They are not "working for" EquitableDocs — they contribute to a shared goal alongside us.</p>
+    <p>This is volunteer, mission-driven work. We learn together, share knowledge openly, and work on real documents for real students.</p>
+
+    <div class="principles">
+      <div class="principle">
+        <h3>Collaboration over competition</h3>
+        <p>We share knowledge and skills openly. The Collective exists to build accessibility capacity across India, not to create a proprietary workforce.</p>
+      </div>
+      <div class="principle">
+        <h3>The work speaks for itself</h3>
+        <p>There are no tiers, promotions, or rank. Your readiness for different types of contribution is demonstrated through your work, assessed against public criteria that anyone can read.</p>
+      </div>
+      <div class="principle">
+        <h3>More than documents</h3>
+        <p>The Collective serves universities as a whole — pipeline setup, staff training, and remediation. Fixing documents is one part of the mission, not the whole of it.</p>
+      </div>
+      <div class="principle">
+        <h3>Nothing about us without us</h3>
+        <p>Students with disabilities are part of the Collective as Student Advocates, shaping how accessibility work is done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 4: CONTRIBUTION TYPES                -->
+<!-- ============================================ -->
+<section class="contributions" aria-labelledby="contrib-heading">
+  <div class="container">
+    <h2 id="contrib-heading">Ways to contribute</h2>
+    <p>Members contribute where their skills match. The criteria are public — you can see exactly what is expected for each type of contribution. No gatekeeping, no hidden requirements.</p>
+
+    <div class="contrib-grid">
+      <div class="contrib-card">
+        <h3>Document remediation</h3>
+        <p class="what">Fix documents so they work with screen readers. Add image descriptions, correct headings, mark up tables, fix reading order.</p>
+        <div class="ready">
+          <strong>What you need:</strong>
+          Complete the training programme. Remediate 3 practice documents. Pass peer review on all 3.
+        </div>
+      </div>
+      <div class="contrib-card">
+        <h3>Quality review</h3>
+        <p class="what">Check other members' remediation work against accessibility standards. Test with screen readers. Provide constructive feedback.</p>
+        <div class="ready">
+          <strong>What you need:</strong>
+          15 or more documents remediated with consistent quality. Demonstrate screen reader testing with NVDA or VoiceOver.
+        </div>
+      </div>
+      <div class="contrib-card">
+        <h3>University pipeline support</h3>
+        <p class="what">Help universities set up and configure accessibility tools. Work with their staff to build permanent, in-house capacity.</p>
+        <div class="ready">
+          <strong>What you need:</strong>
+          Understand the full remediation pipeline end to end. Have participated in at least one university engagement as an observer.
+        </div>
+      </div>
+      <div class="contrib-card">
+        <h3>Training delivery</h3>
+        <p class="what">Run training sessions for university staff and new Collective members. Teach document accessibility to people who have never done it.</p>
+        <div class="ready">
+          <strong>What you need:</strong>
+          All of the above, plus deliver a practice session to other Collective members first.
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.5rem;">You choose what to work toward. A member who is excellent at image descriptions but has never used a screen reader contributes to remediation but not to quality review. That is not a rank — it is matching skills to needs.</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 5: STUDENT ADVOCATES                 -->
+<!-- ============================================ -->
+<section class="advocates" aria-labelledby="advocates-heading">
+  <div class="container">
+    <h2 id="advocates-heading">Student Advocates</h2>
+    <p>Students — with disabilities and allied — contribute their lived experience to the mission. Student Advocates show universities why accessible documents matter. They can also work on making documents accessible alongside other Collective members.</p>
+
+    <div class="advocate-roles">
+      <div class="advocate-role">
+        <h3>Mobilisation</h3>
+        <p>"This is what my textbook looks like to me. This is why it matters." No sighted professional can make that case as powerfully as a student who lives it.</p>
+      </div>
+      <div class="advocate-role">
+        <h3>Training partners</h3>
+        <p>Sitting in a university training session and showing staff what an inaccessible document does when a screen reader encounters it. That is proof, not a presentation.</p>
+      </div>
+      <div class="advocate-role">
+        <h3>University advocacy</h3>
+        <p>When a student says "I cannot read this" directly to disability services, it carries more weight than when EquitableDocs says it.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.5rem;">Student Advocates are defined by what they do, not what they have. The programme is open to students with disabilities and to allied students who share the mission.</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 6: CREDENTIALS                       -->
+<!-- ============================================ -->
+<section class="credentials" aria-labelledby="cred-heading">
+  <div class="container">
+    <h2 id="cred-heading">What you earn</h2>
+    <p>Your work builds a real professional profile. These credentials are issued by EquitableDocs and reflect demonstrated capability.</p>
+
+    <div class="cred-list">
+      <div class="cred-item">
+        <span class="cred-name">Accessibility Collective Certificate</span>
+        <span class="cred-desc">For any member who has remediated 10 or more documents and passed peer review. Demonstrates real, verified skill in document accessibility.</span>
+      </div>
+      <div class="cred-item">
+        <span class="cred-name">Trainer Credential</span>
+        <span class="cred-desc">For members who have delivered training sessions through the Collective. Demonstrates the ability to teach accessibility, not just practice it.</span>
+      </div>
+      <div class="cred-item">
+        <span class="cred-name">Portfolio of completed work</span>
+        <span class="cred-desc">Every document you contribute to is part of your professional record. Reference letters available for members with consistent contributions.</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 1.5rem;">EquitableDocs is also open to formal certification partnerships with accessibility and professional bodies. No specific partnerships are confirmed yet — we will announce them here when they are.</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 7: CTA                               -->
+<!-- ============================================ -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <h2 id="cta-heading">Join the Collective</h2>
+    <p><strong>Registration opens soon.</strong> We are setting up the training materials and first batch of documents now.</p>
+    <p>Leave your email and we will let you know when registration opens.</p>
+    <div class="cta-group" style="justify-content: center;">
+      <!-- Replace with registration form or link when ready -->
+      <a href="mailto:deepa@equitabledocs.org?subject=Accessibility%20Collective%20—%20Interest" class="btn btn-primary">Express interest by email</a>
+    </div>
+    <p style="margin-top: 1rem; font-size: 0.9375rem; opacity: 0.85;">Or email <a href="mailto:deepa@equitabledocs.org" style="color: var(--white);">deepa@equitabledocs.org</a> with the subject "Accessibility Collective."</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION 8: FAQ                               -->
+<!-- ============================================ -->
+<section class="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <h2 id="faq-heading">Common questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Do I need experience in document accessibility?</h3>
+        <p>No. The Collective provides free training. You start by learning, practise on real documents, and build skills through doing. Many members will be new to this field.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this paid work?</h3>
+        <p>This is volunteer, mission-driven work. We make no promises about compensation. If that ever changes, we will be transparent about how it works.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much time does it take?</h3>
+        <p>That is up to you. Some members may contribute a few hours a month. Others may work on documents regularly. There is no minimum commitment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>I am a student. Can I join?</h3>
+        <p>Yes. Students join as Student Advocates — contributing through mobilisation, training partnerships, university advocacy, and working on accessible documents. You do not need technical skills to start. Your lived experience is valuable, and you can build technical skills through the Collective's training.</p>
+      </div>
+      <div class="faq-item">
+        <h3>I already do remediation work. Is this for me?</h3>
+        <p>Yes. If you are an experienced practitioner, you can contribute to quality review, university pipeline support, or training delivery. The Collective is a place to share what you know, not just learn.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does this relate to EquitableDocs?</h3>
+        <p>EquitableDocs hosts and facilitates the Collective. Members are not employees or contractors. You contribute to a shared mission — making academic documents accessible for students in India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>EquitableDocs</h3>
+        <p>A Document Equity Initiative.<br>Accessible documents for every student, in every language, at no cost.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/universities">Universities</a></li>
+          <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/stem">STEM Pipeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>For Students</h3>
+        <ul>
+          <li><a href="/get-help">Get help with a document</a></li>
+          <li><a href="/transparency">Transparency</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/accessibility">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>
+          <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a>
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+          Built in India. Open source.<br>
+          Nothing about us without us.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>EquitableDocs — The Document Equity Initiative. All content and code available under open licences where possible.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
