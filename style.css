@@ -205,7 +205,7 @@ nav[aria-label="Main navigation"] a[aria-current="page"] {
   opacity: 0.95;
   font-size: 1.125rem;
 }
-.hero a { color: var(--white); }
+.hero a:not(.btn) { color: var(--white); }
 
 /* === EYEBROW (small label above headings) === */
 .eyebrow {
