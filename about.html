@@ -5,82 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="EquitableDocs is a Document Equity initiative making academic documents accessible for students with disabilities across India and beyond. Learn about our mission and the accessibility gap in higher education.">
 <title>About — EquitableDocs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 <style>
 /* ── About page-specific styles ── */
-.about-hero .hero-in { max-width:720px; text-align:center; }
-.about-hero .hero-sub { margin-left:auto; margin-right:auto; }
-.about-hero .hero-actions { justify-content:center; }
-
-.story-sec { background:#fff; }
-.story-layout { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
-@media(max-width:760px){ .story-layout { grid-template-columns:1fr; gap:2.5rem; } }
-.story-text p { font-size:.95rem; color:var(--ink-mid); line-height:1.8; margin-bottom:1.25rem; }
-.story-text p:last-child { margin-bottom:0; }
-
-.story-sidebar { background:var(--cream-2); border-radius:18px; padding:2.5rem; }
-.story-sidebar h3 { font-family:var(--serif); font-size:1.1rem; font-weight:600; color:var(--ink); margin-bottom:1.25rem; }
-.story-stat { margin-bottom:1.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border); }
-.story-stat:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
-.story-stat-num { font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--teal); display:block; margin-bottom:.2rem; }
-.story-stat-label { font-size:.85rem; color:var(--ink-muted); line-height:1.5; }
-
-.values-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
-.value-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:2rem; border-left:4px solid var(--teal); }
-.value-card h3 { font-family:var(--serif); font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
-.value-card p { font-size:.875rem; color:var(--ink-muted); line-height:1.65; }
-
-.cta-banner { background:var(--teal-deep); padding:4rem 1.5rem; text-align:center; }
-.cta-banner h2 { font-family:var(--serif); font-size:clamp(1.4rem,3vw,2rem); color:#fff; margin-bottom:1rem; }
-.cta-banner p { font-size:1rem; color:rgba(255,255,255,.7); max-width:520px; margin:0 auto 2rem; line-height:1.7; }
-.cta-actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+.about-hero .container { max-width: 720px; text-align: center; }
+.about-hero .cta-group { justify-content: center; }
+.about-hero p { margin-left: auto; margin-right: auto; }
 </style>
 </head>
 <body>
 
-<a href="#main-content" class="skip">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- Nav -->
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-in">
-    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="site-name" aria-label="EquitableDocs home">EquitableDocs</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+      <svg class="icon-open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <ul class="nav-links" id="nav-menu" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="universities.html">Universities</a></li>
-      <li><a href="training.html">Training</a></li>
-      <li><a href="accessibility-collective.html">Accessibility Collective</a></li>
-      <li><a href="about.html" aria-current="page">About</a></li>
-      <li><a href="get-help.html" class="nav-cta">Get Help</a></li>
-    </ul>
+    <nav aria-label="Main navigation">
+      <ul id="main-nav">
+        <li><a href="/about" aria-current="page">About</a></li>
+        <li><a href="/universities">Universities</a></li>
+        <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/transparency">Transparency</a></li>
+        <li><a href="/get-help">Get Help</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<main id="main-content">
+<main id="main">
 
 <!-- ══ HERO ══ -->
 <section class="hero about-hero" aria-labelledby="hero-h">
-  <div class="hero-in">
-    <span class="hero-eyebrow">About EquitableDocs</span>
+  <div class="container">
+    <span class="eyebrow" style="color: rgba(255,255,255,0.85);">About EquitableDocs</span>
     <h1 id="hero-h">Nothing about us without us.</h1>
-    <p class="hero-sub">EquitableDocs exists because millions of students with disabilities cannot access the documents their education depends on. We are building the infrastructure to change that — openly, transparently, and at no cost to the students who need it.</p>
-    <div class="hero-actions">
-      <a href="universities.html" class="btn-white">Partner with us</a>
-      <a href="accessibility-collective.html" class="btn-outline-w">Join the Collective</a>
+    <p>EquitableDocs exists because millions of students with disabilities cannot access the documents their education depends on. We are building the infrastructure to change that — openly, transparently, and at no cost to the students who need it.</p>
+    <div class="cta-group">
+      <a href="/universities" class="btn btn-primary">Partner with us</a>
+      <a href="/accessibility-collective" class="btn btn-outline-w">Join the Collective</a>
     </div>
   </div>
 </section>
 
 <!-- ══ THE STORY ══ -->
-<section class="sec story-sec" aria-labelledby="story-h">
-  <div class="sec-in">
+<section style="background: var(--white);" aria-labelledby="story-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">The story</span>
-    <h2 class="sec-title" id="story-h">Why Document Equity matters</h2>
+    <h2 id="story-h">Why Document Equity matters</h2>
 
     <div class="story-layout">
       <div class="story-text">
@@ -114,11 +90,11 @@
 </section>
 
 <!-- ══ OUR VALUES ══ -->
-<section class="sec" style="background:var(--cream-2);" aria-labelledby="values-h">
-  <div class="sec-in">
+<section style="background: var(--cream);" aria-labelledby="values-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">Our values</span>
-    <h2 class="sec-title" id="values-h">What guides every decision we make</h2>
-    <p class="sec-lead">These are not aspirations. They are constraints. Every feature, every page, every partnership is tested against them.</p>
+    <h2 id="values-h">What guides every decision we make</h2>
+    <p>These are not aspirations. They are constraints. Every feature, every page, every partnership is tested against them.</p>
 
     <div class="values-grid" role="list">
       <article class="value-card" role="listitem">
@@ -150,10 +126,10 @@
 </section>
 
 <!-- ══ ABOUT DEEPA ══ -->
-<section class="sec" aria-labelledby="founder-h">
-  <div class="sec-in">
+<section style="background: var(--white);" aria-labelledby="founder-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">The founder</span>
-    <h2 class="sec-title" id="founder-h">Deepa Palaniappan</h2>
+    <h2 id="founder-h">Deepa Palaniappan</h2>
     <div class="story-layout">
       <div class="story-text">
         <p>Deepa Palaniappan founded EquitableDocs after years of working in accessibility and seeing the same pattern repeat: institutions wanted to do the right thing but lacked the tools, the training, and the infrastructure to make it happen at scale.</p>
@@ -176,64 +152,68 @@
 </section>
 
 <!-- ══ CTA BANNER ══ -->
-<section class="cta-banner" aria-labelledby="cta-h">
-  <h2 id="cta-h">Ready to make a difference?</h2>
-  <p>Whether you are a student who needs an accessible document, a university looking to build capacity, or a professional who wants to join the Collective — there is a place for you here.</p>
-  <div class="cta-actions">
-    <a href="upload.html" class="btn-white">Upload a document</a>
-    <a href="universities.html" class="btn-outline-w">University partnerships</a>
-    <a href="accessibility-collective.html" class="btn-outline-w">Join the Collective</a>
+<section class="cta-section" aria-labelledby="cta-h">
+  <div class="container">
+    <h2 id="cta-h">Ready to make a difference?</h2>
+    <p>Whether you are a student who needs an accessible document, a university looking to build capacity, or a professional who wants to join the Collective — there is a place for you here.</p>
+    <div class="cta-group" style="justify-content: center;">
+      <a href="/get-help" class="btn btn-primary">Upload a document</a>
+      <a href="/universities" class="btn btn-outline-w">University partnerships</a>
+      <a href="/accessibility-collective" class="btn btn-outline-w">Join the Collective</a>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- Footer -->
-<footer class="footer" role="contentinfo">
-  <div class="footer-in">
-    <div class="footer-top">
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <p class="footer-brand">EquitableDocs</p>
-        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+        <h3>EquitableDocs</h3>
+        <p>A Document Equity Initiative.<br>Accessible documents for every student, in every language, at no cost.</p>
       </div>
-      <nav class="footer-cols" aria-label="Footer navigation">
-        <div class="footer-col">
-          <h3>Platform</h3>
-          <ul>
-            <li><a href="upload.html">Upload document</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Universities</h3>
-          <ul>
-            <li><a href="universities.html#apply">Apply to partner</a></li>
-            <li><a href="universities.html#pipeline">How it works</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Community</h3>
-          <ul>
-            <li><a href="accessibility-collective.html">Accessibility Collective</a></li>
-            <li><a href="training.html">Training pathways</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/universities">Universities</a></li>
+          <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/stem">STEM Pipeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>For Students</h3>
+        <ul>
+          <li><a href="/get-help">Get help with a document</a></li>
+          <li><a href="/transparency">Transparency</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/accessibility">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+          Built in India. Open source.<br>
+          Nothing about us without us.
+        </p>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
-      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+      <p>EquitableDocs — The Document Equity Initiative. All content and code available under open licences where possible.</p>
     </div>
   </div>
 </footer>
 
 <script>
 (function() {
-  var toggle = document.querySelector('.nav-toggle');
-  var menu = document.getElementById('nav-menu');
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('main-nav');
   if (!toggle || !menu) return;
   toggle.addEventListener('click', function() {
-    var open = menu.classList.toggle('open');
+    var open = menu.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', open);
   });
 })();

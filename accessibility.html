@@ -5,196 +5,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="EquitableDocs accessibility statement. Our commitment to WCAG 2.1 AA, COGA guidelines, and ensuring our website works for everyone, including people who use assistive technology.">
 <title>Accessibility Statement — EquitableDocs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<style>
-/* ── Accessibility statement page-specific styles ── */
-.a11y-wrapper {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-}
-.a11y-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 3rem 3rem 2.5rem;
-}
-@media (max-width: 600px) {
-  .a11y-card {
-    padding: 2rem 1.25rem 1.75rem;
-  }
-}
-.a11y-card h1 {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 1.25rem;
-}
-.a11y-card h2 {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-top: 2rem;
-  margin-bottom: .75rem;
-}
-.a11y-card p {
-  font-size: .95rem;
-  color: var(--ink-mid);
-  line-height: 1.75;
-  margin-bottom: 1rem;
-}
-.a11y-card ul {
-  margin: .5rem 0 1rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: .4rem;
-}
-.a11y-card ul li {
-  font-size: .95rem;
-  color: var(--ink-mid);
-  line-height: 1.65;
-}
-.a11y-card a {
-  color: var(--teal);
-}
-.a11y-card a:hover,
-.a11y-card a:focus {
-  text-decoration: underline;
-}
-.a11y-updated {
-  margin-top: 2rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--border);
-  font-size: .875rem;
-  color: var(--ink-muted);
-  font-style: italic;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a href="#main-content" class="skip">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- Nav -->
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-in">
-    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="site-name" aria-label="EquitableDocs home">EquitableDocs</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+      <svg class="icon-open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <ul class="nav-links" id="nav-menu" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="universities.html">Universities</a></li>
-      <li><a href="training.html">Training</a></li>
-      <li><a href="accessibility-collective.html">Accessibility Collective</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="get-help.html" class="nav-cta">Get Help</a></li>
-    </ul>
+    <nav aria-label="Main navigation">
+      <ul id="main-nav">
+        <li><a href="/about">About</a></li>
+        <li><a href="/universities">Universities</a></li>
+        <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/transparency">Transparency</a></li>
+        <li><a href="/get-help">Get Help</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<main id="main-content">
+<main id="main">
 
-<div class="a11y-wrapper">
-  <div class="a11y-card">
-    <h1>Our commitment to accessibility</h1>
+<div class="content-card">
+  <h1>Our commitment to accessibility</h1>
 
-    <p>EquitableDocs exists to make documents accessible. Our own website must meet the same standards we apply to the documents we process.</p>
+  <p>EquitableDocs exists to make documents accessible. Our own website must meet the same standards we apply to the documents we process.</p>
 
-    <h2>Standards we follow</h2>
-    <ul>
-      <li>WCAG 2.1 AA (Web Content Accessibility Guidelines) — the international standard for web accessibility</li>
-      <li>W3C COGA (Cognitive Accessibility) guidelines — ensuring our site works for people with learning disabilities, ADHD, dyslexia, and low digital literacy</li>
-      <li>PDF/UA (ISO 14289) — for all documents we produce</li>
-    </ul>
+  <h2>Standards we follow</h2>
+  <ul>
+    <li>WCAG 2.1 AA (Web Content Accessibility Guidelines) — the international standard for web accessibility</li>
+    <li>W3C COGA (Cognitive Accessibility) guidelines — ensuring our site works for people with learning disabilities, ADHD, dyslexia, and low digital literacy</li>
+    <li>PDF/UA (ISO 14289) — for all documents we produce</li>
+  </ul>
 
-    <h2>What this means in practice</h2>
-    <ul>
-      <li>Every page works with screen readers (NVDA, JAWS, VoiceOver, TalkBack)</li>
-      <li>Every page is fully navigable by keyboard alone</li>
-      <li>All text meets minimum contrast ratios (4.5:1 for body text, 3:1 for large text)</li>
-      <li>All images have descriptive alt text</li>
-      <li>All form fields have visible labels</li>
-      <li>No content relies on colour alone to convey meaning</li>
-      <li>No flashing content, auto-playing media, or time limits</li>
-      <li>Plain language throughout — Grade 6–8 reading level</li>
-      <li>The site respects your browser settings for zoom, font size, and high contrast mode</li>
-    </ul>
+  <h2>What this means in practice</h2>
+  <ul>
+    <li>Every page works with screen readers (NVDA, JAWS, VoiceOver, TalkBack)</li>
+    <li>Every page is fully navigable by keyboard alone</li>
+    <li>All text meets minimum contrast ratios (4.5:1 for body text, 3:1 for large text)</li>
+    <li>All images have descriptive alt text</li>
+    <li>All form fields have visible labels</li>
+    <li>No content relies on colour alone to convey meaning</li>
+    <li>No flashing content, auto-playing media, or time limits</li>
+    <li>Plain language throughout — Grade 6–8 reading level</li>
+    <li>The site respects your browser settings for zoom, font size, and high contrast mode</li>
+  </ul>
 
-    <h2>Known issues</h2>
-    <p>We are continuously testing and improving. If you find any part of this website difficult to use with your assistive technology, please contact us immediately:</p>
-    <p>Email: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a></p>
-    <p>We will fix the issue and let you know when it is resolved.</p>
+  <h2>Known issues</h2>
+  <p>We are continuously testing and improving. If you find any part of this website difficult to use with your assistive technology, please contact us immediately:</p>
+  <p>Email: <a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a></p>
+  <p>We will fix the issue and let you know when it is resolved.</p>
 
-    <h2>Testing</h2>
-    <p>We test with:</p>
-    <ul>
-      <li>NVDA screen reader on Windows</li>
-      <li>Keyboard-only navigation</li>
-      <li>Browser zoom up to 200%</li>
-      <li>WAVE accessibility evaluation tool</li>
-      <li>Manual review against WCAG 2.1 AA checklist</li>
-    </ul>
+  <h2>Testing</h2>
+  <p>We test with:</p>
+  <ul>
+    <li>NVDA screen reader on Windows</li>
+    <li>Keyboard-only navigation</li>
+    <li>Browser zoom up to 200%</li>
+    <li>WAVE accessibility evaluation tool</li>
+    <li>Manual review against WCAG 2.1 AA checklist</li>
+  </ul>
 
-    <p class="a11y-updated">This statement was last updated on 23 March 2026.</p>
-  </div>
+  <p class="content-updated">This statement was last updated on 23 March 2026.</p>
 </div>
 
 </main>
 
-<!-- Footer -->
-<footer class="footer" role="contentinfo">
-  <div class="footer-in">
-    <div class="footer-top">
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <p class="footer-brand">EquitableDocs</p>
-        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+        <h3>EquitableDocs</h3>
+        <p>A Document Equity Initiative.<br>Accessible documents for every student, in every language, at no cost.</p>
       </div>
-      <nav class="footer-cols" aria-label="Footer navigation">
-        <div class="footer-col">
-          <h3>Platform</h3>
-          <ul>
-            <li><a href="upload.html">Upload document</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Universities</h3>
-          <ul>
-            <li><a href="universities.html#apply">Apply to partner</a></li>
-            <li><a href="universities.html#pipeline">How it works</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Community</h3>
-          <ul>
-            <li><a href="accessibility-collective.html">Accessibility Collective</a></li>
-            <li><a href="training.html">Training pathways</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/universities">Universities</a></li>
+          <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/stem">STEM Pipeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>For Students</h3>
+        <ul>
+          <li><a href="/get-help">Get help with a document</a></li>
+          <li><a href="/transparency">Transparency</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/accessibility">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+          Built in India. Open source.<br>
+          Nothing about us without us.
+        </p>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
-      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+      <p>EquitableDocs — The Document Equity Initiative. All content and code available under open licences where possible.</p>
     </div>
   </div>
 </footer>
 
 <script>
 (function() {
-  var toggle = document.querySelector('.nav-toggle');
-  var menu = document.getElementById('nav-menu');
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('main-nav');
   if (!toggle || !menu) return;
   toggle.addEventListener('click', function() {
-    var open = menu.classList.toggle('open');
+    var open = menu.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', open);
   });
 })();

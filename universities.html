@@ -5,45 +5,298 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="EquitableDocs partners with universities to build in-house accessible document capacity. We assess your documents, set up the right tools, train your staff, and step back. Capacity-building, not dependency.">
 <title>For Universities — EquitableDocs</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="universities.css">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ══ Universities page-specific tokens ══ */
+:root {
+  --teal-mid: #B8D9DA;
+  --violet: #7C3AED;
+  --violet-bg: #F5F0FF;
+  --violet-mid: #E9D5FF;
+  --amber: #B45309;
+  --amber-bg: #FFFBEB;
+}
+
+/* ── Hero layout (two-column) ── */
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+@media (max-width: 48rem) { .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+.hero-eyebrow { display: block; font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+.hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.88); line-height: 1.65; margin-bottom: 1.5rem; max-width: 540px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+.hero h1 em { font-style: italic; color: var(--teal-mid); }
+
+/* Hero stat cards */
+.hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+@media (max-width: 30rem) { .hero-cards { grid-template-columns: 1fr; } }
+.hero-card { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 0.5rem; padding: 1.25rem; }
+.hero-card.accent { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); }
+.hero-card-num { display: block; font-family: Georgia, serif; font-size: 1.4rem; font-weight: 600; color: #fff; margin-bottom: 0.25rem; }
+.hero-card-label { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
+
+/* ── Section alternating backgrounds ── */
+.sec-alt { background: var(--teal-light); }
+
+/* ── Who benefits ── */
+.students-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+.student-card { background: var(--white); border: 1px solid var(--border); border-radius: 0.25rem; padding: 2rem; border-top: 3px solid var(--teal); }
+.student-icon { font-size: 2rem; margin-bottom: 0.85rem; display: block; line-height: 1; }
+.student-name { font-family: Georgia, serif; font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+.student-desc { font-size: 0.875rem; color: var(--text-light); line-height: 1.65; }
+.student-stat { display: inline-block; margin-top: 0.85rem; font-size: 0.8rem; font-weight: 500; background: var(--teal-light); color: var(--teal-dark); padding: 0.2rem 0.7rem; border-radius: 100px; }
+
+/* ── The myth section ── */
+.myth-sec { background: var(--teal-dark); border-top: none; }
+.myth-sec + section { border-top: none; }
+.myth-sec h2 { color: #fff; }
+.myth-sec .eyebrow { color: var(--teal-mid); }
+.myth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 43rem) { .myth-grid { grid-template-columns: 1fr; } }
+.myth-card { border-radius: 0.5rem; padding: 2rem; }
+.myth-card.wrong { background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); }
+.myth-card.right { background: rgba(13,115,119,0.3); border: 1px solid rgba(13,195,199,0.2); }
+.myth-card-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; display: inline-flex; align-items: center; gap: 0.4rem; }
+.myth-card.wrong .myth-card-tag { color: #FCA5A5; }
+.myth-card.right .myth-card-tag { color: var(--teal-mid); }
+.myth-card h3 { font-family: Georgia, serif; font-size: 1.05rem; color: #fff; margin-bottom: 0.75rem; font-weight: 600; }
+.myth-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; margin: 0; }
+.myth-card li { font-size: 0.875rem; line-height: 1.6; display: flex; gap: 0.6rem; align-items: flex-start; }
+.myth-card.wrong li { color: rgba(255,255,255,0.65); }
+.myth-card.right li { color: rgba(255,255,255,0.82); }
+.myth-card li::before { content: ''; display: block; min-width: 14px; height: 14px; margin-top: 3px; border-radius: 50%; }
+.myth-card.wrong li::before { background: rgba(239,68,68,0.4); }
+.myth-card.right li::before { background: var(--teal); }
+
+/* ── Models / Partners ── */
+.models-sec { background: var(--teal-light); border-top: none; }
+.models-intro { max-width: 700px; margin-bottom: 3rem; }
+.models-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; }
+.model-card { background: var(--white); border: 1px solid var(--border); border-radius: 0.5rem; padding: 2rem; }
+.model-card.partner-card { border-color: var(--violet-mid); border-top: 3px solid var(--violet); }
+.model-uni { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.6rem; }
+.model-uni.partner-uni { color: var(--violet); }
+.model-card h3 { font-family: Georgia, serif; font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; }
+.model-card p { font-size: 0.875rem; color: var(--text-light); line-height: 1.65; margin-bottom: 0.75rem; }
+.model-lesson { font-size: 0.82rem; background: var(--teal-light); color: var(--teal-dark); padding: 0.5rem 0.85rem; border-radius: 0.25rem; font-weight: 500; }
+.model-lesson.partner-lesson { background: var(--violet-bg); color: var(--violet); }
+.partner-badge { display: inline-flex; align-items: center; gap: 0.35rem; background: var(--violet); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.25rem 0.65rem; border-radius: 100px; margin-bottom: 0.75rem; }
+
+/* ── Pipeline ── */
+.pipeline-intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; margin-bottom: 4rem; }
+@media (max-width: 48rem) { .pipeline-intro { grid-template-columns: 1fr; gap: 2rem; } }
+.pipeline-steps { counter-reset: pipe; display: flex; flex-direction: column; gap: 0; }
+.pipe-step { display: grid; grid-template-columns: 52px 1fr; gap: 1rem; align-items: stretch; counter-increment: pipe; }
+.pipe-step:not(:last-child) .pipe-num::after { content: ''; display: block; width: 2px; background: var(--teal-mid); flex: 1; margin: 0 auto; }
+.pipe-num { display: flex; flex-direction: column; align-items: center; }
+.pipe-num-circle { width: 36px; height: 36px; min-height: 36px; background: var(--teal); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: Georgia, serif; font-size: 0.9rem; font-weight: 600; flex-shrink: 0; }
+.pipe-content { padding-bottom: 2rem; }
+.pipe-step:last-child .pipe-content { padding-bottom: 0; }
+.pipe-title { font-weight: 500; color: var(--text); margin-bottom: 0.2rem; font-size: 0.95rem; }
+.pipe-desc { font-size: 0.855rem; color: var(--text-light); line-height: 1.6; }
+
+/* Pipeline routing fork */
+.pipeline-routes { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 3rem; }
+@media (max-width: 40rem) { .pipeline-routes { grid-template-columns: 1fr; } }
+.pipeline-route-card { border-radius: 0.5rem; padding: 1.5rem; border: 1px solid var(--border); }
+.pipeline-route-card.route-a { background: var(--teal-light); border-top: 3px solid var(--teal); border-color: var(--teal-mid); }
+.pipeline-route-card.route-b { background: var(--violet-bg); border-top: 3px solid var(--violet); border-color: var(--violet-mid); }
+.route-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 100px; margin-bottom: 0.65rem; }
+.route-badge-a { background: var(--teal); color: #fff; }
+.route-badge-b { background: var(--violet); color: #fff; }
+.pipeline-route-card h3 { font-family: Georgia, serif; font-weight: 600; color: var(--text); font-size: 1rem; margin-bottom: 0.45rem; }
+.pipeline-route-card p { font-size: 0.84rem; color: var(--text-light); line-height: 1.65; }
+
+/* Pipeline aside */
+.pipeline-aside { background: var(--teal-dark); color: #fff; border-radius: 0.5rem; padding: 2.5rem; position: sticky; top: 80px; }
+.pipeline-aside h3 { font-family: Georgia, serif; font-size: 1.15rem; color: #fff; margin-bottom: 1rem; }
+.aside-items { display: flex; flex-direction: column; gap: 1rem; }
+.aside-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+.aside-item-icon { width: 32px; height: 32px; min-width: 32px; background: rgba(255,255,255,0.1); border-radius: 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+.aside-item-text { font-size: 0.85rem; color: rgba(255,255,255,0.75); line-height: 1.55; }
+.aside-item-title { color: #fff; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.15rem; }
+
+/* ── What we offer ── */
+.offer-sec { background: var(--teal-dark); border-top: none; }
+.offer-sec h2 { color: #fff; }
+.offer-sec .sec-lead { color: rgba(255,255,255,0.7); max-width: 680px; }
+.offer-sec .eyebrow { color: var(--teal-mid); }
+.offer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+.offer-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 1.75rem; }
+.offer-card-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 0.75rem; }
+.offer-card h3 { font-family: Georgia, serif; font-size: 1rem; color: #fff; margin-bottom: 0.6rem; font-weight: 600; }
+.offer-card p { font-size: 0.855rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+.offer-card.highlight { background: rgba(13,115,119,0.35); border-color: rgba(13,195,199,0.25); }
+.offer-card.highlight h3 { color: #fff; }
+.offer-card.highlight-violet { background: rgba(124,58,237,0.2); border-color: rgba(196,168,255,0.25); }
+.offer-card.highlight-violet .offer-card-tag { color: #C4A8FF; }
+
+/* ── Capacity block ── */
+.capacity-sec { background: var(--teal-light); border-top: none; }
+.capacity-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+@media (max-width: 48rem) { .capacity-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+.cap-timeline { position: relative; padding-left: 2rem; }
+.cap-timeline::before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--teal-mid); }
+.cap-item { position: relative; margin-bottom: 2rem; }
+.cap-item:last-child { margin-bottom: 0; }
+.cap-dot { position: absolute; left: -2rem; top: 4px; width: 20px; height: 20px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.cap-dot-inner { width: 8px; height: 8px; background: #fff; border-radius: 50%; }
+.cap-month { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.3rem; }
+.cap-title { font-weight: 500; color: var(--text); margin-bottom: 0.2rem; font-size: 0.95rem; }
+.cap-desc { font-size: 0.855rem; color: var(--text-light); line-height: 1.6; }
+.cap-quote-block { background: var(--teal-dark); color: #fff; border-radius: 0.5rem; padding: 3rem; }
+.cap-quote-block blockquote { font-family: Georgia, serif; font-size: 1.25rem; font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.92); margin-bottom: 1.25rem; }
+.cap-quote-block cite { font-size: 0.82rem; color: rgba(255,255,255,0.45); font-style: normal; }
+.quote-mark { font-family: Georgia, serif; font-size: 5rem; color: rgba(255,255,255,0.07); line-height: 1; margin-bottom: 0.5rem; }
+
+/* ── Training ecosystem ── */
+.training-sec { background: var(--cream); border-top: none; }
+.training-header { display: grid; grid-template-columns: 1.4fr 1fr; gap: 4rem; align-items: start; margin-bottom: 2rem; }
+@media (max-width: 48rem) { .training-header { grid-template-columns: 1fr; gap: 2rem; } }
+.training-header-aside { background: var(--teal-dark); border-radius: 0.5rem; padding: 2rem; color: #fff; }
+.training-stat-block { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.training-stat-block:last-of-type { border-bottom: none; margin-bottom: 0.5rem; padding-bottom: 0; }
+.training-stat-num { display: block; font-family: Georgia, serif; font-size: 1.6rem; font-weight: 600; color: #fff; line-height: 1.2; }
+.training-stat-label { display: block; font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 0.2rem; }
+
+.training-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.training-table thead tr { border-bottom: 2px solid var(--teal); text-align: left; }
+.training-table th { padding: 0.75rem 1rem; color: var(--text); font-family: Georgia, serif; font-weight: 600; }
+.training-table tbody tr { border-bottom: 1px solid var(--border); }
+.training-table tbody tr:last-child { border-bottom: none; }
+.training-table td { padding: 0.75rem 1rem; }
+.training-table td:first-child { color: var(--text-light); }
+.training-table td:nth-child(2) { color: var(--text); }
+.training-table td:last-child { color: var(--text-light); font-size: 0.85rem; }
+.training-level-badge { font-size: 0.78rem; font-weight: 500; }
+.level-foundation { color: var(--teal); }
+.level-intermediate { color: #92400E; }
+.level-advanced { color: #4C1D95; }
+
+.training-custom { background: var(--teal-dark); border-radius: 0.5rem; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
+.training-custom-text h3 { font-family: Georgia, serif; font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem; }
+.training-custom-text p { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.6; max-width: 520px; }
+.training-custom-btn { display: inline-flex; white-space: nowrap; align-items: center; background: #fff; color: var(--teal-dark); font-size: 0.9rem; font-weight: 500; padding: 0.8rem 1.5rem; border-radius: 0.25rem; text-decoration: none; }
+.training-custom-btn:hover { background: var(--cream); color: var(--teal-dark); }
+
+/* ── Pricing philosophy ── */
+.pricing-strip { background: var(--amber-bg); border-top: 3px solid var(--amber); border-bottom: 3px solid var(--amber); padding: 3rem 0; }
+.pricing-strip .container { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+@media (max-width: 43rem) { .pricing-strip .container { grid-template-columns: 1fr; gap: 1.5rem; } }
+.pricing-strip h2 { font-family: Georgia, serif; font-size: 1.3rem; font-weight: 600; color: var(--amber); }
+.pricing-strip p { font-size: 0.93rem; color: var(--text-light); line-height: 1.7; margin-bottom: 0.75rem; }
+.pricing-strip strong { color: var(--amber); font-weight: 600; }
+.pricing-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+.pricing-pill { font-size: 0.8rem; font-weight: 500; padding: 0.3rem 0.85rem; border-radius: 100px; border: 1.5px solid; }
+.pricing-pill.yes { border-color: var(--teal); color: var(--teal-dark); background: var(--teal-light); }
+.pricing-pill.no { border-color: #FCA5A5; color: #991B1B; background: #FEF2F2; }
+
+/* ── Application form ── */
+.form-sec { background: var(--white); border-top: none; }
+.form-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
+@media (max-width: 48rem) { .form-layout { grid-template-columns: 1fr; gap: 3rem; } }
+.form-explainer h2 { font-family: Georgia, serif; font-size: 1.7rem; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
+.form-explainer p { font-size: 0.92rem; color: var(--text-light); line-height: 1.7; margin-bottom: 1rem; }
+.form-options-list { list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.form-options-list li { display: flex; gap: 0.65rem; align-items: flex-start; font-size: 0.875rem; color: var(--text-light); line-height: 1.5; }
+.fol-dot { width: 20px; height: 20px; min-width: 20px; background: var(--teal); border-radius: 50%; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
+.fol-dot svg { width: 10px; height: 10px; }
+.fol-dot.violet { background: var(--violet); }
+.no-cost-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--teal-light); color: var(--teal-dark); font-size: 0.82rem; font-weight: 500; padding: 0.4rem 0.9rem; border-radius: 100px; margin-top: 1.25rem; border: 1px solid var(--teal-mid); }
+
+/* ── Form card ── */
+.form-card { background: var(--cream); border: 1px solid var(--border); border-radius: 0.5rem; padding: 2.5rem; }
+@media (max-width: 48rem) { .form-card { padding: 1.5rem; } }
+.form-section-title { font-family: Georgia, serif; font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 1rem; margin-top: 0.5rem; }
+.form-two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 30rem) { .form-two { grid-template-columns: 1fr; } }
+.fg { margin-bottom: 1rem; }
+.fg-label { display: block; font-size: 0.85rem; font-weight: 500; color: var(--text); margin-bottom: 0.35rem; }
+.req { color: #B91C1C; }
+.fg-input,
+.fg-select,
+.fg-textarea { display: block; width: 100%; font-size: 0.9rem; padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 0.25rem; background: var(--white); color: var(--text); font-family: inherit; }
+.fg-input:focus,
+.fg-select:focus,
+.fg-textarea:focus { outline: 3px solid var(--focus); outline-offset: 2px; border-color: var(--teal); }
+.fg-textarea { min-height: 120px; resize: vertical; }
+.fg-hint { font-size: 0.78rem; color: var(--text-light); margin-top: 0.35rem; line-height: 1.5; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+/* Checkbox choices */
+.choice-group { margin-bottom: 1rem; }
+.choice-group-label { font-size: 0.82rem; font-weight: 500; color: var(--text-light); margin-bottom: 0.75rem; }
+.choice-opt { display: flex; gap: 0.75rem; align-items: flex-start; padding: 1rem; border: 1px solid var(--border); border-radius: 0.25rem; margin-bottom: 0.5rem; cursor: pointer; background: var(--white); }
+.choice-opt:hover { border-color: var(--teal); }
+.choice-opt input[type="checkbox"] { margin-top: 0.25rem; flex-shrink: 0; accent-color: var(--teal); width: 1.1rem; height: 1.1rem; }
+.choice-opt-text strong { display: block; font-size: 0.88rem; color: var(--text); margin-bottom: 0.2rem; }
+.choice-opt-desc { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; margin-bottom: 0; }
+.violet-opt { border-color: var(--violet-mid); }
+.violet-opt:hover { border-color: var(--violet); }
+
+/* Format chips */
+.format-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.format-chip { display: inline-flex; align-items: center; gap: 0.4rem; }
+.format-chip input[type="checkbox"] { accent-color: var(--teal); width: 1rem; height: 1rem; }
+.format-chip label { font-size: 0.85rem; color: var(--text); cursor: pointer; }
+
+/* Submit */
+.btn-submit { display: block; width: 100%; background: var(--teal); color: #fff; font-size: 1rem; font-weight: 600; padding: 0.85rem 1.5rem; border: none; border-radius: 0.25rem; cursor: pointer; font-family: inherit; margin-top: 0.5rem; }
+.btn-submit:hover { background: var(--teal-dark); }
+.btn-submit:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.form-privacy { font-size: 0.78rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.5; }
+
+/* ── FAQ section ── */
+.faq-sec { background: var(--teal-light); border-top: none; }
+.faq-list { margin-top: 1.5rem; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:first-child { border-top: 1px solid var(--border); }
+.faq-item details { padding: 0; }
+.faq-item summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; cursor: pointer; font-family: Georgia, serif; font-size: 1rem; font-weight: 600; color: var(--teal); list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { display: none; content: ''; }
+.faq-plus { font-size: 1.25rem; font-weight: 400; color: var(--teal); flex-shrink: 0; }
+details[open] .faq-plus { transform: rotate(45deg); }
+.faq-body { padding: 0 0 1.25rem; font-size: 0.9375rem; color: var(--text-light); line-height: 1.7; }
+
+/* ── Misc overrides ── */
+.sec-lead { font-size: 1.05rem; color: var(--text-light); line-height: 1.65; max-width: 700px; margin-bottom: 2rem; }
+</style>
 </head>
 <body>
 
-<a href="#main-content" class="skip">Skip to main content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- Nav -->
-<nav class="nav" aria-label="Main navigation">
-  <div class="nav-in">
-    <a href="index.html" class="nav-logo">EquitableDocs<span class="nav-dot" aria-hidden="true"></span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
-      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="site-name" aria-label="EquitableDocs home">EquitableDocs</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+      <svg class="icon-open" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <ul class="nav-links" id="nav-menu" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="universities.html" aria-current="page">Universities</a></li>
-      <li><a href="accessibility-collective.html">Accessibility Collective</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="get-help.html" class="nav-cta">Get Help</a></li>
-    </ul>
+    <nav aria-label="Main navigation">
+      <ul id="main-nav">
+        <li><a href="/about">About</a></li>
+        <li><a href="/universities" aria-current="page">Universities</a></li>
+        <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+        <li><a href="/training">Training</a></li>
+        <li><a href="/transparency">Transparency</a></li>
+        <li><a href="/get-help">Get Help</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
+</header>
 
-<main id="main-content">
+<main id="main">
 
 <!-- ══ HERO ══════════════════════════════════════════════════════════════ -->
 <section class="hero" aria-labelledby="hero-h">
-  <div class="hero-in hero-grid">
+  <div class="container hero-grid">
     <div>
       <span class="hero-eyebrow">For universities and colleges</span>
       <h1 id="hero-h">Build accessible document capacity at your institution — <em>then own it completely.</em></h1>
       <p class="hero-sub">Through EquitableDocs, The Document Equity Initiative helps universities make their documents accessible — standard and STEM. We assess your documents, set up the right tools inside your infrastructure, train your staff to run them, and step back. Our goal is to make ourselves unnecessary.</p>
       <div class="hero-actions">
-        <a href="#apply" class="btn-white">Request support for your institution</a>
-        <a href="#pipeline" class="btn-outline-w">See the two pipelines</a>
+        <a href="#apply" class="btn btn-primary">Request support for your institution</a>
+        <a href="#pipeline" class="btn btn-outline-w">See the two pipelines</a>
       </div>
     </div>
     <div class="hero-cards" aria-label="Key statistics about document inaccessibility">
@@ -68,37 +321,37 @@
 </section>
 
 <!-- ══ WHO BENEFITS ══════════════════════════════════════════════════════ -->
-<section class="sec" aria-labelledby="students-h">
-  <div class="sec-in">
+<section aria-labelledby="students-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">Who benefits</span>
-    <h2 class="sec-title" id="students-h">Which students need accessible documents — and why it matters</h2>
+    <h2 id="students-h">Which students need accessible documents — and why it matters</h2>
     <p class="sec-lead">Document inaccessibility is not a rare edge case. It affects a wide group of students who are rarely counted in institutional audits — because most have learned to manage quietly, or have simply stopped trying to access certain materials.</p>
 
     <div class="students-grid" role="list">
 
       <article class="student-card" aria-labelledby="s1" role="listitem">
-        <span class="student-icon" aria-hidden="true">👁️</span>
+        <span class="student-icon" aria-hidden="true">&#x1f441;&#xfe0f;</span>
         <h3 class="student-name" id="s1">Students who are blind or have low vision</h3>
         <p class="student-desc">Screen readers such as NVDA and JAWS can only read a PDF that has been properly tagged — with headings, paragraphs, figures with alt text, and tables with headers. An untagged PDF produces silence or random noise. Students using screen magnification software face a different problem: a scanned PDF is just an image, and image content cannot be enlarged as readable text, reflowed, or read aloud. Both groups are entirely dependent on how a document was prepared.</p>
         <span class="student-stat">Combined, the largest print disability group in Indian higher education</span>
       </article>
 
       <article class="student-card" aria-labelledby="s2" role="listitem">
-        <span class="student-icon" aria-hidden="true">📖</span>
+        <span class="student-icon" aria-hidden="true">&#x1f4d6;</span>
         <h3 class="student-name" id="s2">Students with specific learning disabilities</h3>
         <p class="student-desc">Students with dyslexia rely on text-to-speech tools, font substitutions, and reading overlays. These tools only work when the underlying text is properly encoded and the reading order is correct. In multi-column academic layouts — common in Indian textbooks and research papers — incorrect reading order causes text-to-speech tools to read content out of sequence. Students with ADHD benefit from clear heading structures and bookmarks, which allow them to navigate directly to the section they need rather than scrolling through entire documents.</p>
         <span class="student-stat">1 in 10 students has dyslexia. 5–7% of university-age students have ADHD.</span>
       </article>
 
       <article class="student-card" aria-labelledby="s3" role="listitem">
-        <span class="student-icon" aria-hidden="true">🤝</span>
+        <span class="student-icon" aria-hidden="true">&#x1f91d;</span>
         <h3 class="student-name" id="s3">Students with motor and physical disabilities</h3>
         <p class="student-desc">Students who cannot hold a physical textbook, or who use switch access, eye-gaze technology, or voice control, depend entirely on digital documents that are keyboard navigable and properly structured. A PDF without correct tab order effectively requires a mouse to use — which these students may not be able to operate. Accessible documents are not an accommodation for this group: they are the only viable format.</p>
         <span class="student-stat">Often underreported in institutional disability statistics</span>
       </article>
 
       <article class="student-card" aria-labelledby="s4" role="listitem">
-        <span class="student-icon" aria-hidden="true">🧠</span>
+        <span class="student-icon" aria-hidden="true">&#x1f9e0;</span>
         <h3 class="student-name" id="s4">Neurodivergent students broadly</h3>
         <p class="student-desc">Consistent heading structures, clear language, predictable document layouts, and logical reading order benefit a wide group of students — including those with autism, acquired brain injuries, processing disorders, and age-related cognitive changes. These students rarely identify themselves in formal disability registers, but they make up a significant proportion of the student population. Good document structure is good design for everyone. For this group, it is often the difference between engaging with course material independently or not.</p>
         <span class="student-stat">15–20% of students identify as neurodivergent in some form</span>
@@ -109,15 +362,15 @@
 </section>
 
 <!-- ══ THE MYTH ══════════════════════════════════════════════════════════ -->
-<section class="sec myth-sec" aria-labelledby="myth-h">
-  <div class="sec-in">
+<section class="myth-sec" aria-labelledby="myth-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">The common misunderstanding</span>
-    <h2 class="sec-title" id="myth-h">"We have a scanner and a braille printer."</h2>
+    <h2 id="myth-h">"We have a scanner and a braille printer."</h2>
     <p class="sec-lead" style="color:rgba(255,255,255,.7)">This is the most common response when we ask universities about their document accessibility provision. It is also, unfortunately, not a solution — and it may be creating a false sense of coverage that leaves most students without support.</p>
     <div class="myth-grid">
       <div class="myth-card wrong" role="region" aria-label="What does not work">
         <p class="myth-card-tag">
-          <span aria-hidden="true">✕</span> What doesn't work
+          <span aria-hidden="true">&#x2715;</span> What doesn't work
         </p>
         <h3>The scanner-and-printer approach</h3>
         <ul role="list">
@@ -130,7 +383,7 @@
       </div>
       <div class="myth-card right" role="region" aria-label="What actually works">
         <p class="myth-card-tag">
-          <span aria-hidden="true">✓</span> What actually works
+          <span aria-hidden="true">&#x2713;</span> What actually works
         </p>
         <h3>A systematic, pipeline-based approach</h3>
         <ul role="list">
@@ -146,10 +399,10 @@
 </section>
 
 <!-- ══ GLOBAL EVIDENCE & PIPELINE PARTNERS ══════════════════════════════ -->
-<section class="sec models-sec" aria-labelledby="models-h">
-  <div class="sec-in">
+<section class="models-sec" aria-labelledby="models-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">Global evidence &amp; pipeline partners</span>
-    <h2 class="sec-title" id="models-h">What the world has built — and where EquitableDocs fits</h2>
+    <h2 id="models-h">What the world has built — and where EquitableDocs fits</h2>
     <div class="models-intro">
       <p class="sec-lead">Universities in North America, the UK, Australia, and Africa have been building systematic accessible document operations for over a decade. Their approaches share a consistent finding: accessibility works when it is built into institutional processes, not handled case by case. EquitableDocs draws on these proven models.</p>
     </div>
@@ -203,10 +456,10 @@
 </section>
 
 <!-- ══ PIPELINE ══════════════════════════════════════════════════════════ -->
-<section class="sec" id="pipeline" aria-labelledby="pipeline-h">
-  <div class="sec-in">
+<section id="pipeline" aria-labelledby="pipeline-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">The process</span>
-    <h2 class="sec-title" id="pipeline-h">How we make your documents accessible</h2>
+    <h2 id="pipeline-h">How we make your documents accessible</h2>
     <p class="sec-lead">Every document goes through a structured process — from assessment to validated delivery. Standard documents and STEM content follow different processing tracks, but both deliver the same outcome: documents that work with screen readers, braille displays, and assistive technology, validated against international standards.</p>
 
     <!-- Pipeline routing cards -->
@@ -312,35 +565,35 @@
         <h3>What this means for your institution</h3>
         <div class="aside-items">
           <div class="aside-item">
-            <div class="aside-item-icon" aria-hidden="true">🔧</div>
+            <div class="aside-item-icon" aria-hidden="true">&#x1f527;</div>
             <div>
               <p class="aside-item-title">Your tools run on your own servers</p>
               <p class="aside-item-text">Processing tools are installed within your own infrastructure. Your IT team runs them. Your staff learn them. Nothing is locked inside EquitableDocs.</p>
             </div>
           </div>
           <div class="aside-item">
-            <div class="aside-item-icon" aria-hidden="true">⚡</div>
+            <div class="aside-item-icon" aria-hidden="true">&#x26a1;</div>
             <div>
               <p class="aside-item-title">STEM content gets specialised processing</p>
               <p class="aside-item-text">Documents with equations, complex layouts, and high-volume batches go through a dedicated STEM track with AI-powered tagging and specialist human review.</p>
             </div>
           </div>
           <div class="aside-item">
-            <div class="aside-item-icon" aria-hidden="true">👥</div>
+            <div class="aside-item-icon" aria-hidden="true">&#x1f465;</div>
             <div>
               <p class="aside-item-title">Your staff trained alongside ours</p>
               <p class="aside-item-text">We do not train EquitableDocs staff and then train your staff separately. We train everyone at the same time — so the knowledge transfer is direct and immediate.</p>
             </div>
           </div>
           <div class="aside-item">
-            <div class="aside-item-icon" aria-hidden="true">📐</div>
+            <div class="aside-item-icon" aria-hidden="true">&#x1f4d0;</div>
             <div>
               <p class="aside-item-title">Document Format Templates belong to you</p>
               <p class="aside-item-text">During onboarding, we build Document Format Templates for your specific recurring document types. These templates belong to your institution and improve processing accuracy for every batch you run — permanently.</p>
             </div>
           </div>
           <div class="aside-item">
-            <div class="aside-item-icon" aria-hidden="true">✅</div>
+            <div class="aside-item-icon" aria-hidden="true">&#x2705;</div>
             <div>
               <p class="aside-item-title">Compliance certificates on every delivery</p>
               <p class="aside-item-text">Every document comes with a veraPDF compliance report. If a student or regulator ever asks whether a document is accessible, you have proof — not just a promise.</p>
@@ -353,10 +606,10 @@
 </section>
 
 <!-- ══ WHAT WE OFFER ════════════════════════════════════════════════════ -->
-<section class="sec offer-sec" aria-labelledby="offer-h">
-  <div class="sec-in">
+<section class="offer-sec" aria-labelledby="offer-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">What we offer</span>
-    <h2 class="sec-title" id="offer-h">What support looks like in practice</h2>
+    <h2 id="offer-h">What support looks like in practice</h2>
     <p class="sec-lead">This is not a subscription or a service contract. It is practical, hands-on support for institutions that want to take accessible document production seriously — and build the skills to sustain it themselves.</p>
     <div class="offer-grid" role="list">
 
@@ -407,13 +660,13 @@
 </section>
 
 <!-- ══ CAPACITY NOT DEPENDENCY ══════════════════════════════════════════ -->
-<section class="sec capacity-sec" aria-labelledby="cap-h">
-  <div class="sec-in">
+<section class="capacity-sec" aria-labelledby="cap-h">
+  <div class="container">
     <div class="capacity-layout">
       <div>
         <span class="eyebrow" aria-hidden="true">Our philosophy</span>
-        <h2 class="sec-title" id="cap-h">We are here to build your capacity, not to create a dependency</h2>
-        <p style="font-size:1.02rem; color:var(--ink-mid); line-height:1.75; max-width:480px; margin-bottom:2.5rem; font-weight:300;">The Document Equity Initiative is not primarily a remediation service. We are a capacity-building initiative. Our goal is to help your institution set up the tools, processes, and trained staff to produce accessible documents independently. So that over time, you do not need to send documents to us at all.</p>
+        <h2 id="cap-h">We are here to build your capacity, not to create a dependency</h2>
+        <p style="font-size:1.02rem; color:var(--text-light); line-height:1.75; max-width:480px; margin-bottom:2.5rem; font-weight:300;">The Document Equity Initiative is not primarily a remediation service. We are a capacity-building initiative. Our goal is to help your institution set up the tools, processes, and trained staff to produce accessible documents independently. So that over time, you do not need to send documents to us at all.</p>
         <div class="cap-timeline" aria-label="Timeline to institutional self-sufficiency">
           <div class="cap-item">
             <div class="cap-dot"><div class="cap-dot-inner"></div></div>
@@ -451,15 +704,15 @@
 </section>
 
 <!-- ══ TRAINING ECOSYSTEM ═══════════════════════════════════════════════ -->
-<section class="sec training-sec" id="training" aria-labelledby="training-h">
-  <div class="sec-in">
+<section class="training-sec" id="training" aria-labelledby="training-h">
+  <div class="container">
 
     <div class="training-header">
       <div class="training-header-text">
         <span class="eyebrow" aria-hidden="true">Capacity building</span>
-        <h2 class="sec-title" id="training-h">We help your institution build internal capacity in accessible document production</h2>
+        <h2 id="training-h">We help your institution build internal capacity in accessible document production</h2>
         <p class="sec-lead" style="margin-bottom:1.5rem">Training is delivered in-person at your campus, tailored to your document types and staff needs. No cost to your institution. Travel and accommodation support where applicable.</p>
-        <p style="font-size:.95rem; color:var(--ink-muted); line-height:1.7; max-width:600px;">Our training components are aligned with internationally recognised document accessibility standards, including those developed by <a href="https://dequeuniversity.com/" style="color:var(--teal);" target="_blank" rel="noopener">Deque University</a>, <a href="https://webaim.org/training/docs/" style="color:var(--teal);" target="_blank" rel="noopener">WebAIM</a>, and the <a href="https://www.accessibilityassociation.org/" style="color:var(--teal);" target="_blank" rel="noopener">IAAP</a> certification framework.</p>
+        <p style="font-size:.95rem; color:var(--text-light); line-height:1.7; max-width:600px;">Our training components are aligned with internationally recognised document accessibility standards, including those developed by <a href="https://dequeuniversity.com/" target="_blank" rel="noopener">Deque University</a>, <a href="https://webaim.org/training/docs/" target="_blank" rel="noopener">WebAIM</a>, and the <a href="https://www.accessibilityassociation.org/" target="_blank" rel="noopener">IAAP</a> certification framework.</p>
       </div>
       <div class="training-header-aside">
         <div class="training-stat-block">
@@ -478,68 +731,68 @@
     </div>
 
     <div style="overflow-x:auto; margin-top:2rem;">
-      <table style="width:100%; border-collapse:collapse; font-size:.9rem;">
+      <table class="training-table">
         <thead>
-          <tr style="border-bottom:2px solid var(--teal); text-align:left;">
-            <th style="padding:.75rem 1rem; color:var(--ink); font-family:var(--serif); font-weight:600;">#</th>
-            <th style="padding:.75rem 1rem; color:var(--ink); font-family:var(--serif); font-weight:600;">Training component</th>
-            <th style="padding:.75rem 1rem; color:var(--ink); font-family:var(--serif); font-weight:600;">Level</th>
-            <th style="padding:.75rem 1rem; color:var(--ink); font-family:var(--serif); font-weight:600;">For</th>
+          <tr>
+            <th>#</th>
+            <th>Training component</th>
+            <th>Level</th>
+            <th>For</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">1</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">Orientation and Sensitisation — Understanding Document Accessibility</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:var(--teal);">Foundation</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">All staff</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">2</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">Creating Accessible Documents from Source (Word, PowerPoint, InDesign)</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:var(--teal);">Foundation</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">Faculty, publication staff</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">3</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">PDF Remediation and Validation</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:#92400E;">Intermediate</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">Disability services, library staff</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">4</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">Accessible EPUB Development</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:#92400E;">Intermediate</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">Digital content teams</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">5</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">STEM Document Accessibility — Equations, Tables, Complex Layouts</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:#4C1D95;">Advanced</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">STEM faculty and staff</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border);">
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">6</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">Easy Read Content Creation</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:#92400E;">Intermediate</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">Content teams, disability services</td>
+          <tr>
+            <td>1</td>
+            <td>Orientation and Sensitisation — Understanding Document Accessibility</td>
+            <td><span class="training-level-badge level-foundation">Foundation</span></td>
+            <td>All staff</td>
           </tr>
           <tr>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted);">7</td>
-            <td style="padding:.75rem 1rem; color:var(--ink);">Setting Up an In-House Accessible Document Operation</td>
-            <td style="padding:.75rem 1rem;"><span style="font-size:.78rem; font-weight:500; color:#4C1D95;">Advanced</span></td>
-            <td style="padding:.75rem 1rem; color:var(--ink-muted); font-size:.85rem;">IT leads, disability services leads</td>
+            <td>2</td>
+            <td>Creating Accessible Documents from Source (Word, PowerPoint, InDesign)</td>
+            <td><span class="training-level-badge level-foundation">Foundation</span></td>
+            <td>Faculty, publication staff</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>PDF Remediation and Validation</td>
+            <td><span class="training-level-badge level-intermediate">Intermediate</span></td>
+            <td>Disability services, library staff</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Accessible EPUB Development</td>
+            <td><span class="training-level-badge level-intermediate">Intermediate</span></td>
+            <td>Digital content teams</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>STEM Document Accessibility — Equations, Tables, Complex Layouts</td>
+            <td><span class="training-level-badge level-advanced">Advanced</span></td>
+            <td>STEM faculty and staff</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Easy Read Content Creation</td>
+            <td><span class="training-level-badge level-intermediate">Intermediate</span></td>
+            <td>Content teams, disability services</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Setting Up an In-House Accessible Document Operation</td>
+            <td><span class="training-level-badge level-advanced">Advanced</span></td>
+            <td>IT leads, disability services leads</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="training-custom" style="margin-top:2rem;">
+    <div class="training-custom">
       <div class="training-custom-text">
         <h3>Training is tailored to your institution</h3>
         <p>We design the training programme around your specific document types, languages, staff capacity, and institutional goals. Tell us what you need and we will propose a plan.</p>
       </div>
-      <a href="#apply" class="training-custom-btn">Discuss training for your institution →</a>
+      <a href="#apply" class="training-custom-btn">Discuss training for your institution &#x2192;</a>
     </div>
 
   </div>
@@ -547,7 +800,7 @@
 
 <!-- ══ PRICING PHILOSOPHY ══════════════════════════════════════════════ -->
 <section class="pricing-strip" aria-labelledby="pricing-h">
-  <div class="pricing-strip-in">
+  <div class="container">
     <div>
       <h2 id="pricing-h">On pricing</h2>
     </div>
@@ -556,22 +809,22 @@
       <p>STEM processing infrastructure costs are covered by institutional partnership fees — they are not charged to individual students. The cost breakdown is itemised separately in the letter of understanding.</p>
       <p>The only additional costs to your institution are <strong>travel and accommodation</strong> when in-person sessions are held at your campus. These are listed in the letter of understanding before anything is agreed.</p>
       <div class="pricing-pills" aria-label="Pricing commitments">
-        <span class="pricing-pill yes">✓ Actual cost only</span>
-        <span class="pricing-pill yes">✓ No profit margin</span>
-        <span class="pricing-pill yes">✓ Published cost methodology</span>
-        <span class="pricing-pill yes">✓ STEM pipeline included</span>
-        <span class="pricing-pill yes">✓ Transparent cost breakdown</span>
-        <span class="pricing-pill no">✕ No subscription fees</span>
-        <span class="pricing-pill no">✕ No per-seat licences</span>
-        <span class="pricing-pill no">✕ No hidden costs</span>
+        <span class="pricing-pill yes">&#x2713; Actual cost only</span>
+        <span class="pricing-pill yes">&#x2713; No profit margin</span>
+        <span class="pricing-pill yes">&#x2713; Published cost methodology</span>
+        <span class="pricing-pill yes">&#x2713; STEM pipeline included</span>
+        <span class="pricing-pill yes">&#x2713; Transparent cost breakdown</span>
+        <span class="pricing-pill no">&#x2715; No subscription fees</span>
+        <span class="pricing-pill no">&#x2715; No per-seat licences</span>
+        <span class="pricing-pill no">&#x2715; No hidden costs</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ══ APPLICATION FORM ════════════════════════════════════════════════ -->
-<section class="sec form-sec" id="apply" aria-labelledby="form-h">
-  <div class="sec-in">
+<section class="form-sec" id="apply" aria-labelledby="form-h">
+  <div class="container">
     <div class="form-layout">
 
       <div class="form-explainer">
@@ -663,7 +916,7 @@
               <div class="choice-opt-text">
                 <strong>Document accessibility training — in-person (free of cost)</strong>
                 <p class="choice-opt-desc">A phased training programme delivered at your campus. Travel and accommodation support where applicable.</p>
-                <ul style="font-size:.8rem; color:var(--ink-muted); margin:.5rem 0 0 1rem; line-height:1.6;">
+                <ul style="font-size:.8rem; color:var(--text-light); margin:.5rem 0 0 1rem; line-height:1.6;">
                   <li>Phase 1: Orientation and sensitisation — what is document accessibility, what makes documents inaccessible, how students with disabilities experience inaccessible content</li>
                   <li>Phase 2: Creating accessible documents — Word, PowerPoint, posters, online and offline teaching-learning materials</li>
                   <li>Phase 3: PDF remediation — fixing inaccessible PDFs, tagging, reading order, alt text, tables, PDF/UA validation</li>
@@ -708,7 +961,7 @@
           <p class="form-section-title">Your documents</p>
 
           <div class="fg">
-            <label class="fg-label">Primary document languages</label>
+            <label class="fg-label" for="langs">Primary document languages</label>
             <input class="fg-input" type="text" id="langs" name="languages" placeholder="e.g. English, Hindi, Tamil, Bengali, Telugu">
           </div>
 
@@ -781,10 +1034,10 @@
 </section>
 
 <!-- ══ FAQ ══════════════════════════════════════════════════════════════ -->
-<section class="sec" style="background:var(--cream-2)" aria-labelledby="faq-h">
-  <div class="sec-in">
+<section class="faq-sec" aria-labelledby="faq-h">
+  <div class="container">
     <span class="eyebrow" aria-hidden="true">Questions</span>
-    <h2 class="sec-title" id="faq-h">Common questions</h2>
+    <h2 id="faq-h">Common questions</h2>
     <dl class="faq-list">
 
       <div class="faq-item">
@@ -842,41 +1095,43 @@
 
 </main>
 
-<!-- Footer -->
-<footer class="footer" role="contentinfo">
-  <div class="footer-in">
-    <div class="footer-top">
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <p class="footer-brand">EquitableDocs</p>
-        <p class="footer-tag">Accessible documents for every student, in every language, at no cost.</p>
+        <h3>EquitableDocs</h3>
+        <p>A Document Equity Initiative.<br>Accessible documents for every student, in every language, at no cost.</p>
       </div>
-      <nav class="footer-cols" aria-label="Footer navigation">
-        <div class="footer-col">
-          <h3>Platform</h3>
-          <ul>
-            <li><a href="upload.html">Upload document</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Universities</h3>
-          <ul>
-            <li><a href="universities.html#apply">Apply to partner</a></li>
-            <li><a href="universities.html#pipeline">How it works</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Community</h3>
-          <ul>
-            <li><a href="accessibility-collective.html">Accessibility Collective</a></li>
-            <li><a href="training.html">Training pathways</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div>
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/universities">Universities</a></li>
+          <li><a href="/accessibility-collective">Accessibility Collective</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/stem">STEM Pipeline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>For Students</h3>
+        <ul>
+          <li><a href="/get-help">Get help with a document</a></li>
+          <li><a href="/transparency">Transparency</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/accessibility">Accessibility statement</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="mailto:deepa@equitabledocs.org">deepa@equitabledocs.org</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+          Built in India. Open source.<br>
+          Nothing about us without us.
+        </p>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 EquitableDocs &mdash; A Document Equity Initiative. Part of <a href="index.html">The EquitableAccess Suite</a>.</p>
-      <p><a href="accessibility.html">Accessibility statement</a> &middot; <a href="privacy.html">Privacy policy</a></p>
+      <p>EquitableDocs — The Document Equity Initiative. All content and code available under open licences where possible.</p>
     </div>
   </div>
 </footer>
@@ -884,14 +1139,13 @@
 <script>
 (function() {
   // Mobile nav toggle
-  var toggle = document.querySelector('.nav-toggle');
-  var menu = document.getElementById('nav-menu');
-  if (toggle && menu) {
-    toggle.addEventListener('click', function() {
-      var open = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-  }
+  var toggle = document.querySelector('.menu-toggle');
+  var menu = document.getElementById('main-nav');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function() {
+    var open = menu.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
 
   // Form submission feedback
   var form = document.querySelector('form');
